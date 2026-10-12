@@ -20,6 +20,13 @@ importers:
       vue:
         specifier: ^3.5.0
         version: 3.5.43(typescript@6.0.3)
+    devDependencies:
+      prettier:
+        specifier: ^3.9.10
+        version: 3.9.10
+      prettier-plugin-slidev:
+        specifier: ^1.0.5
+        version: 1.0.5(prettier@3.9.10)
 
 packages:
 
@@ -658,6 +665,10 @@ packages:
   '@slidev/client@53.0.0':
     resolution: {integrity: sha512-y95YzIeqEhXGAKQ0BabG7QLBYwDaqwjtAAttNmJL9E2qmgSoEuIg2KVMIyz15bdchS6XyouqlDiNdzgDag47Kw==}
     engines: {node: '>=22.12.0'}
+
+  '@slidev/parser@0.47.5':
+    resolution: {integrity: sha512-KvqOEhIFuMDu8CjAsehMNKlAnnmAn2TRHiEymc3CMadid05oWa5zgTxqEyMxUl2rjWpYs3A1yDiendZsGYs3HA==}
+    engines: {node: '>=18.0.0'}
 
   '@slidev/parser@53.0.0':
     resolution: {integrity: sha512-0wwoyPimeLUV0+BUCxJXq4GqBkufeSioPNTN6JGIByAEtm0efNNpSwQ6Pdy8UroCINuALDt+sttBFqo+MtDaFw==}
@@ -2348,6 +2359,11 @@ packages:
   pptxgenjs@4.0.1:
     resolution: {integrity: sha512-TeJISr8wouAuXw4C1F/mC33xbZs/FuEG6nH9FG1Zj+nuPcGMP5YRHl6X+j3HSUnS1f3at6k75ZZXPMZlA5Lj9A==}
 
+  prettier-plugin-slidev@1.0.5:
+    resolution: {integrity: sha512-1xaKzOAX17QAcn1roUgQIAfeio3HPYYefCgzxh6Bzk+5rJJxq0I8HUhLrUyv9nCpIP6e9CDv/yDQSdEeqqRUuA==}
+    peerDependencies:
+      prettier: ^3.2.4
+
   prettier@3.9.10:
     resolution: {integrity: sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA==}
     engines: {node: '>=14'}
@@ -3746,6 +3762,11 @@ snapshots:
       - unloader
       - vite
       - webpack
+
+  '@slidev/parser@0.47.5':
+    dependencies:
+      '@slidev/types': 0.47.5
+      js-yaml: 4.3.2
 
   '@slidev/parser@53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.153.0)(@vue/compiler-sfc@3.5.43)(cac@7.1.0)(crossws@0.4.15(srvx@1.0.5))(rolldown@1.2.13)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.4(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))':
     dependencies:
@@ -5803,6 +5824,11 @@ snapshots:
       https: 1.0.0
       image-size: 1.2.1
       jszip: 3.10.2
+
+  prettier-plugin-slidev@1.0.5(prettier@3.9.10):
+    dependencies:
+      '@slidev/parser': 0.47.5
+      prettier: 3.9.10
 
   prettier@3.9.10: {}
 

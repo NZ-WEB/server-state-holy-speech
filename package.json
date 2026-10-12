@@ -6,11 +6,16 @@
   "scripts": {
     "dev": "slidev --port 3030",
     "build": "slidev build",
-    "export": "slidev export"
+    "export": "slidev export",
+    "format": "prettier slides.md --write"
   },
   "dependencies": {
     "@slidev/cli": "53.0.0",
     "@slidev/theme-default": "0.25.0",
     "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "prettier-plugin-slidev": "^1.0.5"
   }
 }

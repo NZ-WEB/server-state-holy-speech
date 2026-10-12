@@ -19,6 +19,14 @@
 }
 
 @font-face {
+  font-family: 'Roboto Mono';
+  src: url('/fonts/RobotoMono-Variable.ttf') format('truetype');
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'SF Pro';
   src: url('/fonts/SFPro-Variable.ttf') format('truetype');
   font-weight: 100 1000;
@@ -33,4 +41,12 @@
 
 :where(.slidev-layout h1, .slidev-layout h2, .slidev-layout h3, .slidev-layout p) {
   margin: 0;
+}
+
+/* Tight display leading can place descenders below the line box. Transparent
+   gradient text needs background paint there, even when overflow is visible.
+   Extend only its paint box: font size, line height and baseline stay intact. */
+:where(.slidev-layout .bg-clip-text) {
+  padding-block-end: 0.2em;
+  margin-block-end: -0.2em;
 }

@@ -61,6 +61,20 @@ export const gradientVariants = {
     stops: [[0, 0.16], [42, 0.064], [75, 0.008], [100, 0]],
   }, { ...cornerSpot, x: -540 }],
   none: [],
+  cooking: [{
+    x: 401, y: 60, width: 1836, height: 1507,
+    color: [237, 15, 0], opacity: 1,
+    stops: [[0, 0.64], [42, 0.32], [75, 0.08], [100, 0]],
+  }],
+  'section-right': [{
+    x: 850, y: -210, width: 1520, height: 1480,
+    color: [237, 15, 0], opacity: 1,
+    stops: [[0, 0.48], [42, 0.192], [75, 0.024], [100, 0]],
+  }, {
+    x: 1274, y: -455, width: 1150, height: 1000,
+    color: [237, 15, 0], opacity: 1,
+    stops: [[0, 0.16], [42, 0.064], [75, 0.008], [100, 0]],
+  }],
 } as const satisfies Record<string, readonly GradientSpot[]>
 
 export type GradientVariant = keyof typeof gradientVariants
