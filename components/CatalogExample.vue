@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { useSlideContext } from '@slidev/client'
+import { computed } from 'vue'
 
+const props = withDefaults(defineProps<{ static?: boolean }>(), { static: false })
 const { $clicks } = useSlideContext()
+const stage = computed(() => props.static ? 4 : $clicks.value)
 const products = [
   { id: 'lollipop', click: 1, name: 'Леденец “Петушок”', price: '250 ₽', image: '/images/catalog-lollipop-2x.png' },
   { id: 'biscuits', click: 2, name: 'Печенье Юбилейное', price: '64 ₽', image: '/images/catalog-biscuits-2x.png' },
@@ -20,8 +23,8 @@ const products = [
         <h2 class="m-0 font-body text-[40px] font-bold leading-[1.2] text-white">Магнит</h2>
         <p
           class="catalog-delivery m-0 h-[26px] w-[457px] whitespace-nowrap text-[24px] leading-[1.35] text-secondary !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"
-          :class="$clicks >= 4 ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none translate-y-[12px]'"
-          :aria-hidden="$clicks < 4"
+          :class="stage >= 4 ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none translate-y-[12px]'"
+          :aria-hidden="stage < 4"
         >Адрес доставки: ул. Ленина, 10 · Москва</p>
       </div>
     </div>
@@ -31,8 +34,8 @@ const products = [
         :key="product.id"
         :data-product="product.id"
         class="catalog-product box-border flex h-[413px] w-[318px] shrink-0 flex-col gap-[24px] rounded-[32px] border border-solid border-white/20 bg-[#252525] px-[8px] pb-[20px] pt-[8px] text-white !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"
-        :class="$clicks >= product.click ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none translate-y-[48px]'"
-        :aria-hidden="$clicks < product.click"
+        :class="stage >= product.click ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none translate-y-[48px]'"
+        :aria-hidden="stage < product.click"
       >
         <img :src="product.image" :alt="product.name" class="block h-[287px] w-[300px] shrink-0 rounded-[24px] object-cover">
         <div class="box-border flex w-full flex-col gap-[2px] px-[16px]">

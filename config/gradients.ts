@@ -61,6 +61,20 @@ export const gradientVariants = {
     stops: [[0, 0.16], [42, 0.064], [75, 0.008], [100, 0]],
   }, { ...cornerSpot, x: -540 }],
   none: [],
+  'store-left': [{
+    x: 1150, y: -740, width: 1300, height: 1100,
+    color: [237, 15, 0], opacity: 1,
+    stops: [[0, 0.16], [42, 0.064], [75, 0.008], [100, 0]],
+  }, {
+    x: -650, y: 370, width: 1500, height: 1300,
+    color: [237, 15, 0], opacity: 1,
+    stops: [[0, 0.48], [42, 0.192], [75, 0.024], [100, 0]],
+  }],
+  'risk-left': [{
+    x: 1250, y: -580, width: 1300, height: 1000,
+    color: [237, 15, 0], opacity: 1,
+    stops: [[0, 0.16], [42, 0.064], [75, 0.008], [100, 0]],
+  }, { ...cornerSpot, x: -540 }],
   cooking: [{
     x: 401, y: 60, width: 1836, height: 1507,
     color: [237, 15, 0], opacity: 1,

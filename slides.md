@@ -233,3 +233,494 @@ const close = () => activeModal.value = null
 </StateQuizCode>
 
 </div>
+
+---
+layout: default
+variant: diagonal-left
+clicks: 4
+---
+
+<p class="absolute top-[96px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Local или Application</p>
+
+<h1 class="absolute top-[146px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.1760574395592deg,#fff_1.5437%,#999_99.362%)]">Список адресов</h1>
+
+<div class="real-case-bullets absolute top-[298px] left-[-1px] flex w-[554px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
+  <p v-click="1" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Истина на сервере</span></p>
+  <p v-click="2" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Меняется by action</span></p>
+  <p v-click="3" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>От него зависит Application State</span></p>
+  <p v-click="4" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Используется только в адресах</span></p>
+</div>
+
+<AddressExample static :active-address="null" class="absolute top-[308px] left-[804px]" />
+
+---
+layout: default
+variant: diagonal-left
+clicks: 3
+---
+
+<p class="absolute top-[96px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+
+<h1 class="absolute top-[146px] left-[0] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.51865950802929deg,#fff_1.5437%,#999_99.362%)]">Активный адрес</h1>
+
+<div class="real-case-bullets absolute top-[298px] left-[-1px] flex w-[469px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
+  <p v-click="1" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Истина на клиенте</span></p>
+  <p v-click="2" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Меняется со временем</span></p>
+  <p v-click="3" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Используется повсеместно</span></p>
+</div>
+
+<AddressExample static class="absolute top-[308px] left-[804px]" />
+
+---
+layout: default
+variant: diagonal
+clicks: 3
+---
+
+<p class="absolute top-[96px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Local или Application</p>
+
+<h1 class="absolute top-[146px] left-[0] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.25069355919166deg,#fff_1.5437%,#999_99.362%)]">А каталог и магазин?</h1>
+
+<div class="real-case-bullets absolute top-[298px] left-[-1px] flex w-[529px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
+  <p v-click="1" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Истина на сервере</span></p>
+  <p v-click="2" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Зависит от выбранного адреса</span></p>
+  <p v-click="3" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Используется не везде</span></p>
+</div>
+
+<CatalogExample static class="absolute top-[308px] left-[708px]" />
+
+---
+layout: default
+variant: diagonal
+clicks: 4
+---
+
+<p class="absolute top-[96px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
+
+<h1 class="absolute top-[146px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(115.04475892308335deg,#fff_1.5437%,#999_99.362%)]">За что мы любим Store</h1>
+
+<StoreBenefitsCards class="absolute inset-x-0 top-[298px]" />
+
+---
+layout: default
+variant: none
+showLogo: false
+showNumbers: false
+---
+
+<img class="store-everything-background pointer-events-none absolute left-[-80px] top-0 block h-full w-[1920px] max-w-none" :src="'/images/store-everything-background-2x.png'" alt="">
+
+<div class="pointer-events-none absolute left-[-250.914px] top-[285.12px] flex h-[846.626px] w-[1154.261px] items-center justify-center" aria-hidden="true">
+  <div class="relative h-[587.001px] w-[1033.32px] rotate-[-15.83deg]">
+    <img class="absolute left-[-100px] top-[-100px] max-w-none" :src="'/images/delete-address-focal.svg'" alt="">
+  </div>
+</div>
+
+<img class="store-everything-character absolute left-[770.273px] top-[224px] block h-[735px] w-[496.274px] max-w-none" :src="'/images/store-everything-character-2x.png'" alt="Вовка из мультфильма «Вовка в Тридевятом царстве»">
+
+<img class="store-everything-bucket absolute left-[474px] top-[575.651px] block h-[383.129px] w-[316.617px] max-w-none" :src="'/images/store-everything-bucket-2x.png'" alt="Ведро с берёзовыми поленьями">
+
+<h1 class="absolute top-[88px] left-[249px] m-0 w-[1262px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-[#fafafa]">Давайте делать всё в Store!</h1>
+
+---
+layout: store-code
+clicks: 4
+---
+
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.1760574395592deg,#fff_1.5437%,#999_99.362%)]">Список адресов</h1>
+
+<div class="store-addresses-content absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
+
+<div class="store-notes flex w-[402px] shrink-0 flex-col gap-[24px] font-body text-[30px] leading-[38px] text-body">
+  <p class="m-0"><span class="font-bold text-accent">addresses</span> – данные</p>
+  <p class="m-0"><span class="font-bold text-accent">isLoading</span> – загрузка</p>
+  <p class="m-0"><span class="font-bold text-accent">error</span> – ошибка</p>
+  <p class="m-0"><span class="font-bold text-accent">loadAddresses</span> – action</p>
+</div>
+
+<StoreCodePanel :line-height="32">
+
+````md magic-move
+```ts {all|7-9|11-13|15}
+import { defineStore } from 'pinia'
+import { ref } from 'vue'
+import { useAddressesApi } from '@/http-transport/addresses'
+
+export const useAddressesStore = defineStore('addresses', () => {
+  const api = useAddressesApi()
+  const addresses = ref([])
+  const isLoading = ref(false)
+  const error = ref(null)
+
+  async function loadAddresses() {
+    // ...
+  }
+
+  return { addresses, isLoading, error, loadAddresses }
+})
+```
+```ts {all}
+async function loadAddresses() {
+  isLoading.value = true
+  error.value = null
+
+  try {
+    const nextAddresses = await api.list()
+    addresses.value = [...nextAddresses]
+  } catch {
+    error.value = 'Не удалось загрузить адреса'
+  } finally {
+    isLoading.value = false
+  }
+}
+```
+````
+
+</StoreCodePanel>
+
+</div>
+
+---
+layout: store-code
+clicks: 1
+---
+
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(102.9576450088695deg,#fff_1.5437%,#999_99.362%)]">Все actions</h1>
+
+<div class="store-actions-content absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
+
+<div class="store-notes flex w-[402px] shrink-0 flex-col gap-[24px] font-body font-bold text-[30px] leading-[38px] text-accent">
+  <p class="m-0">Добавить адрес</p>
+  <p class="m-0">Удалить адрес</p>
+  <p class="m-0">Обновить адрес</p>
+</div>
+
+<StoreCodePanel :line-height="28">
+
+````md magic-move
+```ts {all}
+import { defineStore } from 'pinia'
+import { ref } from 'vue'
+import { useAddressesApi } from '@/http-transport/addresses'
+
+export const useAddressesStore = defineStore('addresses', () => {
+  ...
+  async function loadAddresses() {
+    ...
+  }
+  async function createAddress(dto: CreateAddressDTO) {
+    ...
+  }
+  async function removeAddress(addressId: string) {
+    ...
+  }
+  async function updateAddress(dto: UpdateAddressDTO) {
+    ...
+  }
+})
+```
+```ts {all}
+async function removeAddress(addressId: string) {
+  isLoading.value = true
+  error.value = null
+
+  try {
+    await api.remove(addressId)
+    await loadAddresses()
+  } catch {
+    error.value = 'Не удалось удалить адрес'
+  } finally {
+    isLoading.value = false
+  }
+}
+```
+````
+
+</StoreCodePanel>
+
+</div>
+
+---
+layout: store-code
+clicks: 3
+---
+
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.51865950802929deg,#fff_1.5437%,#999_99.362%)]">Активный адрес</h1>
+
+<div class="store-active-address-content absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
+<div class="store-active-address-notes flex w-[402px] shrink-0 flex-col gap-[24px] font-body text-[30px] leading-[38px] text-body">
+  <p class="m-0"><span class="font-bold text-accent">activeAddressId</span> – выбранный ID</p>
+  <p class="m-0"><span class="font-bold text-accent">activeAddress</span> – вычисляемый адрес</p>
+  <p class="m-0"><span class="font-bold text-accent">selectAddress</span> – action выбора</p>
+</div>
+
+<StoreCodePanel :line-height="28">
+
+````md magic-move
+```ts {6-7|9-12|15-17|19}
+import { defineStore } from 'pinia'
+import { computed, ref } from 'vue'
+import { useAddressesStore } from './addresses'
+
+export const useActiveAddressStore = defineStore('active-address', () => {
+  const addresses = useAddressesStore()
+  const activeAddressId = ref(null)
+
+  const activeAddress = computed(() =>
+    addresses.addresses.find(
+      (address) => address.id === activeAddressId.value,
+    ),
+  )
+
+  function selectAddress(addressId: string) {
+    activeAddressId.value = addressId
+  }
+
+  return { activeAddress, activeAddressId, selectAddress }
+})
+```
+````
+
+</StoreCodePanel>
+</div>
+
+---
+layout: store-code
+---
+
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(117.15031701376903deg,#fff_1.5437%,#999_99.362%)]">Актуализация состояния</h1>
+
+<p class="refresh-definition absolute top-[288px] inset-x-[28px] m-0 font-body font-normal text-[40px] leading-[1.2] text-secondary">Refresh – повторное получение данных, чтобы клиентская копия снова соответствовала состоянию на сервере.</p>
+
+<div class="refresh-conditions absolute top-[496px] inset-x-[28px] flex flex-col gap-[16px] font-body">
+  <div class="refresh-condition relative flex h-[128px] items-center gap-[32px]">
+    <p class="m-0 w-[402px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">60 секунд</p>
+    <p class="m-0 min-w-0 flex-1 font-normal text-[32px] leading-[1.2] text-secondary">Магазин обновляется раз в минуту</p>
+    <div class="refresh-separator absolute inset-x-0 bottom-0 h-[1px] bg-[#ed0f00]/25" aria-hidden="true"></div>
+  </div>
+  <div class="refresh-condition relative flex h-[128px] items-center gap-[32px]">
+    <p class="m-0 w-[402px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">Состояние клиента</p>
+    <p class="m-0 min-w-0 flex-1 font-normal text-[32px] leading-[1.2] text-secondary">Клиенту нужно обновлять состояние</p>
+    <div class="refresh-separator absolute inset-x-0 bottom-0 h-[1px] bg-[#ed0f00]/25" aria-hidden="true"></div>
+  </div>
+  <div class="refresh-condition relative flex h-[128px] items-center gap-[32px]">
+    <p class="m-0 w-[402px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">Повторный запрос</p>
+    <p class="m-0 min-w-0 flex-1 font-normal text-[32px] leading-[1.2] text-secondary">Обновление нужно запускать автоматически</p>
+    <div class="refresh-separator absolute inset-x-0 bottom-0 h-[1px] bg-[#ed0f00]/25" aria-hidden="true"></div>
+  </div>
+</div>
+
+---
+layout: store-code
+clicks: 7
+---
+
+
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.0792614279172deg,#fff_1.5437%,#999_99.362%)]">Ближайший магазин</h1>
+
+<div class="store-nearest-shop-body absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
+<div class="store-nearest-shop-notes flex w-[402px] shrink-0 flex-col gap-[24px] font-body text-[32px] leading-[1.2] text-white">
+  <p class="m-0"><span class="font-bold text-accent">store</span> – найденный магазин</p>
+  <p class="m-0"><span class="font-bold text-accent">isLoading</span> – загрузка</p>
+  <p class="m-0"><span class="font-bold text-accent">error</span> – ошибка</p>
+</div>
+
+<StoreCodePanel :line-height="28" class="relative top-[-28px]">
+
+````md magic-move
+```ts {all|5-7|9-19|21}
+export const useActiveStoreStore = defineStore('active-store', () => {
+  const address = useActiveAddressStore()
+  const api = useStoresApi()
+
+  const store = ref(null)
+  const isLoading = ref(false)
+  const error = ref(null)
+
+  async function loadNearestStore(addressId: string) {
+    isLoading.value = true
+    error.value = null
+    try {
+      store.value = await api.nearest(addressId)
+    } catch {
+      error.value = 'Не удалось загрузить магазин'
+    } finally {
+      isLoading.value = false
+    }
+  }
+
+  return { store, isLoading, error, loadNearestStore }
+})
+```
+```ts {1-11|13-16}
+async function loadNearestStore(addressId: string) {
+  isLoading.value = true
+  error.value = null
+  try {
+    store.value = await api.nearest(addressId)
+  } catch {
+    error.value = 'Не удалось загрузить магазин'
+  } finally {
+    isLoading.value = false
+  }
+}
+
+watch(
+  () => address.activeAddress.id,
+  async addressId => loadNearestStore(addressId),
+)
+```
+```ts {1-4|6-9}
+watch(
+  () => address.activeAddress.id,
+  async addressId => loadNearestStore(addressId),
+)
+
+window.setInterval(
+  () => loadNearestStore(address.activeAddress.id),
+  60_000,
+)
+```
+````
+
+</StoreCodePanel>
+</div>
+
+---
+layout: store-code
+variant: risk-left
+---
+
+<p class="invalidation-kicker absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent whitespace-nowrap">Реальная жизнь</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(115.33539188446608deg,#fff_1.5437%,#999_99.362%)]">Контроль инвалидации</h1>
+
+<div class="invalidation-clown-crop absolute left-[887px] top-[258px] w-[729px] h-[836px] overflow-hidden rounded-[26.954px] pointer-events-none">
+  <img class="invalidation-clown absolute left-[-37.3327441%] top-[-5.8117626%] w-[174.6654726%] h-[105.8498564%] max-w-none" src="/images/invalidation-clown.png" alt="Клоун жонглирует мячами">
+</div>
+
+<div class="invalidation-principles absolute left-[28px] top-[300px] flex flex-col items-start gap-[32px] font-body text-[32px] leading-[42px] text-white">
+  <div class="invalidation-principle flex items-center gap-[32px]">
+    <img class="block shrink-0 max-w-none" src="/images/invalidation-cross.svg" alt="" width="64" height="64">
+    <p class="m-0 whitespace-nowrap">Ручное поддержание инвариантов</p>
+  </div>
+  <div class="invalidation-principle flex items-center gap-[32px]">
+    <img class="block shrink-0 max-w-none" src="/images/invalidation-cross.svg" alt="" width="64" height="64">
+    <p class="m-0 whitespace-nowrap">Разрозненная логика зависимостей</p>
+  </div>
+  <div class="invalidation-principle flex items-center gap-[32px]">
+    <img class="block shrink-0 max-w-none" src="/images/invalidation-cross.svg" alt="" width="64" height="64">
+    <p class="m-0 whitespace-nowrap">Риск рассинхронизации</p>
+  </div>
+</div>
+
+---
+layout: store-code
+clicks: 3
+---
+
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.34721910752687deg,#fff_1.5437%,#999_99.362%)]">Каталог</h1>
+
+<div class="store-catalog-body absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
+<div class="store-catalog-notes flex w-[402px] shrink-0 flex-col gap-[24px] font-body text-[32px] leading-[1.2] text-white">
+  <p class="m-0"><span class="font-bold text-accent">products</span> – данные каталога</p>
+  <p class="m-0"><span class="font-bold text-accent">isLoading</span> – загрузка</p>
+  <p class="m-0"><span class="font-bold text-accent">error</span> – ошибка</p>
+</div>
+
+<StoreCodePanel :line-height="28" class="relative top-[-28px]">
+
+````md magic-move
+```ts {5-9|11-13|15-17|19}
+import { defineStore } from 'pinia'
+import { ref, watch } from 'vue'
+import { useActiveStoreStore } from './active-store'
+
+export const useCatalogStore = defineStore('catalog', () => {
+  const products = ref([])
+  const isLoading = ref(false)
+  const error = ref(null)
+  const store = useActiveStoreStore()
+
+  async function loadCatalog(storeId: string) {
+    // ...
+  }
+
+  watch(() => store.store.id, async (storeId) => {
+    await loadCatalog(storeId)
+  })
+
+  return { products, isLoading, error, loadCatalog }
+})
+```
+````
+
+</StoreCodePanel>
+</div>
+
+---
+layout: store-code
+---
+
+
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Проблемы</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(109.33529736428274deg,#fff_1.5437%,#999_99.362%)]">Проблемы watch</h1>
+
+<div class="watch-problems absolute top-[304px] inset-x-[28px] flex flex-col gap-[24px] font-body">
+  <div class="watch-problem relative flex h-[176px] items-center gap-[48px]">
+    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">01</p>
+    <div class="min-w-0 flex-1 flex flex-col gap-[12px] leading-[1.2]">
+      <p class="m-0 font-bold text-[40px] text-white">Race conditions</p>
+      <p class="m-0 font-normal text-[32px] text-secondary">Старый ответ может прийти позже и перезаписать актуальные данные.</p>
+    </div>
+    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
+  </div>
+  <div class="watch-problem relative flex h-[176px] items-center gap-[48px]">
+    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">02</p>
+    <div class="min-w-0 flex-1 flex flex-col gap-[12px] leading-[1.2]">
+      <p class="m-0 font-bold text-[40px] text-white">Неявность</p>
+      <p class="m-0 font-normal text-[32px] text-secondary">Причина запроса спрятана в цепочке реактивных наблюдателей.</p>
+    </div>
+    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
+  </div>
+  <div class="watch-problem relative flex h-[176px] items-center gap-[48px]">
+    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
+    <div class="min-w-0 flex-1 flex flex-col gap-[12px] leading-[1.2]">
+      <p class="m-0 font-bold text-[40px] text-white">Отмена запросов</p>
+      <p class="m-0 font-normal text-[32px] text-secondary">Очистку таймеров и отмену устаревших запросов пишем вручную.</p>
+    </div>
+    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
+  </div>
+</div>
+
+
+---
+layout: store-code
+---
+
+
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Проблемы</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(102.13636440638527deg,#fff_1.5437%,#999_99.362%)]">Boilerplate</h1>
+
+<ul class="boilerplate-list absolute top-[320px] left-[28px] m-0 p-0 w-[836px] list-none flex flex-col gap-[32px] font-body font-normal text-[40px] leading-[1.2] text-white">
+  <li class="flex items-center gap-[24px]"><span class="w-[8px] h-[8px] shrink-0 bg-accent" aria-hidden="true"></span><span class="min-w-0 flex-1">Одинаковые CRUD-ы</span></li>
+  <li class="flex items-center gap-[24px]"><span class="w-[8px] h-[8px] shrink-0 bg-accent" aria-hidden="true"></span><span class="min-w-0 flex-1">Флаги асинхронщины</span></li>
+  <li class="flex items-center gap-[24px]"><span class="w-[8px] h-[8px] shrink-0 bg-accent" aria-hidden="true"></span><span class="min-w-0 flex-1">Обработка ошибок</span></li>
+  <li class="flex items-center gap-[24px]"><span class="w-[8px] h-[8px] shrink-0 bg-accent" aria-hidden="true"></span><span class="min-w-0 flex-1">Загрузка из API</span></li>
+</ul>
+
+<img class="boilerplate-iceberg absolute top-[288px] right-[27.56px] block max-w-none w-[584.878px] h-[640px] rounded-[16px] object-cover" :src="'/images/boilerplate-iceberg-2x.png'" alt="Айсберг: над водой data, под водой isLoading, error, refetch, fetch, clear" width="1170" height="1280">
