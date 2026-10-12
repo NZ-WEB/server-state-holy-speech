@@ -1,0 +1,16 @@
+{
+  "name": "server-state-holy-v2",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "dev": "slidev --port 3030",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "53.0.0",
+    "@slidev/theme-default": "0.25.0",
+    "vue": "^3.5.0"
+  }
+}
