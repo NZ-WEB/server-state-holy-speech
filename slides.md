@@ -724,3 +724,115 @@ layout: store-code
 </ul>
 
 <img class="boilerplate-iceberg absolute top-[288px] right-[27.56px] block max-w-none w-[584.878px] h-[640px] rounded-[16px] object-cover" :src="'/images/boilerplate-iceberg-2x.png'" alt="Айсберг: над водой data, под водой isLoading, error, refetch, fetch, clear" width="1170" height="1280">
+
+---
+layout: store-code
+clicks: 1
+---
+
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Альтернатива Store</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(112.97189370889106deg,#fff_1.5437%,#999_99.362%)]">Спасибо composable</h1>
+
+<div class="composable-body absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
+  <div class="composable-notes flex w-[402px] shrink-0 flex-col gap-[24px] font-body font-normal text-[32px] leading-[1.2] text-white">
+    <p class="m-0">Реализует boilerplate</p>
+    <p class="m-0">Скрывает реализацию</p>
+  </div>
+
+<StoreCodePanel :line-height="28" class="relative top-[-28px]">
+
+````md magic-move
+```ts
+export function useFetch<T>(request: () => Promise<T>) {
+  const data = ref<T>()
+  const isLoading = ref(false)
+  const error = ref<Error>()
+
+  async function execute() {
+    isLoading.value = true
+    try { data.value = await request() }
+    catch (cause) { error.value = cause as Error }
+    finally { isLoading.value = false }
+  }
+
+  return { data, isLoading, error, execute }
+}
+```
+```ts
+import { useFetch } from '@vueuse/core'
+
+const { data, error, isFetching, execute } = useFetch(
+  '/api/addresses',
+  { immediate: true },
+).json<Address[]>()
+```
+````
+
+</StoreCodePanel>
+</div>
+
+---
+layout: store-code
+variant: none
+clicks: 3
+---
+
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Проблемы composable</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 w-[1122px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-white">Дедупликация запросов</h1>
+
+<RequestDeduplicationDiagram />
+
+---
+layout: store-code
+---
+
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Проблемы composable</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(116.7271941937475deg,#fff_1.5437%,#999_99.362%)]">Composable не подходит</h1>
+
+<div class="composable-limitations absolute top-[375px] inset-x-[28px] flex flex-col gap-[64px] font-body">
+  <div class="composable-limitations-row flex items-start gap-[32px]">
+    <p class="m-0 w-[402px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">Нет дедупликации</p>
+    <p class="m-0 min-w-0 flex-1 font-normal text-[32px] leading-[42px] text-secondary">Одинаковые запросы запускаются повторно в разных компонентах</p>
+  </div>
+  <div class="composable-limitations-separator h-px shrink-0 bg-white/20" aria-hidden="true"></div>
+  <div class="composable-limitations-row flex items-start gap-[32px]">
+    <p class="m-0 w-[402px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">Дублирование состояния</p>
+    <p class="m-0 min-w-0 flex-1 font-normal text-[32px] leading-[42px] text-secondary">Каждый экземпляр composable хранит собственные данные, загрузку и ошибку</p>
+  </div>
+  <div class="composable-limitations-separator h-px shrink-0 bg-white/20" aria-hidden="true"></div>
+  <div class="composable-limitations-row flex items-start gap-[32px]">
+    <p class="m-0 w-[402px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">Сложный refresh</p>
+    <p class="m-0 min-w-0 flex-1 font-normal text-[32px] leading-[42px] text-secondary">Интервалы и повторные запросы приходится координировать вручную</p>
+  </div>
+</div>
+
+---
+layout: store-code
+clicks: 3
+---
+
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Кэш</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.40703837884945deg,#fff_1.5437%,#999_99.362%)]">Кэш – что за зверь?</h1>
+
+<p class="absolute top-[300px] left-[28px] w-[836px] m-0 font-body font-normal text-[32px] leading-[42px] text-white">Кэш – временная копия данных, которая позволяет не обращаться к источнику истины при каждом чтении.</p>
+
+<p class="absolute top-[466px] left-[28px] w-[704px] m-0 font-body font-normal text-[24px] leading-[1.35] text-secondary">Ключ кэша – уникальный идентификатор, по которому находим нужную копию данных.</p>
+
+<BackendCacheDiagram class="absolute top-[304px] left-[896px]" />
+
+---
+layout: store-code
+clicks: 4
+---
+
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Кэш</p>
+
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.38811141368086deg,#fff_1.5437%,#999_99.362%)]">Инвалидация</h1>
+
+<p class="invalidation-definition absolute top-[300px] left-[28px] m-0 w-[1268px] font-body font-normal text-[32px] leading-[42px] text-secondary">Инвалидация кэша – пометка сохранённых данных как устаревших, после которой следующий потребитель получает свежую версию.</p>
+
+<InvalidationFlow class="absolute top-[574px] left-[28px]" :stage="$clicks" />
