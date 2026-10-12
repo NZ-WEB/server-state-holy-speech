@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'RF Dewi Extended';
+  src: url('/fonts/RFDewiExtended-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('/fonts/NunitoSans-Variable.ttf') format('truetype');
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/fonts/SFPro-Variable.ttf') format('truetype');
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+.slidev-layout {
+  font-family: 'Nunito Sans', sans-serif;
+  font-variation-settings: 'YTLC' 500, 'wdth' 100;
+}
+
+:where(.slidev-layout h1, .slidev-layout h2, .slidev-layout h3, .slidev-layout p) {
+  margin: 0;
+}
