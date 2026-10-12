@@ -32,7 +32,7 @@ const addresses = [
         :class="stage >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none translate-y-[8px]'"
       >
         <span class="relative block h-[28px] w-[28px] shrink-0 overflow-hidden" aria-hidden="true">
-          <img class="absolute left-[4.8333px] top-[4.8333px] block max-w-none" src="/images/addresses-plus.svg" alt="">
+          <PublicImage class="absolute left-[4.8333px] top-[4.8333px] block max-w-none" src="/images/addresses-plus.svg" alt="" />
         </span>
         <span class="whitespace-nowrap">Добавить адрес</span>
       </button>

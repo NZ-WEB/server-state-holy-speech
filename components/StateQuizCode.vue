@@ -38,12 +38,12 @@ const revealed = computed(() => props.answerClicks.includes($clicks.value))
     >
       <div v-if="answer === 'local'" class="absolute right-[34.472px] bottom-[14.853px] flex items-center justify-center w-[339.528px] h-[179.147px]">
         <div class="relative w-[324.813px] h-[140.61px] rotate-[-7deg] overflow-hidden">
-          <img class="absolute left-[-1.98%] top-[-6.78%] w-[104%] h-[114.5%] max-w-none" src="/images/state-answer-local.png" alt="LOCAL">
+          <PublicImage class="absolute left-[-1.98%] top-[-6.78%] w-[104%] h-[114.5%] max-w-none" src="/images/state-answer-local.png" alt="LOCAL" />
         </div>
       </div>
       <div v-else class="absolute right-[34.623px] bottom-[14.091px] flex items-center justify-center w-[565.377px] h-[204.909px]">
         <div class="relative w-[552.605px] h-[138.596px] rotate-[-7deg] overflow-hidden">
-          <img class="absolute left-[-1.57%] top-[-18.31%] w-[103.15%] h-[137.09%] max-w-none" src="/images/state-answer-application.png" alt="APPLICATION">
+          <PublicImage class="absolute left-[-1.57%] top-[-18.31%] w-[103.15%] h-[137.09%] max-w-none" src="/images/state-answer-application.png" alt="APPLICATION" />
         </div>
       </div>
     </div>

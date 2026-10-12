@@ -40,7 +40,7 @@ const destinations = [
       :class="$clicks >= 2 ? 'opacity-100' : 'opacity-0'"
       :aria-hidden="$clicks < 2"
     >
-      <img :src="`${assetBase}backend-database-arrow.svg`" alt="" class="absolute top-[171px] left-[480.5px] block max-w-none" width="167.546" height="183">
+      <PublicImage :src="`${assetBase}backend-database-arrow.svg`" alt="" class="absolute top-[171px] left-[480.5px] block max-w-none" width="167.546" height="183" />
       <p class="absolute top-[264px] left-[641px] w-[276px] m-0 text-[24px] leading-[28.8px] font-bold">5 секунд</p>
     </div>
 
@@ -51,7 +51,7 @@ const destinations = [
       :aria-hidden="$clicks < 3"
     >
       <div class="absolute top-[171px] left-[204px] w-[156px] h-[182px] scale-x-[-1]">
-        <img :src="`${assetBase}backend-cache-arrow.svg`" alt="" class="absolute top-0 left-[-1.5px] block max-w-none" width="168.546" height="183.5">
+        <PublicImage :src="`${assetBase}backend-cache-arrow.svg`" alt="" class="absolute top-0 left-[-1.5px] block max-w-none" width="168.546" height="183.5" />
       </div>
       <p class="absolute top-[264px] left-0 w-[402px] m-0 text-[24px] leading-[28.8px] font-bold text-[#41e786]">50 миллисекунд</p>
     </div>

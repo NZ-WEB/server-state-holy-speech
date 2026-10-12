@@ -40,7 +40,7 @@ const benefits = [
       :aria-hidden="$clicks < index + 1"
     >
       <div class="relative h-[160px] w-[160px] shrink-0 overflow-hidden" aria-hidden="true">
-        <img :src="benefit.image" alt="" class="absolute top-[-14.5px] left-[-20px] h-[188px] w-[188px] max-w-none object-bottom" />
+        <PublicImage :src="benefit.image" alt="" class="absolute top-[-14.5px] left-[-20px] h-[188px] w-[188px] max-w-none object-bottom" />
       </div>
       <div class="relative z-1 flex min-w-0 flex-1 flex-col gap-[12px] font-body">
         <h2 class="m-0 text-[40px] font-bold leading-[48px]" :class="benefit.color">{{ benefit.title }}</h2>

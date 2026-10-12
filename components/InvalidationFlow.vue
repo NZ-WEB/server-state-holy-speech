@@ -20,7 +20,7 @@ const arrow = `${import.meta.env.BASE_URL}images/invalidation-arrow.svg`
         :class="stage >= index + 1 ? 'opacity-100' : 'opacity-0'"
         aria-hidden="true"
       >
-        <img :src="arrow" alt="" width="35" height="22.0919" class="absolute left-[-1.5px] top-[-11.04595px] block max-w-none" />
+        <PublicImage :src="arrow" alt="" width="35" height="22.0919" class="absolute left-[-1.5px] top-[-11.04595px] block max-w-none" />
       </div>
       <article
         class="invalidation-step relative box-border flex h-[208px] w-[396px] shrink-0 flex-col items-center justify-center gap-[16px] rounded-[24px] border-solid bg-white/5 p-[24px] text-center font-body leading-[1.2] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)] transition-[opacity,transform] duration-500 ease-out motion-reduce:duration-0 motion-reduce:transform-none"

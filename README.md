@@ -6,6 +6,27 @@ pnpm dev
 pnpm build
 ```
 
+## GitHub Pages
+
+`.github/workflows/deploy-pages.yml` собирает презентацию и публикует её при
+push в `main`; также доступен ручной запуск `workflow_dispatch`.
+В Settings → Pages источником публикации должен быть GitHub Actions.
+Для приватного репозитория Pages требует GitHub Pro; публичный репозиторий
+можно публиковать на GitHub Free.
+
+Адрес публикации: `https://nz-web.github.io/server-state-holy-v2/`.
+Сборка использует путь репозитория и hash-навигацию, поэтому прямые ссылки
+на слайды работают без серверных перенаправлений.
+
+```sh
+pnpm build --base /server-state-holy-v2/ --router-mode hash
+pnpm exec vite preview --base /server-state-holy-v2/
+```
+
+`PublicImage` автоматически учитывает путь публикации для изображений из
+`public/`, включая динамические картинки и SVG. Локальный `pnpm dev`
+продолжает работать по обычным адресам `/1`, `/2`, …
+
 Slidev использует полотно 1920×1080 и сам масштабирует его под экран.
 Шрифты и изображения находятся в `public/`; внешняя загрузка не нужна.
 Все слайды описаны в одном `slides.md`, без подключений других Markdown-файлов.

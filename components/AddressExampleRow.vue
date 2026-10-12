@@ -16,8 +16,8 @@ defineProps<{
     :aria-label="`${label}: ${street}`"
   >
     <span class="relative block h-[32px] w-[32px] shrink-0" aria-hidden="true">
-      <img class="absolute inset-0 block max-w-none transition-opacity duration-500 motion-reduce:duration-0" :class="active ? 'opacity-0' : 'opacity-100'" src="/images/addresses-marker.svg" alt="">
-      <img class="absolute inset-0 block max-w-none transition-opacity duration-500 motion-reduce:duration-0" :class="active ? 'opacity-100' : 'opacity-0'" src="/images/addresses-home-active.svg" alt="">
+      <PublicImage class="absolute inset-0 block max-w-none transition-opacity duration-500 motion-reduce:duration-0" :class="active ? 'opacity-0' : 'opacity-100'" src="/images/addresses-marker.svg" alt="" />
+      <PublicImage class="absolute inset-0 block max-w-none transition-opacity duration-500 motion-reduce:duration-0" :class="active ? 'opacity-100' : 'opacity-0'" src="/images/addresses-home-active.svg" alt="" />
     </span>
     <div class="flex min-w-0 flex-1 flex-col items-start gap-[12px] overflow-hidden">
       <div class="flex h-[24px] w-[596px] items-center gap-[8px] whitespace-nowrap text-[20px] leading-[24px] transition-colors duration-500 motion-reduce:duration-0" :class="active ? 'text-[#ff7166]' : 'text-muted'">
@@ -36,7 +36,7 @@ defineProps<{
       class="relative h-[32px] w-[32px] shrink-0 overflow-hidden border-0 bg-transparent p-0 !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"
       :class="showDelete ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none translate-y-[8px]'"
     >
-      <img class="absolute left-[3px] top-[3px] block max-w-none" src="/images/addresses-delete.svg" alt="" aria-hidden="true">
+      <PublicImage class="absolute left-[3px] top-[3px] block max-w-none" src="/images/addresses-delete.svg" alt="" aria-hidden="true" />
     </button>
   </article>
 </template>

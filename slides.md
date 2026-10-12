@@ -18,7 +18,7 @@ showNumbers: false
 ---
 
 <div class="relative h-full">
-  <img class="absolute left-[734px] top-[-170px] w-[1320px] h-[1320px] max-w-none object-cover opacity-75" src="/images/cover-glass-gears.png" alt="" aria-hidden="true">
+  <PublicImage class="absolute left-[734px] top-[-170px] w-[1320px] h-[1320px] max-w-none object-cover opacity-75" src="/images/cover-glass-gears.png" alt="" aria-hidden="true" />
   <div class="absolute top-[168px] left-0 z-1">
     <h1 class="m-0 w-[925px] font-heading font-black text-[128px] leading-[0.9] tracking-normal">Клиентский<br>кэш</h1>
     <p class="mt-[64px] text-body text-[40px] leading-[1.2]">как держать<br>серверные данные<br>под контролем</p>
@@ -31,7 +31,7 @@ variant: top-right
 ---
 
 <div class="relative h-full">
-  <img class="absolute right-0 bottom-0 w-[935px] h-[1016px] max-w-none object-cover" src="/images/speaker-portrait.png" alt="Евгений Федосеев">
+  <PublicImage class="absolute right-0 bottom-0 w-[935px] h-[1016px] max-w-none object-cover" src="/images/speaker-portrait.png" alt="Евгений Федосеев" />
   <div class="absolute top-[240px] left-0">
     <h1 class="m-0 font-heading font-black text-[96px] leading-[0.9] tracking-[-2px]">Евгений<br>Федосеев</h1>
     <div class="inline-flex mt-[63.2px] py-[22px] px-[30px] border-[2px] border-solid border-white/20 rounded-[20px] bg-[linear-gradient(155deg,rgba(255,255,255,0.02),rgba(255,255,255,0.05))] backdrop-blur-[19px]"><p class="text-body text-[32px] leading-[42px] whitespace-nowrap">Frontend Guild Lead в MAGNIT TECH</p></div>
@@ -132,7 +132,7 @@ class: "[&_figure]:!absolute [&_figure]:!left-[364px] [&_figure]:!top-[224px] [&
 
 <div class="pointer-events-none absolute left-[-614.91px] top-[61.12px] -z-1 flex h-[846.626px] w-[1154.261px] items-center justify-center" aria-hidden="true">
   <div class="relative h-[587.001px] w-[1033.32px] rotate-[-15.83deg]">
-    <img class="absolute left-[-100px] top-[-100px] max-w-none" :src="'/images/delete-address-focal.svg'" alt="">
+    <PublicImage class="absolute left-[-100px] top-[-100px] max-w-none" :src="'/images/delete-address-focal.svg'" alt="" />
   </div>
 </div>
 
@@ -145,16 +145,16 @@ variant: cooking
 
 <p class="absolute left-[-2px] top-[200px] m-0 w-[1704px] font-body font-normal text-[32px] leading-[42px] text-accent"><span class="relative top-[1px]">Выглядит сложно даже без кода</span></p>
 
-<img class="cooking-meme absolute left-[538px] top-[247px] w-[1260px] h-[834px] max-w-none object-cover" src="/images/cooking-meme.png" alt="Мужчина разводит руками в недоумении">
+<PublicImage class="cooking-meme absolute left-[538px] top-[247px] w-[1260px] h-[834px] max-w-none object-cover" src="/images/cooking-meme.png" alt="Мужчина разводит руками в недоумении" />
 
-<img class="cooking-glass absolute left-[404px] top-[475.745px] w-[553.578px] h-[232.192px] max-w-none origin-top-left rotate-[-8.177960676deg] opacity-85" src="/images/cooking-glass.png" alt="Я просто хотел удалить адрес">
+<PublicImage class="cooking-glass absolute left-[404px] top-[475.745px] w-[553.578px] h-[232.192px] max-w-none origin-top-left rotate-[-8.177960676deg] opacity-85" src="/images/cooking-glass.png" alt="Я просто хотел удалить адрес" />
 
 ---
 layout: default
 variant: section-right
 ---
 
-<img class="absolute left-[838px] top-[62px] w-[934px] h-[981px] max-w-none object-cover opacity-85 pointer-events-none" src="/images/state-types-intro-glass-controls.png" alt="" aria-hidden="true">
+<PublicImage class="absolute left-[838px] top-[62px] w-[934px] h-[981px] max-w-none object-cover opacity-85 pointer-events-none" src="/images/state-types-intro-glass-controls.png" alt="" aria-hidden="true" />
 
 <h1 class="absolute left-[-2px] top-[264px] m-0 w-[836px] font-heading font-black text-[120px] leading-[108px] tracking-[-2px] text-heading">Типы<br>состояний</h1>
 
@@ -308,17 +308,17 @@ showLogo: false
 showNumbers: false
 ---
 
-<img class="store-everything-background pointer-events-none absolute left-[-80px] top-0 block h-full w-[1920px] max-w-none" :src="'/images/store-everything-background-2x.png'" alt="">
+<PublicImage class="store-everything-background pointer-events-none absolute left-[-80px] top-0 block h-full w-[1920px] max-w-none" :src="'/images/store-everything-background-2x.png'" alt="" />
 
 <div class="pointer-events-none absolute left-[-250.914px] top-[285.12px] flex h-[846.626px] w-[1154.261px] items-center justify-center" aria-hidden="true">
   <div class="relative h-[587.001px] w-[1033.32px] rotate-[-15.83deg]">
-    <img class="absolute left-[-100px] top-[-100px] max-w-none" :src="'/images/delete-address-focal.svg'" alt="">
+    <PublicImage class="absolute left-[-100px] top-[-100px] max-w-none" :src="'/images/delete-address-focal.svg'" alt="" />
   </div>
 </div>
 
-<img class="store-everything-character absolute left-[770.273px] top-[224px] block h-[735px] w-[496.274px] max-w-none" :src="'/images/store-everything-character-2x.png'" alt="Вовка из мультфильма «Вовка в Тридевятом царстве»">
+<PublicImage class="store-everything-character absolute left-[770.273px] top-[224px] block h-[735px] w-[496.274px] max-w-none" :src="'/images/store-everything-character-2x.png'" alt="Вовка из мультфильма «Вовка в Тридевятом царстве»" />
 
-<img class="store-everything-bucket absolute left-[474px] top-[575.651px] block h-[383.129px] w-[316.617px] max-w-none" :src="'/images/store-everything-bucket-2x.png'" alt="Ведро с берёзовыми поленьями">
+<PublicImage class="store-everything-bucket absolute left-[474px] top-[575.651px] block h-[383.129px] w-[316.617px] max-w-none" :src="'/images/store-everything-bucket-2x.png'" alt="Ведро с берёзовыми поленьями" />
 
 <h1 class="absolute top-[88px] left-[249px] m-0 w-[1262px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-[#fafafa]">Давайте делать всё в Store!</h1>
 
@@ -606,20 +606,20 @@ variant: risk-left
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(115.33539188446608deg,#fff_1.5437%,#999_99.362%)]">Контроль инвалидации</h1>
 
 <div class="invalidation-clown-crop absolute left-[887px] top-[258px] w-[729px] h-[836px] overflow-hidden rounded-[26.954px] pointer-events-none">
-  <img class="invalidation-clown absolute left-[-37.3327441%] top-[-5.8117626%] w-[174.6654726%] h-[105.8498564%] max-w-none" src="/images/invalidation-clown.png" alt="Клоун жонглирует мячами">
+  <PublicImage class="invalidation-clown absolute left-[-37.3327441%] top-[-5.8117626%] w-[174.6654726%] h-[105.8498564%] max-w-none" src="/images/invalidation-clown.png" alt="Клоун жонглирует мячами" />
 </div>
 
 <div class="invalidation-principles absolute left-[28px] top-[300px] flex flex-col items-start gap-[32px] font-body text-[32px] leading-[42px] text-white">
   <div class="invalidation-principle flex items-center gap-[32px]">
-    <img class="block shrink-0 max-w-none" src="/images/invalidation-cross.svg" alt="" width="64" height="64">
+    <PublicImage class="block shrink-0 max-w-none" src="/images/invalidation-cross.svg" alt="" width="64" height="64" />
     <p class="m-0 whitespace-nowrap">Ручное поддержание инвариантов</p>
   </div>
   <div class="invalidation-principle flex items-center gap-[32px]">
-    <img class="block shrink-0 max-w-none" src="/images/invalidation-cross.svg" alt="" width="64" height="64">
+    <PublicImage class="block shrink-0 max-w-none" src="/images/invalidation-cross.svg" alt="" width="64" height="64" />
     <p class="m-0 whitespace-nowrap">Разрозненная логика зависимостей</p>
   </div>
   <div class="invalidation-principle flex items-center gap-[32px]">
-    <img class="block shrink-0 max-w-none" src="/images/invalidation-cross.svg" alt="" width="64" height="64">
+    <PublicImage class="block shrink-0 max-w-none" src="/images/invalidation-cross.svg" alt="" width="64" height="64" />
     <p class="m-0 whitespace-nowrap">Риск рассинхронизации</p>
   </div>
 </div>
@@ -723,7 +723,7 @@ layout: store-code
   <li class="flex items-center gap-[24px]"><span class="w-[8px] h-[8px] shrink-0 bg-accent" aria-hidden="true"></span><span class="min-w-0 flex-1">Загрузка из API</span></li>
 </ul>
 
-<img class="boilerplate-iceberg absolute top-[288px] right-[27.56px] block max-w-none w-[584.878px] h-[640px] rounded-[16px] object-cover" :src="'/images/boilerplate-iceberg-2x.png'" alt="Айсберг: над водой data, под водой isLoading, error, refetch, fetch, clear" width="1170" height="1280">
+<PublicImage class="boilerplate-iceberg absolute top-[288px] right-[27.56px] block max-w-none w-[584.878px] h-[640px] rounded-[16px] object-cover" :src="'/images/boilerplate-iceberg-2x.png'" alt="Айсберг: над водой data, под водой isLoading, error, refetch, fetch, clear" width="1170" height="1280" />
 
 ---
 layout: store-code

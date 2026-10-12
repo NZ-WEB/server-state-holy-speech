@@ -42,7 +42,7 @@ const requests = [
       :aria-hidden="$clicks < 3"
     >
       <template v-for="request in requests" :key="request.image">
-        <img class="dedup-request-arrow absolute left-[430px] top-[324px] block max-w-none" :src="request.image" alt="" width="466" height="560" aria-hidden="true" />
+        <PublicImage class="dedup-request-arrow absolute left-[430px] top-[324px] block max-w-none" :src="request.image" alt="" width="466" height="560" aria-hidden="true" />
         <p class="absolute left-[462px] m-0 w-[402px] text-center font-bold text-[24px] leading-[26.4px] text-accent" :class="request.labelTop">loadAddresses()</p>
       </template>
     </div>

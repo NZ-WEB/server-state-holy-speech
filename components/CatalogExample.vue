@@ -37,7 +37,7 @@ const products = [
         :class="stage >= product.click ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none translate-y-[48px]'"
         :aria-hidden="stage < product.click"
       >
-        <img :src="product.image" :alt="product.name" class="block h-[287px] w-[300px] shrink-0 rounded-[24px] object-cover">
+        <PublicImage :src="product.image" :alt="product.name" class="block h-[287px] w-[300px] shrink-0 rounded-[24px] object-cover" />
         <div class="box-border flex w-full flex-col gap-[2px] px-[16px]">
           <p class="m-0 h-[32px] w-full whitespace-nowrap text-[24px] leading-[1.35]">{{ product.name }}</p>
           <p class="m-0 w-full text-[30px] font-bold leading-[38px]">{{ product.price }}</p>
