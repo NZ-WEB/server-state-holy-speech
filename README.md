@@ -14,13 +14,13 @@ push в `main`; также доступен ручной запуск `workflow_
 Для приватного репозитория Pages требует GitHub Pro; публичный репозиторий
 можно публиковать на GitHub Free.
 
-Адрес публикации: `https://nz-web.github.io/server-state-holy-v2/`.
+Адрес публикации: `https://nz-web.github.io/server-state-holy-speech/`.
 Сборка использует путь репозитория и hash-навигацию, поэтому прямые ссылки
 на слайды работают без серверных перенаправлений.
 
 ```sh
-pnpm build --base /server-state-holy-v2/ --router-mode hash
-pnpm exec vite preview --base /server-state-holy-v2/
+pnpm build --base /server-state-holy-speech/ --router-mode hash
+pnpm exec vite preview --base /server-state-holy-speech/
 ```
 
 `PublicImage` автоматически учитывает путь публикации для изображений из

@@ -89,9 +89,29 @@ export const gradientVariants = {
     color: [237, 15, 0], opacity: 1,
     stops: [[0, 0.16], [42, 0.064], [75, 0.008], [100, 0]],
   }],
+  closing: [{
+    x: -670, y: -650, width: 1300, height: 1100,
+    color: [237, 15, 0], opacity: 1,
+    stops: [[0, 0.16], [42, 0.064], [75, 0.008], [100, 0]],
+  }, {
+    x: 900, y: 450, width: 1500, height: 1300,
+    color: [237, 15, 0], opacity: 1,
+    stops: [[0, 0.48], [42, 0.192], [75, 0.024], [100, 0]],
+  }],
 } as const satisfies Record<string, readonly GradientSpot[]>
 
 export type GradientVariant = keyof typeof gradientVariants
+
+/** Match the defaults of the deck's three layouts when frontmatter omits a preset. */
+export function resolveGradientVariant(variant: unknown, layout: string): GradientVariant {
+  if (typeof variant === 'string' && Object.hasOwn(gradientVariants, variant))
+    return variant as GradientVariant
+  if (layout === 'store-code')
+    return 'store-left'
+  if (layout === 'image-center')
+    return 'diagonal'
+  return 'right'
+}
 
 export interface SlideFrameProps {
   variant?: GradientVariant

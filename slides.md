@@ -4,6 +4,10 @@ title: "Клиентский кеш: как держать серверные д
 colorSchema: dark
 aspectRatio: 16/9
 canvasWidth: 1920
+transition:
+  name: slide-left
+  enterActiveClass: 'transition-[translate] duration-500 ease-in-out motion-reduce:transition-none'
+  leaveActiveClass: 'transition-[translate] duration-500 ease-in-out motion-reduce:transition-none'
 fonts:
   sans: Nunito Sans
   local: RF Dewi Extended, Nunito Sans
@@ -1969,12 +1973,10 @@ layout: store-code
 
 ---
 layout: store-code
-variant: none
+variant: closing
 ---
 
 <!-- CONCLUSIONS-70:START -->
-<div data-node="closing-secondary-gradient" class="absolute top-[-650px] left-[-750px] h-[1100px] w-[1300px] pointer-events-none bg-[radial-gradient(ellipse_closest-side,rgba(237,15,0,0.16)_0%,rgba(237,15,0,0.064)_42%,rgba(237,15,0,0.008)_75%,transparent_100%)]" aria-hidden="true"></div>
-<div data-node="closing-focal-gradient" class="absolute top-[450px] left-[820px] h-[1300px] w-[1500px] pointer-events-none bg-[radial-gradient(ellipse_closest-side,rgba(237,15,0,0.48)_0%,rgba(237,15,0,0.192)_42%,rgba(237,15,0,0.024)_75%,transparent_100%)]" aria-hidden="true"></div>
 
 <PublicImage data-node="1:2120" class="absolute top-[20px] left-[820px] block h-[1100px] w-[1100px] max-w-none object-contain opacity-75 pointer-events-none" src="/images/closing-glass-gears.png" alt="" aria-hidden="true" />
 
