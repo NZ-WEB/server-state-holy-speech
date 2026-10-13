@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import GradientBackground from './GradientBackground.vue'
+import StarField from './StarField.vue'
 import SlideChrome from './SlideChrome.vue'
 import { computed } from 'vue'
 import { useNav, useSlideContext } from '@slidev/client'
@@ -25,6 +26,7 @@ const sharedBackground = computed(() => !isPrintMode.value
 <template>
   <div class="slidev-layout slide-frame relative isolate w-full h-full p-0 overflow-hidden text-heading" :class="sharedBackground ? 'bg-transparent' : 'bg-canvas'">
     <GradientBackground v-if="!sharedBackground" :variant="variant" />
+    <StarField v-if="!sharedBackground" />
     <div v-if="$slots.background" class="absolute inset-0 z-1 pointer-events-none"><slot name="background" /></div>
     <div class="relative z-2 h-full mx-gutter"><slot /></div>
     <SlideChrome :show-logo="showLogo" :show-numbers="showNumbers" />
