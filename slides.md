@@ -251,7 +251,6 @@ clicks: 4
 <div class="real-case-bullets absolute top-[298px] left-[-1px] flex w-[554px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
   <p v-click="1" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Истина на сервере</span></p>
   <p v-click="2" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Меняется by action</span></p>
-  <p v-click="3" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>От него зависит Application State</span></p>
   <p v-click="4" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Используется только в адресах</span></p>
 </div>
 
