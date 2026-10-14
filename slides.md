@@ -396,11 +396,11 @@ clicks: 1
 
 <div class="store-actions-content absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
 
-<div class="store-notes flex w-[402px] shrink-0 flex-col gap-[24px] font-body font-bold text-[30px] leading-[38px] text-accent">
-  <p class="m-0">Добавить адрес</p>
-  <p class="m-0">Удалить адрес</p>
-  <p class="m-0">Обновить адрес</p>
-</div>
+<ul class="store-notes m-0 box-border flex w-[402px] shrink-0 list-disc flex-col gap-[24px] pl-[24px] font-body font-normal text-[30px] leading-[38px] text-white">
+  <li class="m-0 pl-[4px]">Добавить адрес</li>
+  <li class="m-0 pl-[4px]">Удалить адрес</li>
+  <li class="m-0 pl-[4px]">Обновить адрес</li>
+</ul>
 
 <StoreCodePanel :line-height="28">
 
@@ -456,14 +456,14 @@ clicks: 3
 
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.51865950802929deg,#fff_1.5437%,#999_99.362%)]">Активный адрес</h1>
 
-<div class="store-active-address-content absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
-<div class="store-active-address-notes flex w-[402px] shrink-0 flex-col gap-[24px] font-body text-[30px] leading-[38px] text-body">
+<div class="store-active-address-content absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[8px]">
+<div class="store-active-address-notes flex w-[460px] shrink-0 flex-col gap-[24px] font-body text-[30px] leading-[38px] text-body">
   <p class="m-0"><span class="font-bold text-accent">activeAddressId</span> – выбранный ID</p>
-  <p class="m-0"><span class="font-bold text-accent">activeAddress</span> – вычисляемый адрес</p>
+  <p class="m-0"><span class="font-bold text-accent">activeAddress</span> – активный адрес</p>
   <p class="m-0"><span class="font-bold text-accent">selectAddress</span> – action выбора</p>
 </div>
 
-<StoreCodePanel :line-height="28">
+<StoreCodePanel :line-height="28" class="!px-[16px]">
 
 ````md magic-move
 ```ts {6-7|9-12|15-17|19}
@@ -471,7 +471,7 @@ import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 import { useAddressesStore } from './addresses'
 
-export const useActiveAddressStore = defineStore('active-address', () => {
+export const useActiveAddressStore = defineStore('address-act', () => {
   const addresses = useAddressesStore()
   const activeAddressId = ref(null)
 
@@ -503,7 +503,7 @@ layout: store-code
 
 <p class="refresh-definition absolute top-[288px] inset-x-[28px] m-0 font-body font-normal text-[40px] leading-[1.2] text-secondary">Refresh – повторное получение данных, чтобы клиентская копия снова соответствовала состоянию на сервере.</p>
 
-<div class="refresh-conditions absolute top-[496px] inset-x-[28px] flex flex-col gap-[16px] font-body">
+<div class="refresh-conditions absolute top-[416px] inset-x-[28px] flex flex-col gap-[16px] font-body">
   <div class="refresh-condition relative flex h-[128px] items-center gap-[32px]">
     <p class="m-0 w-[402px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">60 секунд</p>
     <p class="m-0 min-w-0 flex-1 font-normal text-[32px] leading-[1.2] text-secondary">Магазин обновляется раз в минуту</p>
@@ -609,7 +609,7 @@ variant: risk-left
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(115.33539188446608deg,#fff_1.5437%,#999_99.362%)]">Контроль инвалидации</h1>
 
 <div class="invalidation-clown-crop absolute left-[887px] top-[258px] w-[729px] h-[836px] overflow-hidden rounded-[26.954px] pointer-events-none">
-  <PublicImage class="invalidation-clown absolute left-[-37.3327441%] top-[-5.8117626%] w-[174.6654726%] h-[105.8498564%] max-w-none" src="/images/invalidation-clown.png" alt="Клоун жонглирует мячами" />
+  <PublicImage class="invalidation-clown absolute left-[-37.3327441%] top-[-5.8117626%] w-[174.6654726%] h-[105.8498564%] max-w-none" src="/images/invalidation-clown-personalized.png" alt="Автор доклада в костюме клоуна жонглирует мячами" />
 </div>
 
 <div class="invalidation-principles absolute left-[28px] top-[300px] flex flex-col items-start gap-[32px] font-body text-[32px] leading-[42px] text-white">
@@ -1432,25 +1432,25 @@ clicks: 5
 
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-white">Результаты рефакторинга</h1>
 
-<div class="summary-refactor-results absolute top-[304px] left-[28px] flex w-[1704px] flex-col gap-[16px] font-body leading-[1.2]" role="table">
-  <div v-click="1" data-summary-row="1" class="box-border flex h-[104px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
-    <p class="m-0 w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Boilerplate – всё</p>
-    <p class="m-0 w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Загрузка, ошибки и повторный запрос уже описаны библиотекой</p>
+<div class="summary-refactor-results absolute top-[288px] left-[28px] flex w-[1704px] flex-col gap-0 font-body leading-[1.2]" role="table">
+  <div v-click="1" data-summary-row="1" class="box-border flex h-[120px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
+    <p class="m-0 translate-y-px w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Boilerplate – всё</p>
+    <p class="m-0 translate-y-[2px] w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Загрузка, ошибки и повторный запрос уже описаны библиотекой</p>
   </div>
-  <div v-click="2" data-summary-row="2" class="box-border flex h-[104px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
-    <p class="m-0 w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Дедупликация из коробки</p>
-    <p class="m-0 w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Одинаковые queries разделяют один запрос</p>
+  <div v-click="2" data-summary-row="2" class="box-border flex h-[120px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
+    <p class="m-0 -translate-y-[2px] w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Дедупликация из коробки</p>
+    <p class="m-0 -translate-y-[0.5px] w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Одинаковые queries разделяют один запрос</p>
   </div>
-  <div v-click="3" data-summary-row="3" class="box-border flex h-[104px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
-    <p class="m-0 w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Кэш – это кэш</p>
-    <p class="m-0 w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Ключи, свежесть и инвалидация имеют готовый API</p>
+  <div v-click="3" data-summary-row="3" class="box-border flex h-[120px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
+    <p class="m-0 translate-y-px w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Кэш – это кэш</p>
+    <p class="m-0 translate-y-[0.5px] w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Ключи, свежесть и инвалидация имеют готовый API</p>
   </div>
-  <div v-click="4" data-summary-row="4" class="box-border flex h-[104px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
-    <p class="m-0 w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Больше возможностей</p>
-    <p class="m-0 w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Фоновые обновления и оптимистичные изменения</p>
+  <div v-click="4" data-summary-row="4" class="box-border flex h-[120px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
+    <p class="m-0 translate-y-px w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Больше возможностей</p>
+    <p class="m-0 translate-y-[2px] w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Фоновые обновления и оптимистичные изменения</p>
   </div>
-  <div v-click="5" data-summary-row="5" class="box-border flex h-[104px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
-    <p class="m-0 w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Реактивная модель</p>
+  <div v-click="5" data-summary-row="5" class="box-border flex h-[120px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
+    <p class="m-0 -translate-y-px w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Реактивная модель</p>
     <p class="m-0 w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Query зависят друг от друга и автоматически ждут входные данные</p>
   </div>
 </div>
@@ -1467,8 +1467,8 @@ layout: store-code
 
 <h1 data-node-id="147:2014" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(120.88926413729571deg,#fff_1.5437%,#999_99.362%)]">Слабые стороны Server State</h1>
 
-<div data-node-id="159:2052" class="server-state-weaknesses absolute top-[304px] left-[28px] flex w-[1704px] flex-col gap-[24px] font-body">
-  <div data-node-id="147:2040" class="relative flex h-[176px] shrink-0 items-center gap-[48px]">
+<div data-node-id="159:2052" class="server-state-weaknesses absolute top-[280px] left-[28px] flex w-[1704px] flex-col gap-0 font-body [&>div>p]:-translate-y-[4px] [&>div>div.flex]:-translate-y-[3px]">
+  <div data-node-id="147:2040" class="relative flex h-[200px] shrink-0 items-center gap-[48px]">
     <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">01</p>
     <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
       <p class="m-0 font-bold text-[40px] text-white">Ключи требуют дисциплины</p>
@@ -1476,7 +1476,7 @@ layout: store-code
     </div>
     <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
   </div>
-  <div data-node-id="147:2046" class="relative flex h-[176px] shrink-0 items-center gap-[48px]">
+  <div data-node-id="147:2046" class="relative flex h-[200px] shrink-0 items-center gap-[48px]">
     <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">02</p>
     <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
       <p class="m-0 font-bold text-[40px] text-white">Контроль инвалидаций</p>
@@ -1484,7 +1484,7 @@ layout: store-code
     </div>
     <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
   </div>
-  <div data-node-id="147:2052" class="relative flex h-[176px] shrink-0 items-center gap-[48px]">
+  <div data-node-id="147:2052" class="relative flex h-[200px] shrink-0 items-center gap-[48px]">
     <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
     <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
       <p class="m-0 font-bold text-[40px] text-white">Широкое API</p>
@@ -1540,8 +1540,8 @@ layout: store-code
 
 <h1 data-node="1:1832" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.08129053889449deg,#fff_1.5437%,#999_99.362%)]">Последствия</h1>
 
-<div data-node="1:1833" class="absolute top-[304px] inset-x-[28px] flex flex-col gap-[24px] font-body">
-  <div data-node="1:1834" class="relative flex h-[176px] items-center gap-[48px]">
+<div data-node="1:1833" class="absolute top-[280px] inset-x-[28px] flex flex-col gap-0 font-body [&>div>p]:-translate-y-[4px] [&>div>div.flex]:-translate-y-[3px]">
+  <div data-node="1:1834" class="relative flex h-[200px] items-center gap-[48px]">
     <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">01</p>
     <div class="min-w-0 flex-1 flex flex-col gap-[16px] leading-[1.2]">
       <p class="m-0 font-bold text-[40px] text-white">Нежелательная инвалидация</p>
@@ -1549,7 +1549,7 @@ layout: store-code
     </div>
     <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
   </div>
-  <div data-node="1:1840" class="relative flex h-[176px] items-center gap-[48px]">
+  <div data-node="1:1840" class="relative flex h-[200px] items-center gap-[48px]">
     <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">02</p>
     <div class="min-w-0 flex-1 flex flex-col gap-[16px] leading-[1.2]">
       <p class="m-0 font-bold text-[40px] text-white">Потеря контроля за кэшом</p>
@@ -1557,7 +1557,7 @@ layout: store-code
     </div>
     <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
   </div>
-  <div data-node="1:1846" class="relative flex h-[176px] items-center gap-[48px]">
+  <div data-node="1:1846" class="relative flex h-[200px] items-center gap-[48px]">
     <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
     <div class="min-w-0 flex-1 flex flex-col gap-[16px] leading-[1.2]">
       <p class="m-0 font-bold text-[40px] text-white">Лишние запросы</p>
@@ -1578,8 +1578,8 @@ layout: store-code
 
 <h1 data-node="1:1855" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-white">Решаем архитектурой</h1>
 
-<div data-node="1:1856" class="architecture-principles absolute top-[288px] left-[28px] flex w-[1704px] flex-col gap-[16px] font-body">
-  <div data-node="1:1857" class="relative flex h-[144px] shrink-0 items-center gap-[48px]">
+<div data-node="1:1856" class="architecture-principles absolute top-[272px] left-[28px] flex w-[1704px] flex-col gap-0 font-body [&>div>p]:-translate-y-[4px] [&>div>div.flex]:-translate-y-[3px]">
+  <div data-node="1:1857" class="relative flex h-[160px] shrink-0 items-center gap-[48px]">
     <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">01</p>
     <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
       <p class="m-0 font-bold text-[40px] text-white">Контролируем ключи</p>
@@ -1587,7 +1587,7 @@ layout: store-code
     </div>
     <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
   </div>
-  <div data-node="1:1863" class="relative flex h-[144px] shrink-0 items-center gap-[48px]">
+  <div data-node="1:1863" class="relative flex h-[160px] shrink-0 items-center gap-[48px]">
     <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">02</p>
     <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
       <p class="m-0 font-bold text-[40px] text-white">Сужаем публичный API</p>
@@ -1595,7 +1595,7 @@ layout: store-code
     </div>
     <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
   </div>
-  <div data-node="1:1869" class="relative flex h-[144px] shrink-0 items-center gap-[48px]">
+  <div data-node="1:1869" class="relative flex h-[160px] shrink-0 items-center gap-[48px]">
     <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
     <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
       <p class="m-0 font-bold text-[40px] text-white">Управляем кэшем явно</p>
@@ -1603,7 +1603,7 @@ layout: store-code
     </div>
     <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
   </div>
-  <div data-node="1:1875" class="relative flex h-[144px] shrink-0 items-center gap-[48px]">
+  <div data-node="1:1875" class="relative flex h-[160px] shrink-0 items-center gap-[48px]">
     <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">04</p>
     <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
       <p class="m-0 font-bold text-[40px] text-white">Фиксируем правила свежести</p>
@@ -1979,7 +1979,7 @@ variant: closing
 
 <PublicImage data-node="1:2120" class="absolute top-[20px] left-[820px] block h-[1100px] w-[1100px] max-w-none object-contain opacity-75 pointer-events-none" src="/images/closing-glass-gears.png" alt="" aria-hidden="true" />
 
-<h1 data-node="1:2123" class="absolute top-[300px] left-[28px] m-0 font-heading font-black text-[120px] leading-none tracking-[-2.4px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.61359467739067deg,#fff_1.5437%,#999_99.362%)]">Спасибо!</h1>
+<h1 data-node="1:2123" class="absolute top-[220px] left-[28px] m-0 font-heading font-black text-[120px] leading-none tracking-[-2.4px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.61359467739067deg,#fff_1.5437%,#999_99.362%)]">Спасибо!</h1>
 
 <a data-node="telegram-final-link" class="absolute top-[456px] left-[28px] block h-[320px] w-[320px] overflow-hidden rounded-[24px] bg-white" href="https://t.me/+g25E4B-9SscxOGM6" target="_blank" rel="noopener noreferrer" aria-label="Telegram: https://t.me/+g25E4B-9SscxOGM6">
   <PublicImage data-node="telegram-final-qr" class="block max-w-none" src="/images/telegram-final-qr.svg" alt="QR-код Telegram: https://t.me/+g25E4B-9SscxOGM6" width="320" height="320" />

@@ -6,25 +6,29 @@ const benefits = [
   {
     title: 'Single Source of Truth',
     description: 'Есть единое место управления логикой\n',
-    image: '/images/store-benefit-truth.png',
+    image: '/images/store-benefit-truth-v2.png',
+    imageSize: 'h-[164px] w-[164px]',
     color: 'text-[#ff7166]',
   },
   {
     title: 'Devtools',
     description: 'Состояние и действия удобно наблюдать',
-    image: '/images/store-benefit-devtools.png',
+    image: '/images/store-benefit-devtools-v2.png',
+    imageSize: 'h-[188px] w-[188px]',
     color: 'text-[#a7b9f4]',
   },
   {
     title: 'Предсказуемая модель',
     description: 'Изменения проходят через понятные actions',
-    image: '/images/store-benefit-model.png',
+    image: '/images/store-benefit-model-v2.png',
+    imageSize: 'h-[164px] w-[164px]',
     color: 'text-[#86caa9]',
   },
   {
     title: 'Тестируемость',
     description: 'Store живёт независимо от lifecycle компонента',
-    image: '/images/store-benefit-testing.png',
+    image: '/images/store-benefit-testing-v2.png',
+    imageSize: 'h-[180px] w-[180px]',
     color: 'text-[#e4bd83]',
   },
 ] as const
@@ -40,7 +44,7 @@ const benefits = [
       :aria-hidden="$clicks < index + 1"
     >
       <div class="relative h-[160px] w-[160px] shrink-0 overflow-hidden" aria-hidden="true">
-        <PublicImage :src="benefit.image" alt="" class="absolute top-[-14.5px] left-[-20px] h-[188px] w-[188px] max-w-none object-bottom" />
+        <PublicImage :src="benefit.image" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none object-contain" :class="benefit.imageSize" />
       </div>
       <div class="relative z-1 flex min-w-0 flex-1 flex-col gap-[12px] font-body">
         <h2 class="m-0 text-[40px] font-bold leading-[48px]" :class="benefit.color">{{ benefit.title }}</h2>
