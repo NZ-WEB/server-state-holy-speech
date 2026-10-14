@@ -38,7 +38,11 @@ variant: top-right
   <PublicImage class="absolute right-0 bottom-0 w-[935px] h-[1016px] max-w-none object-cover" src="/images/speaker-portrait.png" alt="Евгений Федосеев" />
   <div class="absolute top-[240px] left-0">
     <h1 class="m-0 font-heading font-black text-[96px] leading-[0.9] tracking-[-2px]">Евгений<br>Федосеев</h1>
-    <div class="inline-flex mt-[63.2px] py-[22px] px-[30px] border-[2px] border-solid border-white/20 rounded-[20px] bg-[linear-gradient(155deg,rgba(255,255,255,0.02),rgba(255,255,255,0.05))] backdrop-blur-[19px]"><p class="text-body text-[32px] leading-[42px] whitespace-nowrap">Frontend Guild Lead в MAGNIT TECH</p></div>
+    <ul class="mt-[64px] mb-0 box-border flex w-[800px] list-disc flex-col gap-[24px] pl-[28px] font-body text-[32px] leading-[42px] text-body">
+      <li class="m-0 pl-[4px]">8+ лет во фронтенде</li>
+      <li class="m-0 pl-[4px]">Лидер Фронтенд гильдии в Magnit Tech</li>
+      <li class="m-0 pl-[4px]">Пишу про фронтенд и процессы</li>
+    </ul>
   </div>
 </div>
 
