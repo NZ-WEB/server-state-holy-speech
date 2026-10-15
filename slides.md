@@ -1273,7 +1273,7 @@ export function useShopQueryOptions() {
 
   return {
     activeShop: defineQueryOptions(() => ({
-      key: ['shops', addressId.value],
+      key: () => ['shops', addressId.value],
       query: () => shopsApi.getShop(addressId.value),
       staleTime: 30 * SECOND,
     })),
