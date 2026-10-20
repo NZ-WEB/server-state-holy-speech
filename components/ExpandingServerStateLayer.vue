@@ -7,7 +7,7 @@ const expanded = computed(() => props.stage >= 1)
 const capabilities = [
   { nodeId: '1:1894', title: 'Query Options', description: 'конфигурация запросов' },
   { nodeId: '1:1897', title: 'Mutation Options', description: 'конфигурация мутаций' },
-  { nodeId: '1:1900', title: 'Cache Service', description: 'управление кэшом' },
+  { nodeId: '1:1900', title: 'Cache Service', description: 'управление кешом' },
 ] as const
 </script>
 

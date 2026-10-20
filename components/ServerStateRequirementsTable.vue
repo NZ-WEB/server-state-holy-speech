@@ -5,7 +5,7 @@ const rows = [
   { title: 'Queries / mutations', description: 'разделение ответственности' },
   { title: 'Query key', description: 'предсказуемая адресация данных' },
   { title: 'Дедупликация', description: 'один запрос для нескольких потребителей' },
-  { title: 'Управление кэшем', description: 'прозрачное состояние данных' },
+  { title: 'Управление кешем', description: 'прозрачное состояние данных' },
   { title: 'Реактивная модель данных', description: 'обновления без ручной синхронизации' },
 ] as const
 </script>

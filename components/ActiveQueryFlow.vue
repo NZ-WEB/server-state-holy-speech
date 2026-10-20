@@ -5,11 +5,11 @@ defineProps<{ stage: number }>()
 const cards = [
   { node: '1:1682', stage: 1, row: 0, column: 0, title: 'UI-компонент', key: '', description: 'читает адреса', active: false },
   { node: '1:1688', stage: 2, row: 0, column: 1, title: 'Query', key: "['addresses']", description: 'есть подписчик', active: true },
-  { node: '1:1694', stage: 3, row: 0, column: 2, title: 'invalidate', key: '', description: 'кэш устарел', active: false },
+  { node: '1:1694', stage: 3, row: 0, column: 2, title: 'invalidate', key: '', description: 'кеш устарел', active: false },
   { node: '1:1700', stage: 4, row: 0, column: 3, title: 'refetch', key: '', description: 'сразу', active: true },
   { node: '1:1703', stage: 5, row: 1, column: 0, title: 'Нет компонента', key: '', description: 'никто не\u00a0читает', active: false },
   { node: '1:1709', stage: 6, row: 1, column: 1, title: 'Query', key: "['catalog']", description: 'нет подписчиков', active: false },
-  { node: '1:1715', stage: 7, row: 1, column: 2, title: 'invalidate', key: '', description: 'кэш устарел', active: false },
+  { node: '1:1715', stage: 7, row: 1, column: 2, title: 'invalidate', key: '', description: 'кеш устарел', active: false },
   { node: '1:1721', stage: 8, row: 1, column: 3, title: 'Ожидание', key: '', description: 'до нового подписчика', active: false },
 ] as const
 

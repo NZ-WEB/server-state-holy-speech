@@ -26,7 +26,7 @@ showNumbers: false
 <div class="relative h-full">
   <PublicImage class="absolute left-[734px] top-[-170px] w-[1320px] h-[1320px] max-w-none object-cover opacity-75" src="/images/cover-glass-gears.png" alt="" aria-hidden="true" />
   <div class="absolute top-[168px] left-0 z-1">
-    <h1 class="m-0 w-[925px] font-heading font-black text-[128px] leading-[0.9] tracking-normal">Клиентский<br>кэш</h1>
+    <h1 class="m-0 w-[925px] font-heading font-black text-[128px] leading-[0.9] tracking-normal">Клиентский<br>кеш</h1>
     <p class="mt-[64px] text-body text-[40px] leading-[1.2]">как держать<br>серверные данные<br>под контролем</p>
   </div>
 </div>
@@ -821,7 +821,7 @@ variant: diagonal
   <div class="flex h-[95px] items-center gap-[64px]">
     <p class="m-0 h-[95px] w-[116px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
     <div class="flex min-w-0 flex-1 flex-col gap-[8px]">
-      <p class="m-0 text-[32px] font-bold leading-[1.1] text-white">Это не кэш</p>
+      <p class="m-0 text-[32px] font-bold leading-[1.1] text-white">Это не кеш</p>
       <p class="m-0 text-[30px] leading-[38px] text-white/69">Нет ключей, свежести и управляемой инвалидации</p>
     </div>
   </div>
@@ -902,7 +902,7 @@ layout: store-code
 clicks: 3
 ---
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(103.5581102367891deg,#fff_1.5437%,#999_99.362%)]">Это же кэш!</h1>
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(103.5581102367891deg,#fff_1.5437%,#999_99.362%)]">Это же кеш!</h1>
 
 <div class="projection-notes absolute top-[300px] left-[28px] flex w-[836px] flex-col gap-[32px] font-body font-normal text-[32px] leading-[42px] text-white">
   <p class="m-0">Источник истины находится на сервере</p>
@@ -918,13 +918,13 @@ variant: diagonal-left
 clicks: 3
 ---
 
-<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Кэш</p>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Кеш</p>
 
-<h1 class="absolute top-[50px] left-[-5px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.407038deg,#fff_1.5437%,#999_99.362%)]">Кэш – что за зверь?</h1>
+<h1 class="absolute top-[50px] left-[-5px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.407038deg,#fff_1.5437%,#999_99.362%)]">Кеш – что за зверь?</h1>
 
 <div class="absolute top-[202px] left-0 flex w-[836px] flex-col gap-[32px] font-body">
-  <p class="m-0 text-[30px] leading-[38px] text-white">Кэш – временная копия данных, которая позволяет не обращаться к источнику истины<br>при каждом чтении</p>
-  <p class="m-0 text-[24px] leading-[1.35] text-white/69">Ключ кэша – уникальный идентификатор,<br>по которому находим нужную копию данных</p>
+  <p class="m-0 text-[30px] leading-[38px] text-white">Кеш – временная копия данных, которая позволяет не обращаться к источнику истины<br>при каждом чтении</p>
+  <p class="m-0 text-[24px] leading-[1.35] text-white/69">Ключ кеша – уникальный идентификатор,<br>по которому находим нужную копию данных</p>
 </div>
 
 <BackendCacheDiagram class="absolute top-[210px] left-[924px]" />
@@ -935,11 +935,11 @@ variant: diagonal-left
 clicks: 4
 ---
 
-<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Кэш</p>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Кеш</p>
 
 <h1 class="absolute top-[50px] left-[-5px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.388111deg,#fff_1.5437%,#999_99.362%)]">Инвалидация</h1>
 
-<p class="invalidation-definition absolute top-[202px] left-0 m-0 w-[792px] font-body text-[30px] leading-[38px] text-body">Инвалидация кэша – пометка сохранённых данных как устаревших, после которой следующий потребитель получает свежую версию</p>
+<p class="invalidation-definition absolute top-[202px] left-0 m-0 w-[792px] font-body text-[30px] leading-[38px] text-body">Инвалидация кеша – пометка сохранённых данных как устаревших, после которой следующий потребитель получает свежую версию</p>
 
 <InvalidationFlow class="absolute top-[372px] left-0" :stage="$clicks" />
 
@@ -1001,7 +1001,7 @@ clicks: 2
 
 <p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(106.39648337165877deg,#fff_1.5437%,#999_99.362%)]">Кэш – это кэш!</h1>
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(106.39648337165877deg,#fff_1.5437%,#999_99.362%)]">Кеш – это кеш!</h1>
 
 <div class="query-mutation-tiles absolute top-[304px] inset-x-[28px] flex gap-[32px] font-body">
   <div data-node="query-definition" class="box-border w-[836px] h-[268px] flex flex-col justify-center gap-[16px] px-[40px] py-[24px] rounded-[24px] bg-white/5 backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
@@ -1010,7 +1010,7 @@ clicks: 2
   </div>
   <div data-node="mutation-definition" class="box-border w-[836px] h-[268px] flex flex-col justify-center gap-[16px] px-[40px] py-[24px] rounded-[24px] bg-white/5 backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
     <p class="m-0 font-bold text-[40px] leading-[1.2] text-[#e4bd83]">Mutation</p>
-    <p class="m-0 font-normal text-[32px] leading-[1.2] text-secondary">Меняет данные на backend, после чего связанный кэш может устареть.</p>
+    <p class="m-0 font-normal text-[32px] leading-[1.2] text-secondary">Меняет данные на backend, после чего связанный кеш может устареть.</p>
   </div>
 </div>
 
@@ -1024,7 +1024,7 @@ clicks: 4
 
 <p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(103.96470826850641deg,#fff_1.5437%,#999_99.362%)]">Ключи кэша</h1>
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(103.96470826850641deg,#fff_1.5437%,#999_99.362%)]">Ключи кеша</h1>
 
 <CatalogKeyTree class="absolute top-[304px] left-[28px]" :stage="$clicks" />
 
@@ -1386,7 +1386,7 @@ clicks: 3
 
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(109.38043091915237deg,#fff_1.5437%,#999_99.362%)]">Удалим же адрес</h1>
 
-<p data-node="remove-address-description" class="absolute top-[280px] left-[28px] m-0 w-[836px] font-body font-normal text-[40px] leading-[1.2] text-secondary">После удаления кэш адресов инвалидируется и вся цепочка запросов перезагружается</p>
+<p data-node="remove-address-description" class="absolute top-[280px] left-[28px] m-0 w-[836px] font-body font-normal text-[40px] leading-[1.2] text-secondary">После удаления кеш адресов инвалидируется и вся цепочка запросов перезагружается</p>
 
 <StoreCodePanel data-node="remove-address-code" :font-size="24" :line-height="24" class="absolute top-[520px] left-[28px] !w-[836px] [&_pre_code]:block motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0">
 
@@ -1475,7 +1475,7 @@ clicks: 5
     <p class="m-0 -translate-y-[0.5px] w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Одинаковые queries разделяют один запрос</p>
   </div>
   <div v-click="3" data-summary-row="3" class="box-border flex h-[120px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
-    <p class="m-0 translate-y-px w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Кэш – это кэш</p>
+    <p class="m-0 translate-y-px w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Кеш – это кеш</p>
     <p class="m-0 translate-y-[0.5px] w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Ключи, свежесть и инвалидация имеют готовый API</p>
   </div>
   <div v-click="4" data-summary-row="4" class="box-border flex h-[120px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
@@ -1585,7 +1585,7 @@ layout: store-code
   <div data-node="1:1840" class="relative flex h-[200px] items-center gap-[48px]">
     <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">02</p>
     <div class="min-w-0 flex-1 flex flex-col gap-[16px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Потеря контроля за кэшом</p>
+      <p class="m-0 font-bold text-[40px] text-white">Потеря контроля за кешом</p>
       <p class="m-0 font-normal text-[32px] text-secondary">Непонятно, кто и почему сбросил данные или запустил refetch.</p>
     </div>
     <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
@@ -1594,7 +1594,7 @@ layout: store-code
     <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
     <div class="min-w-0 flex-1 flex flex-col gap-[16px] leading-[1.2]">
       <p class="m-0 font-bold text-[40px] text-white">Лишние запросы</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Фоновая работа кэша превращается в мусорные запросы и лишнюю нагрузку.</p>
+      <p class="m-0 font-normal text-[32px] text-secondary">Фоновая работа кеша превращается в мусорные запросы и лишнюю нагрузку.</p>
     </div>
     <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
   </div>
@@ -1631,7 +1631,7 @@ layout: store-code
   <div data-node="1:1869" class="relative flex h-[160px] shrink-0 items-center gap-[48px]">
     <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
     <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Управляем кэшем явно</p>
+      <p class="m-0 font-bold text-[40px] text-white">Управляем кешем явно</p>
       <p class="m-0 font-normal text-[32px] text-secondary">Инвалидации, обновления и сбросы имеют доменные имена и одно место вызова.</p>
     </div>
     <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
@@ -1819,7 +1819,7 @@ clicks: 9
 
 <div class="architecture-code-body absolute inset-x-[28px] top-[272px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0 motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0" :data-stage="$clicks">
   <ul data-node="architecture-notes" class="m-0 mt-[28px] pl-[32px] box-border list-disc flex w-[402px] shrink-0 flex-col gap-[24px] font-body font-normal text-[32px] leading-[1.2] text-secondary">
-    <li class="m-0 pl-[4px]">Все операции с кэшем домена адресов живут в одном месте</li>
+    <li class="m-0 pl-[4px]">Все операции с кешем домена адресов живут в одном месте</li>
     <li class="m-0 pl-[4px]">Мутации и компоненты не знают деталей QueryCache</li>
     <li class="m-0 pl-[4px]">Сервис даёт инвалидации понятные доменные имена</li>
   </ul>
@@ -1868,7 +1868,7 @@ function updateAddressList(addresses: Address[]) {
 </div>
 
 <blockquote data-node="cache-quote" class="absolute top-[716px] left-[28px] box-border m-0 flex w-[486px] items-center justify-center rounded-[24px] border border-solid border-white/20 bg-white/5 p-[24px] font-body text-[32px] leading-[1.2] text-secondary">
-  <p class="m-0 w-full">«В программировании есть только две проблемы: инвалидация кэша и выбор имён переменных»</p>
+  <p class="m-0 w-full">«В программировании есть только две проблемы: инвалидация кеша и выбор имён переменных»</p>
 </blockquote>
 <!-- ARCHITECTURE-CODE-64:END -->
 
@@ -1917,7 +1917,7 @@ layout: store-code
 <!-- CONCLUSIONS-67:START -->
 <p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Выводы</p>
 
-<h1 data-node="1:2072" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.95318947401859deg,#fff_1.5437%,#999_99.362%)]">Server State – это кэш</h1>
+<h1 data-node="1:2072" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.95318947401859deg,#fff_1.5437%,#999_99.362%)]">Server State – это кеш</h1>
 
 <div class="cache-conclusion-cards absolute top-[336px] left-[28px] grid w-[1704px] grid-cols-3 gap-[32px] font-body leading-[1.2] text-white">
   <div data-node="1:2073" class="box-border flex h-[456px] min-w-0 flex-col gap-[32px] rounded-[24px] border-2 border-solid border-white bg-white/5 px-[32px] pt-[40px] pb-[24px] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
@@ -1984,7 +1984,7 @@ layout: store-code
 
 <h1 data-node="1:2103" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.27209169199533deg,#fff_1.5437%,#999_99.362%)]">Архитектурный слой</h1>
 
-<p data-node="1:2104" class="absolute top-[280px] left-[28px] m-0 w-[1704px] font-body font-normal text-[40px] leading-[1.2] text-secondary">Чтобы контролировать кэш, ключи и инвалидации, ограничиваем работу с Server State архитектурным слоем.</p>
+<p data-node="1:2104" class="absolute top-[280px] left-[28px] m-0 w-[1704px] font-body font-normal text-[40px] leading-[1.2] text-secondary">Чтобы контролировать кеш, ключи и инвалидации, ограничиваем работу с Server State архитектурным слоем.</p>
 
 <div data-node="1:2105" class="absolute top-[456px] left-[28px] flex w-[1704px] flex-col gap-[24px] font-body">
   <div data-node="1:2106" class="box-border flex h-[128px] w-full shrink-0 items-center gap-[32px] rounded-[24px] border-2 border-solid border-[#a7b9f4] bg-white/5 px-[32px] py-[24px] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
@@ -1997,7 +1997,7 @@ layout: store-code
   </div>
   <div data-node="1:2112" class="box-border flex h-[128px] w-full shrink-0 items-center gap-[32px] rounded-[24px] border-2 border-solid border-[#86caa9] bg-white/5 px-[32px] py-[24px] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
     <p class="m-0 w-[772px] shrink-0 font-bold text-[48px] leading-[53px] tracking-[-2px] text-[#86caa9]">Cache Service</p>
-    <p class="m-0 min-w-0 flex-1 font-normal text-[40px] leading-[1.2] text-secondary">Сервис управления кэшом</p>
+    <p class="m-0 min-w-0 flex-1 font-normal text-[40px] leading-[1.2] text-secondary">Сервис управления кешом</p>
   </div>
 </div>
 <!-- CONCLUSIONS-69:END -->

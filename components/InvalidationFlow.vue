@@ -2,7 +2,7 @@
 defineProps<{ stage: number }>()
 const steps = [
   { title: 'Action', description: 'данные изменились' },
-  { title: 'Invalidate', description: 'кэш устарел' },
+  { title: 'Invalidate', description: 'кеш устарел' },
   { title: 'Refetch', description: 'новый запрос' },
   { title: 'Fresh cache', description: 'актуальная копия' },
 ] as const
