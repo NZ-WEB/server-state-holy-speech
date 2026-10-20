@@ -6,15 +6,17 @@ import { computed } from 'vue'
 import { useNav, useSlideContext } from '@slidev/client'
 import type { SlideFrameProps } from '../config/gradients'
 
-withDefaults(defineProps<SlideFrameProps>(), {
+withDefaults(defineProps<SlideFrameProps & { contentInset?: boolean }>(), {
   variant: 'right',
   showLogo: true,
   showNumbers: true,
+  contentInset: false,
 })
 
 defineSlots<{
   default(): unknown
   background?(): unknown
+  canvas?(): unknown
 }>()
 
 const { $renderContext } = useSlideContext()
@@ -28,7 +30,8 @@ const sharedBackground = computed(() => !isPrintMode.value
     <GradientBackground v-if="!sharedBackground" :variant="variant" />
     <StarField v-if="!sharedBackground" />
     <div v-if="$slots.background" class="absolute inset-0 z-1 pointer-events-none"><slot name="background" /></div>
-    <div class="relative z-2 h-full mx-gutter"><slot /></div>
+    <div class="slide-content absolute inset-x-gutter z-2" :class="contentInset ? 'top-[88px] bottom-[72px]' : 'inset-y-0'"><slot /></div>
+    <div v-if="$slots.canvas" class="slide-canvas absolute inset-y-0 inset-x-gutter z-2"><slot name="canvas" /></div>
     <SlideChrome :show-logo="showLogo" :show-numbers="showNumbers" />
   </div>
 </template>

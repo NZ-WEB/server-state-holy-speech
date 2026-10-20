@@ -10,7 +10,8 @@ withDefaults(defineProps<SlideFrameProps>(), {
 </script>
 
 <template>
-  <SlideFrame :variant="variant" :show-logo="showLogo" :show-numbers="showNumbers">
+  <SlideFrame :variant="variant" :show-logo="showLogo" :show-numbers="showNumbers" content-inset>
     <slot />
+    <template v-if="$slots.canvas" #canvas><slot name="canvas" /></template>
   </SlideFrame>
 </template>

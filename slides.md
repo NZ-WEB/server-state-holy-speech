@@ -21,6 +21,8 @@ variant: right
 showNumbers: false
 ---
 
+::canvas::
+
 <div class="relative h-full">
   <PublicImage class="absolute left-[734px] top-[-170px] w-[1320px] h-[1320px] max-w-none object-cover opacity-75" src="/images/cover-glass-gears.png" alt="" aria-hidden="true" />
   <div class="absolute top-[168px] left-0 z-1">
@@ -34,16 +36,16 @@ layout: default
 variant: top-right
 ---
 
+::canvas::
+
 <div class="relative h-full">
   <PublicImage class="absolute right-0 bottom-0 w-[935px] h-[1016px] max-w-none object-cover" src="/images/speaker-portrait.png" alt="Евгений Федосеев" />
-  <div class="absolute top-[240px] left-0">
-    <h1 class="m-0 font-heading font-black text-[96px] leading-[0.9] tracking-[-2px]">Евгений<br>Федосеев</h1>
-    <ul class="mt-[64px] mb-0 box-border flex w-[800px] list-disc flex-col gap-[24px] pl-[28px] font-body text-[32px] leading-[42px] text-body">
-      <li class="m-0 pl-[4px]">8+ лет во фронтенде</li>
-      <li class="m-0 pl-[4px]">Лидер Фронтенд гильдии в Magnit Tech</li>
-      <li class="m-0 pl-[4px]">Пишу про фронтенд и процессы</li>
-    </ul>
-  </div>
+  <h1 class="absolute top-[240px] left-[-4px] m-0 font-heading font-black text-[96px] leading-[0.9] tracking-[-2px]">Евгений<br>Федосеев</h1>
+  <ul class="absolute top-[484px] left-[2px] m-0 flex list-none flex-col gap-[12px] p-0 font-body font-normal text-[32px] leading-[42px] text-body">
+    <li class="m-0 whitespace-pre">—&nbsp;&nbsp;8+ лет во фронтенде</li>
+    <li class="m-0 whitespace-pre">—&nbsp;&nbsp;лидер фронтенд Гильдии</li>
+    <li class="m-0 whitespace-pre">—&nbsp;&nbsp;пишу про фронтенд и процессы</li>
+  </ul>
 </div>
 
 ---
@@ -66,9 +68,9 @@ variant: diagonal
 clicks: 3
 ---
 
-<h1 class="absolute top-[108px] left-[-6px] m-0 w-[1151px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(116.9895deg,#fff_1.5437%,#999_99.362%)]">Поговорим о состояниях</h1>
+<h1 class="absolute top-[20px] left-[-6px] m-0 w-[1151px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(116.9895deg,#fff_1.5437%,#999_99.362%)]">Поговорим о состояниях</h1>
 
-<StateFormula class="absolute top-[252px] left-[-21px]" />
+<StateFormula class="absolute top-[164px] left-[-21px]" />
 
 ---
 layout: default
@@ -76,11 +78,11 @@ variant: diagonal
 clicks: 4
 ---
 
-<p class="absolute top-[96px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-[#ed0f00] whitespace-nowrap">B2C сценарий</p>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-[#ed0f00] whitespace-nowrap">B2C сценарий</p>
 
-<h1 class="absolute top-[146px] left-[-5px] m-0 w-[961px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.03633486403604deg,#fff_1.5437%,#999_99.362%)]">Рассмотрим пример</h1>
+<h1 class="absolute top-[50px] left-[-5px] m-0 w-[961px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.03633486403604deg,#fff_1.5437%,#999_99.362%)]">Рассмотрим пример</h1>
 
-<ExampleCards class="absolute top-[314px] left-0 w-full" />
+<ExampleCards class="absolute top-[218px] left-0 w-full" />
 
 ---
 layout: default
@@ -88,18 +90,18 @@ variant: diagonal-left
 clicks: 4
 ---
 
-<p class="absolute top-[96px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-[#ed0f00]">Реальная жизнь</p>
+<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-[#ed0f00]">Реальная жизнь</p>
 
-<h1 class="absolute top-[146px] left-0 m-0 w-[342px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(98.60518deg,#fff_1.5437%,#999_99.362%)]">Адреса</h1>
+<h1 class="absolute top-[58px] left-0 m-0 w-[342px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(98.60518deg,#fff_1.5437%,#999_99.362%)]">Адреса</h1>
 
-<div class="absolute top-[298px] left-[-1px] flex w-[469px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
+<div class="absolute top-[210px] left-[-1px] flex w-[469px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
   <p class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none" :class="$clicks >= 1 ? 'opacity-100 translate-x-0' : 'opacity-0 pointer-events-none -translate-x-[12px]'"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Список адресов</span></p>
   <p class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none" :class="$clicks >= 2 ? 'opacity-100 translate-x-0' : 'opacity-0 pointer-events-none -translate-x-[12px]'"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Добавление адреса</span></p>
   <p class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none" :class="$clicks >= 3 ? 'opacity-100 translate-x-0' : 'opacity-0 pointer-events-none -translate-x-[12px]'"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Удаление адреса</span></p>
   <p class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none" :class="$clicks >= 4 ? 'opacity-100 translate-x-0' : 'opacity-0 pointer-events-none -translate-x-[12px]'"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Выбор активного адреса</span></p>
 </div>
 
-<AddressExample class="absolute top-[308px] left-[764px]" />
+<AddressExample class="absolute top-[220px] left-[764px]" />
 
 ---
 layout: default
@@ -114,16 +116,16 @@ variant: diagonal
 clicks: 4
 ---
 
-<p class="absolute top-[96px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реальная жизнь</p>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реальная жизнь</p>
 
-<h1 class="absolute top-[146px] left-[-6px] m-0 w-[372px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.347219deg,#fff_1.5437%,#999_99.362%)]">Каталог</h1>
+<h1 class="absolute top-[50px] left-[-6px] m-0 w-[372px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.347219deg,#fff_1.5437%,#999_99.362%)]">Каталог</h1>
 
-<div class="absolute top-[298px] left-[-1px] flex w-[529px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
+<div class="absolute top-[202px] left-[-1px] flex w-[529px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
   <p class="m-0 flex whitespace-nowrap"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Список товаров</span></p>
   <p class="catalog-dependency m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none" :class="$clicks >= 4 ? 'opacity-100 translate-x-0' : 'opacity-0 pointer-events-none -translate-x-[12px]'" :aria-hidden="$clicks < 4"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Каталог зависит от магазина</span></p>
 </div>
 
-<CatalogExample class="absolute top-[298px] left-[708px]" />
+<CatalogExample surface="glass" class="absolute top-[210px] left-[708px]" />
 
 ---
 layout: image-center
@@ -149,24 +151,26 @@ layout: default
 variant: cooking
 ---
 
-<h1 class="absolute left-[-6px] top-[96px] m-0 w-[817px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(109.87524243018746deg,#fff_1.5437%,#999_99.362%)]">Как это готовить?</h1>
+<h1 class="absolute left-[-6px] top-[8px] m-0 w-[817px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(109.87524243018746deg,#fff_1.5437%,#999_99.362%)]">Как это готовить?</h1>
 
-<p class="absolute left-[-2px] top-[200px] m-0 w-[1704px] font-body font-normal text-[32px] leading-[42px] text-accent"><span class="relative top-[1px]">Выглядит сложно даже без кода</span></p>
+<p class="absolute left-[-2px] top-[112px] m-0 font-body font-normal text-[32px] leading-[42px] text-accent whitespace-nowrap">Выглядит сложно даже без кода</p>
 
-<PublicImage class="cooking-meme absolute left-[538px] top-[247px] w-[1260px] h-[834px] max-w-none object-cover" src="/images/cooking-meme.png" alt="Мужчина разводит руками в недоумении" />
+<p class="absolute left-[500px] top-[113.33px] m-0 font-body font-normal text-[35px] leading-[45.938px] text-accent whitespace-nowrap" aria-label="Лицо с моноклем">🧐</p>
 
-<PublicImage class="cooking-glass absolute left-[404px] top-[475.745px] w-[553.578px] h-[232.192px] max-w-none origin-top-left rotate-[-8.177960676deg] opacity-85" src="/images/cooking-glass.png" alt="Я просто хотел удалить адрес" />
+<PublicImage class="cooking-meme absolute left-[538px] top-[159px] w-[1260px] h-[834px] max-w-none object-cover" src="/images/cooking-meme.png" alt="Мужчина разводит руками в недоумении" />
+
+<PublicImage class="cooking-glass absolute left-[404px] top-[387.745px] w-[553.578px] h-[232.192px] max-w-none origin-top-left rotate-[-8.177960676deg] opacity-85" src="/images/cooking-glass.png" alt="Я просто хотел удалить адрес" />
 
 ---
 layout: default
 variant: section-right
 ---
 
-<PublicImage class="absolute left-[838px] top-[62px] w-[934px] h-[981px] max-w-none object-cover opacity-85 pointer-events-none" src="/images/state-types-intro-glass-controls.png" alt="" aria-hidden="true" />
+<PublicImage class="absolute left-[838px] top-[-26px] w-[934px] h-[981px] max-w-none object-cover opacity-85 pointer-events-none" src="/images/state-types-intro-glass-controls.png" alt="" aria-hidden="true" />
 
-<h1 class="absolute left-[-2px] top-[264px] m-0 w-[836px] font-heading font-black text-[120px] leading-[108px] tracking-[-2px] text-heading">Типы<br>состояний</h1>
+<h1 class="absolute left-[-2px] top-[176px] m-0 w-[836px] font-heading font-black text-[120px] leading-[108px] tracking-[-2px] text-heading">Типы<br>состояний</h1>
 
-<div class="absolute left-0 top-[544px] box-border w-[508px] h-[90px] flex items-start px-[30px] py-[22px] border-[2px] border-solid border-white/20 rounded-[20px] bg-[linear-gradient(175deg,rgba(255,255,255,0.01),rgba(255,255,255,0.07))] shadow-[inset_0_1px_1px_rgba(255,255,255,0.08),inset_0_-1px_1px_rgba(255,255,255,0.05)] backdrop-blur-[19px] overflow-hidden">
+<div class="absolute left-0 top-[456px] box-border w-[508px] h-[90px] flex items-start px-[30px] py-[22px] border-[2px] border-solid border-white/20 rounded-[20px] bg-[linear-gradient(175deg,rgba(255,255,255,0.01),rgba(255,255,255,0.07))] shadow-[inset_0_1px_1px_rgba(255,255,255,0.08),inset_0_-1px_1px_rgba(255,255,255,0.05)] backdrop-blur-[19px] overflow-hidden">
   <p class="m-0 font-body font-normal text-[32px] leading-[42px] text-body whitespace-nowrap">Local State и Application State</p>
 </div>
 
@@ -176,11 +180,11 @@ variant: diagonal
 clicks: 2
 ---
 
-<div class="absolute left-[-1px] top-[96px] font-body font-bold text-[24px] leading-[1.1] text-accent">Состояния</div>
-<div class="absolute left-[-6px] top-[146px]">
+<div class="absolute left-[-1px] top-[8px] font-body font-bold text-[24px] leading-[1.1] text-accent">Состояния</div>
+<div class="absolute left-[-6px] top-[58px]">
   <h1 class="m-0 w-max bg-[linear-gradient(110.3224deg,#ffffff_1.5437%,#999999_99.362%)] bg-clip-text font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-transparent whitespace-nowrap">Local и Application</h1>
 </div>
-<StateTypesCards class="absolute inset-x-0 top-[297.5px]" :local-bullets="['Состояние одного сценария', 'Может жить в компоненте или composable', 'ref / reactive — способы хранения']" :application-bullets="['Состояние нескольких сценариев', 'Живёт на уровне приложения', 'Store – один из способов его хранить']" />
+<StateTypesCards class="absolute inset-x-0 top-[209.5px]" :local-bullets="['Состояние одного сценария', 'Может жить в компоненте или composable', 'ref / reactive — способы хранения']" :application-bullets="['Состояние нескольких сценариев', 'Живёт на уровне приложения', 'Store – один из способов его хранить']" />
 
 ---
 layout: default
@@ -188,11 +192,11 @@ variant: diagonal
 clicks: 18
 ---
 
-<p class="absolute top-[96px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Состояния</p>
+<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Состояния</p>
 
-<h1 class="absolute top-[146px] left-[-6px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.8048deg,#fff_1.5437%,#999_99.362%)]">Local или Application?</h1>
+<h1 class="absolute top-[58px] left-[-6px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.8048deg,#fff_1.5437%,#999_99.362%)]">Local или Application?</h1>
 
-<div class="absolute inset-x-0 top-[298px] grid grid-cols-[558px_minmax(0,1fr)] gap-[120px] items-start">
+<div class="absolute inset-x-0 top-[210px] grid grid-cols-[558px_minmax(0,1fr)] gap-[120px] items-start">
 
 <div class="state-quiz-legend flex w-[558px] flex-col gap-[32px] font-body font-normal text-[28px] leading-[1.35] text-body">
   <p class="m-0"><span class="text-[#7f9fff]">Local State</span> – состояние одного<br>UI-сценария или компонента</p>
@@ -248,17 +252,17 @@ variant: diagonal-left
 clicks: 4
 ---
 
-<p class="absolute top-[96px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Local или Application</p>
+<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Local или Application</p>
 
-<h1 class="absolute top-[146px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.1760574395592deg,#fff_1.5437%,#999_99.362%)]">Список адресов</h1>
+<h1 class="absolute top-[58px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.1760574395592deg,#fff_1.5437%,#999_99.362%)]">Список адресов</h1>
 
-<div class="real-case-bullets absolute top-[298px] left-[-1px] flex w-[554px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
+<div class="real-case-bullets absolute top-[210px] left-[-1px] flex w-[554px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
   <p v-click="1" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Истина на сервере</span></p>
   <p v-click="2" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Меняется by action</span></p>
   <p v-click="4" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Используется только в адресах</span></p>
 </div>
 
-<AddressExample static :active-address="null" class="absolute top-[308px] left-[804px]" />
+<AddressExample static :active-address="null" class="absolute top-[220px] left-[804px]" />
 
 ---
 layout: default
@@ -266,17 +270,17 @@ variant: diagonal-left
 clicks: 3
 ---
 
-<p class="absolute top-[96px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
 
-<h1 class="absolute top-[146px] left-[0] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.51865950802929deg,#fff_1.5437%,#999_99.362%)]">Активный адрес</h1>
+<h1 class="absolute top-[58px] left-[0] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.51865950802929deg,#fff_1.5437%,#999_99.362%)]">Активный адрес</h1>
 
-<div class="real-case-bullets absolute top-[298px] left-[-1px] flex w-[469px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
+<div class="real-case-bullets absolute top-[210px] left-[-1px] flex w-[469px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
   <p v-click="1" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Истина на клиенте</span></p>
   <p v-click="2" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Меняется со временем</span></p>
   <p v-click="3" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Используется повсеместно</span></p>
 </div>
 
-<AddressExample static class="absolute top-[308px] left-[804px]" />
+<AddressExample static class="absolute top-[220px] left-[804px]" />
 
 ---
 layout: default
@@ -284,17 +288,17 @@ variant: diagonal
 clicks: 3
 ---
 
-<p class="absolute top-[96px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Local или Application</p>
+<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Local или Application</p>
 
-<h1 class="absolute top-[146px] left-[0] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.25069355919166deg,#fff_1.5437%,#999_99.362%)]">А каталог и магазин?</h1>
+<h1 class="absolute top-[58px] left-[0] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.25069355919166deg,#fff_1.5437%,#999_99.362%)]">А каталог и магазин?</h1>
 
-<div class="real-case-bullets absolute top-[298px] left-[-1px] flex w-[529px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
+<div class="real-case-bullets absolute top-[210px] left-[-1px] flex w-[529px] flex-col gap-[20px] font-body text-[32px] leading-[42px] text-body">
   <p v-click="1" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Истина на сервере</span></p>
   <p v-click="2" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Зависит от выбранного адреса</span></p>
   <p v-click="3" class="m-0 flex whitespace-nowrap !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span>Используется не везде</span></p>
 </div>
 
-<CatalogExample static class="absolute top-[308px] left-[708px]" />
+<CatalogExample static class="absolute top-[220px] left-[708px]" />
 
 ---
 layout: default
@@ -302,11 +306,11 @@ variant: diagonal
 clicks: 4
 ---
 
-<p class="absolute top-[96px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
+<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
-<h1 class="absolute top-[146px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(115.04475892308335deg,#fff_1.5437%,#999_99.362%)]">За что мы любим Store</h1>
+<h1 class="absolute top-[58px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(115.04475892308335deg,#fff_1.5437%,#999_99.362%)]">За что мы любим Store</h1>
 
-<StoreBenefitsCards class="absolute inset-x-0 top-[298px]" />
+<StoreBenefitsCards class="absolute inset-x-0 top-[210px]" />
 
 ---
 layout: default
@@ -315,19 +319,13 @@ showLogo: false
 showNumbers: false
 ---
 
-<PublicImage class="store-everything-background pointer-events-none absolute left-[-80px] top-0 block h-full w-[1920px] max-w-none" :src="'/images/store-everything-background-2x.png'" alt="" />
+::canvas::
 
-<div class="pointer-events-none absolute left-[-250.914px] top-[285.12px] flex h-[846.626px] w-[1154.261px] items-center justify-center" aria-hidden="true">
-  <div class="relative h-[587.001px] w-[1033.32px] rotate-[-15.83deg]">
-    <PublicImage class="absolute left-[-100px] top-[-100px] max-w-none" :src="'/images/delete-address-focal.svg'" alt="" />
-  </div>
-</div>
+<PublicImage class="store-everything-background pointer-events-none absolute left-[-80px] top-0 block h-[1080px] w-[1920px] max-w-none" src="/images/store-everything-meme-background-2x.png" alt="" aria-hidden="true" />
 
-<PublicImage class="store-everything-character absolute left-[770.273px] top-[224px] block h-[735px] w-[496.274px] max-w-none" :src="'/images/store-everything-character-2x.png'" alt="Вовка из мультфильма «Вовка в Тридевятом царстве»" />
+<h1 class="absolute left-[249px] top-[88px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-[#fafafa]">Давайте делать всё в Store!</h1>
 
-<PublicImage class="store-everything-bucket absolute left-[474px] top-[575.651px] block h-[383.129px] w-[316.617px] max-w-none" :src="'/images/store-everything-bucket-2x.png'" alt="Ведро с берёзовыми поленьями" />
-
-<h1 class="absolute top-[88px] left-[249px] m-0 w-[1262px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-[#fafafa]">Давайте делать всё в Store!</h1>
+<PublicImage class="store-everything-meme absolute left-[462px] top-[232px] block h-[751px] w-[836px] max-w-none object-cover" src="/images/store-everything-meme-2x.png" alt="Вовка в короне рядом с бочкой с надписью STORE" />
 
 ---
 layout: store-code
@@ -340,11 +338,11 @@ clicks: 4
 
 <div class="store-addresses-content absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
 
-<div class="store-notes flex w-[402px] shrink-0 flex-col gap-[24px] font-body text-[30px] leading-[38px] text-body">
-  <p class="m-0"><span class="font-bold text-accent">addresses</span> – данные</p>
-  <p class="m-0"><span class="font-bold text-accent">isLoading</span> – загрузка</p>
-  <p class="m-0"><span class="font-bold text-accent">error</span> – ошибка</p>
-  <p class="m-0"><span class="font-bold text-accent">loadAddresses</span> – action</p>
+<div class="store-notes relative left-[-28px] top-[-10px] flex w-[402px] shrink-0 flex-col gap-[16px] font-body font-normal text-[28px] leading-[1.4] text-white/69">
+  <p class="m-0 w-[460px]"><span class="font-semibold text-white">addresses</span> – данные</p>
+  <p class="m-0 w-[460px]"><span class="font-semibold text-white">isLoading</span> – загрузка</p>
+  <p class="m-0 w-[460px]"><span class="font-semibold text-white">error</span> – ошибка</p>
+  <p class="m-0 w-[460px]"><span class="font-semibold text-white">loadAddresses</span> – action</p>
 </div>
 
 <StoreCodePanel :line-height="32">
@@ -536,10 +534,10 @@ clicks: 7
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.0792614279172deg,#fff_1.5437%,#999_99.362%)]">Ближайший магазин</h1>
 
 <div class="store-nearest-shop-body absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
-<div class="store-nearest-shop-notes flex w-[402px] shrink-0 flex-col gap-[24px] font-body text-[32px] leading-[1.2] text-white">
-  <p class="m-0"><span class="font-bold text-accent">store</span> – найденный магазин</p>
-  <p class="m-0"><span class="font-bold text-accent">isLoading</span> – загрузка</p>
-  <p class="m-0"><span class="font-bold text-accent">error</span> – ошибка</p>
+<div class="store-nearest-shop-notes relative left-[-29px] top-[-10px] flex w-[402px] shrink-0 flex-col gap-[16px] font-body font-normal text-[28px] leading-[1.4] text-white/69">
+  <p class="m-0 whitespace-nowrap"><span class="font-semibold text-white">store</span> – найденный магазин</p>
+  <p class="m-0 whitespace-nowrap"><span class="font-semibold text-white">isLoading</span> – загрузка</p>
+  <p class="m-0 whitespace-nowrap"><span class="font-semibold text-white">error</span> – ошибка</p>
 </div>
 
 <StoreCodePanel :line-height="28" class="relative top-[-28px]">
@@ -616,17 +614,17 @@ variant: risk-left
   <PublicImage class="invalidation-clown absolute left-[-37.3327441%] top-[-5.8117626%] w-[174.6654726%] h-[105.8498564%] max-w-none" src="/images/invalidation-clown-personalized.png" alt="Автор доклада в костюме клоуна жонглирует мячами" />
 </div>
 
-<div class="invalidation-principles absolute left-[28px] top-[300px] flex flex-col items-start gap-[32px] font-body text-[32px] leading-[42px] text-white">
-  <div class="invalidation-principle flex items-center gap-[32px]">
-    <PublicImage class="block shrink-0 max-w-none" src="/images/invalidation-cross.svg" alt="" width="64" height="64" />
+<div class="invalidation-principles absolute left-0 top-[290px] flex w-[738px] flex-col items-start gap-[20px] font-body font-normal text-[32px] leading-[42px] text-body">
+  <div class="invalidation-principle flex items-center gap-[20px]">
+    <span class="block h-[42px] w-[28px] shrink-0 text-[28px] leading-[42px]" aria-hidden="true">❌</span>
     <p class="m-0 whitespace-nowrap">Ручное поддержание инвариантов</p>
   </div>
-  <div class="invalidation-principle flex items-center gap-[32px]">
-    <PublicImage class="block shrink-0 max-w-none" src="/images/invalidation-cross.svg" alt="" width="64" height="64" />
+  <div class="invalidation-principle flex items-center gap-[20px]">
+    <span class="block h-[42px] w-[28px] shrink-0 text-[28px] leading-[42px]" aria-hidden="true">❌</span>
     <p class="m-0 whitespace-nowrap">Разрозненная логика зависимостей</p>
   </div>
-  <div class="invalidation-principle flex items-center gap-[32px]">
-    <PublicImage class="block shrink-0 max-w-none" src="/images/invalidation-cross.svg" alt="" width="64" height="64" />
+  <div class="invalidation-principle flex items-center gap-[20px]">
+    <span class="block h-[42px] w-[28px] shrink-0 text-[28px] leading-[42px]" aria-hidden="true">❌</span>
     <p class="m-0 whitespace-nowrap">Риск рассинхронизации</p>
   </div>
 </div>
@@ -679,75 +677,80 @@ export const useCatalogStore = defineStore('catalog', () => {
 
 ---
 layout: store-code
+variant: diagonal
+class: "[&.slide-frame_.slide-logo]:!left-[80px] [&.slide-frame_.slide-logo]:!bottom-[72px] [&.slide-frame_.slide-number]:!right-[80px] [&.slide-frame_.slide-number]:!bottom-[66px] [&.slide-frame_.slide-number]:!w-[30px] [&.slide-frame_.slide-number]:!px-[3px]"
 ---
 
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Проблемы</p>
+<p class="absolute top-[88px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Проблемы</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(109.33529736428274deg,#fff_1.5437%,#999_99.362%)]">Проблемы watch</h1>
+<h1 class="absolute top-[138px] left-[-6px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(114.16457633999747deg,#fff_1.5437%,#999_99.362%)]">Асинхронность watch</h1>
 
-<div class="watch-problems absolute top-[304px] inset-x-[28px] flex flex-col gap-[24px] font-body">
-  <div class="watch-problem relative flex h-[176px] items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">01</p>
-    <div class="min-w-0 flex-1 flex flex-col gap-[12px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Race conditions</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Старый ответ может прийти позже и перезаписать актуальные данные.</p>
+<div class="watch-problems absolute top-[320px] left-[-2px] w-[1760px] flex flex-col gap-[40px] font-body">
+  <div class="watch-problem relative flex h-[95px] items-center gap-[64px]">
+    <p class="m-0 h-[95px] w-[116px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">01</p>
+    <div class="min-w-0 flex-1 flex flex-col gap-[8px]">
+      <p class="m-0 font-bold text-[32px] leading-[1.1] text-white">Race conditions</p>
+      <p class="m-0 font-normal text-[30px] leading-[38px] text-white/69">Старый ответ может прийти позже и перезаписать актуальные данные</p>
     </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
   </div>
-  <div class="watch-problem relative flex h-[176px] items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">02</p>
-    <div class="min-w-0 flex-1 flex flex-col gap-[12px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Неявность</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Причина запроса спрятана в цепочке реактивных наблюдателей.</p>
+  <div class="self-end h-[2px] w-[1757px] shrink-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.2),rgba(255,255,255,0))]" aria-hidden="true"></div>
+  <div class="watch-problem relative flex h-[95px] items-center gap-[64px]">
+    <p class="m-0 h-[95px] w-[116px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">02</p>
+    <div class="min-w-0 flex-1 flex flex-col gap-[8px]">
+      <p class="m-0 font-bold text-[32px] leading-[1.1] text-white">Неявность</p>
+      <p class="m-0 font-normal text-[30px] leading-[38px] text-white/69">Причина запроса спрятана в цепочке реактивных наблюдателей</p>
     </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
   </div>
-  <div class="watch-problem relative flex h-[176px] items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
-    <div class="min-w-0 flex-1 flex flex-col gap-[12px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Отмена запросов</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Очистку таймеров и отмену устаревших запросов пишем вручную.</p>
+  <div class="self-end h-[2px] w-[1757px] shrink-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.2),rgba(255,255,255,0))]" aria-hidden="true"></div>
+  <div class="watch-problem relative flex h-[95px] items-center gap-[64px]">
+    <p class="m-0 h-[95px] w-[116px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
+    <div class="min-w-0 flex-1 flex flex-col gap-[8px]">
+      <p class="m-0 font-bold text-[32px] leading-[1.1] text-white">Отмена запросов</p>
+      <p class="m-0 font-normal text-[30px] leading-[38px] text-white/69">Очистку таймеров и отмену устаревших запросов пишем вручную</p>
     </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
   </div>
 </div>
 
 
 ---
 layout: store-code
+variant: diagonal-left
+class: "[&.slide-frame_.slide-logo]:!left-[80px] [&.slide-frame_.slide-logo]:!bottom-[72px] [&.slide-frame_.slide-number]:!right-[80px] [&.slide-frame_.slide-number]:!bottom-[66px] [&.slide-frame_.slide-number]:!w-[30px] [&.slide-frame_.slide-number]:!px-[3px]"
 ---
 
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Проблемы</p>
+<p class="absolute top-[88px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Проблемы</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(102.13636440638527deg,#fff_1.5437%,#999_99.362%)]">Boilerplate</h1>
+<h1 class="absolute top-[138px] left-[-6px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(102.13636440638527deg,#fff_1.5437%,#999_99.362%)]">Boilerplate</h1>
 
-<ul class="boilerplate-list absolute top-[320px] left-[28px] m-0 p-0 w-[836px] list-none flex flex-col gap-[32px] font-body font-normal text-[40px] leading-[1.2] text-white">
-  <li class="flex items-center gap-[24px]"><span class="w-[8px] h-[8px] shrink-0 bg-accent" aria-hidden="true"></span><span class="min-w-0 flex-1">Одинаковые CRUD-ы</span></li>
-  <li class="flex items-center gap-[24px]"><span class="w-[8px] h-[8px] shrink-0 bg-accent" aria-hidden="true"></span><span class="min-w-0 flex-1">Флаги асинхронщины</span></li>
-  <li class="flex items-center gap-[24px]"><span class="w-[8px] h-[8px] shrink-0 bg-accent" aria-hidden="true"></span><span class="min-w-0 flex-1">Обработка ошибок</span></li>
-  <li class="flex items-center gap-[24px]"><span class="w-[8px] h-[8px] shrink-0 bg-accent" aria-hidden="true"></span><span class="min-w-0 flex-1">Загрузка из API</span></li>
+<ul class="boilerplate-list absolute top-[290px] left-0 m-0 p-0 w-[738px] list-none flex flex-col gap-[20px] font-body font-normal text-[32px] leading-[42px] text-body">
+  <li class="m-0 flex items-center gap-[20px]"><span class="w-[28px] h-[42px] shrink-0 text-[28px]" aria-hidden="true">❌</span><span>Одинаковые CRUD-ы</span></li>
+  <li class="m-0 flex items-center gap-[20px]"><span class="w-[28px] h-[42px] shrink-0 text-[28px]" aria-hidden="true">❌</span><span>Служебные состояния</span></li>
+  <li class="m-0 flex items-center gap-[20px]"><span class="w-[28px] h-[42px] shrink-0 text-[28px]" aria-hidden="true">❌</span><span>Обработка ошибок</span></li>
+  <li class="m-0 flex items-center gap-[20px]"><span class="w-[28px] h-[42px] shrink-0 text-[28px]" aria-hidden="true">❌</span><span>Загрузка из API</span></li>
 </ul>
 
-<PublicImage class="boilerplate-iceberg absolute top-[288px] right-[27.56px] block max-w-none w-[584.878px] h-[640px] rounded-[16px] object-cover" :src="'/images/boilerplate-iceberg-2x.png'" alt="Айсберг: над водой data, под водой isLoading, error, refetch, fetch, clear" width="1170" height="1280" />
+<PublicImage class="boilerplate-iceberg absolute top-[298px] left-[927px] block max-w-none w-[673px] h-[674px] rounded-[32px] object-fill" src="/images/boilerplate-iceberg-updated.png" alt="Айсберг: над водой data, под водой isLoading, error, refetch, fetch, clear" width="1199" height="1312" />
 
 ---
 layout: store-code
+variant: diagonal
+class: "[&.slide-frame_.slide-logo]:!left-[80px] [&.slide-frame_.slide-logo]:!bottom-[72px] [&.slide-frame_.slide-number]:!right-[80px] [&.slide-frame_.slide-number]:!bottom-[66px] [&.slide-frame_.slide-number]:!w-[30px] [&.slide-frame_.slide-number]:!px-[3px]"
 clicks: 1
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Альтернатива Store</p>
+<p class="absolute top-[88px] left-[0px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Альтернатива Store</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(112.97189370889106deg,#fff_1.5437%,#999_99.362%)]">Спасибо composable</h1>
+<h1 class="absolute top-[138px] left-[-3px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(103.77354411570731deg,#fff_1.5437%,#999_99.362%)]">Composable</h1>
 
-<div class="composable-body absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
-  <div class="composable-notes flex w-[402px] shrink-0 flex-col gap-[24px] font-body font-normal text-[32px] leading-[1.2] text-white">
-    <p class="m-0">Реализует boilerplate</p>
-    <p class="m-0">Скрывает реализацию</p>
-  </div>
+<div class="composable-body absolute inset-x-0 top-[290px] flex items-start justify-between gap-[32px]">
+  <ul class="composable-notes m-0 p-0 list-none flex w-[548px] shrink-0 flex-col gap-[20px] font-body font-normal text-[32px] leading-[42px] text-body">
+    <li class="m-0 flex items-center gap-[20px]"><span class="w-[28px] h-[42px] shrink-0 text-[28px]" aria-hidden="true">✅</span><span>Реализует boilerplate</span></li>
+    <li class="m-0 flex items-center gap-[20px]"><span class="w-[28px] h-[42px] shrink-0 text-[28px]" aria-hidden="true">✅</span><span>Скрывает реализацию</span></li>
+  </ul>
 
-<StoreCodePanel :line-height="28" class="relative top-[-28px]">
+<StoreCodePanel :line-height="28" class="relative top-[8px] !w-[1180px] !flex-[0_0_1180px] !rounded-[32px]">
 
 ````md magic-move
 ```ts
@@ -780,94 +783,119 @@ const { data, error, isFetching, execute } = useFetch(
 </div>
 
 ---
-layout: store-code
+layout: default
 variant: none
 clicks: 3
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Проблемы composable</p>
-
-<h1 class="absolute top-[156px] left-[28px] m-0 w-[1122px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-white">Дедупликация запросов</h1>
+<h1 class="absolute top-[50px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(116.402686deg,#fff_1.5437%,#999_99.362%)]">Дедупликация запросов</h1>
 
 <RequestDeduplicationDiagram />
 
 ---
-layout: store-code
+layout: default
+variant: diagonal
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Проблемы composable</p>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализации</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(116.7271941937475deg,#fff_1.5437%,#999_99.362%)]">Composable не подходит</h1>
+<h1 class="absolute top-[50px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(110.188526deg,#fff_1.5437%,#999_99.362%)]">Store не подходит</h1>
 
-<div class="composable-limitations absolute top-[375px] inset-x-[28px] flex flex-col gap-[64px] font-body">
-  <div class="composable-limitations-row flex items-start gap-[32px]">
-    <p class="m-0 w-[402px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">Нет дедупликации</p>
-    <p class="m-0 min-w-0 flex-1 font-normal text-[32px] leading-[42px] text-secondary">Одинаковые запросы запускаются повторно в разных компонентах</p>
+<div class="server-state-store-problems absolute top-[232px] left-[-3px] flex w-[1760px] flex-col gap-[40px] font-body">
+  <div class="flex h-[95px] items-center gap-[64px]">
+    <p class="m-0 h-[95px] w-[116px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">01</p>
+    <div class="flex min-w-0 flex-1 flex-col gap-[8px]">
+      <p class="m-0 text-[32px] font-bold leading-[1.1] text-white">Boilerplate</p>
+      <p class="m-0 text-[30px] leading-[38px] text-white/69">Загрузка, ошибки и очистка повторяются в каждом action</p>
+    </div>
   </div>
-  <div class="composable-limitations-separator h-px shrink-0 bg-white/20" aria-hidden="true"></div>
-  <div class="composable-limitations-row flex items-start gap-[32px]">
-    <p class="m-0 w-[402px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">Дублирование состояния</p>
-    <p class="m-0 min-w-0 flex-1 font-normal text-[32px] leading-[42px] text-secondary">Каждый экземпляр composable хранит собственные данные, загрузку и ошибку</p>
+  <div class="ml-[3px] h-[2px] w-[1757px] shrink-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.2),rgba(255,255,255,0))]" aria-hidden="true" />
+  <div class="flex h-[95px] items-center gap-[64px]">
+    <p class="m-0 h-[95px] w-[116px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">02</p>
+    <div class="flex min-w-0 flex-1 flex-col gap-[8px]">
+      <p class="m-0 text-[32px] font-bold leading-[1.1] text-white">Нет дедупликации</p>
+      <p class="m-0 text-[30px] leading-[38px] text-white/69">Компоненты могут параллельно запросить одни данные</p>
+    </div>
   </div>
-  <div class="composable-limitations-separator h-px shrink-0 bg-white/20" aria-hidden="true"></div>
-  <div class="composable-limitations-row flex items-start gap-[32px]">
-    <p class="m-0 w-[402px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">Сложный refresh</p>
-    <p class="m-0 min-w-0 flex-1 font-normal text-[32px] leading-[42px] text-secondary">Интервалы и повторные запросы приходится координировать вручную</p>
+  <div class="ml-[3px] h-[2px] w-[1757px] shrink-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.2),rgba(255,255,255,0))]" aria-hidden="true" />
+  <div class="flex h-[95px] items-center gap-[64px]">
+    <p class="m-0 h-[95px] w-[116px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
+    <div class="flex min-w-0 flex-1 flex-col gap-[8px]">
+      <p class="m-0 text-[32px] font-bold leading-[1.1] text-white">Это не кэш</p>
+      <p class="m-0 text-[30px] leading-[38px] text-white/69">Нет ключей, свежести и управляемой инвалидации</p>
+    </div>
   </div>
 </div>
 
 ---
-layout: store-code
+layout: default
+variant: diagonal
 ---
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(107.37143008839674deg,#fff_1.5437%,#999_99.362%)]">Что нам делать</h1>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализации</p>
 
-<p class="absolute top-[300px] left-[28px] m-0 w-[836px] font-body font-normal text-[32px] leading-[42px] text-white">Нужен единый способ управлять запросами, свежестью и кэшем.</p>
+<h1 class="absolute top-[50px] left-[-3px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(116.727194deg,#fff_1.5437%,#999_99.362%)]">Composable не подходит</h1>
 
-<figure class="nothing-understood-meme absolute top-[274px] right-[28px] m-0 w-[836px] aspect-[507/377] overflow-hidden rounded-[24px] border-2 border-solid border-white/55">
-  <PublicImage class="block w-full h-auto max-w-none" src="/images/nothing-understood.png" alt="Мужчина в недоумении: «Ничего не понимаю»" width="507" height="397" />
-</figure>
+<div class="composable-limitations absolute top-[232px] left-[-3px] flex w-[1760px] flex-col gap-[40px] font-body">
+  <div class="flex h-[95px] items-center gap-[64px]">
+    <p class="m-0 h-[95px] w-[116px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">01</p>
+    <div class="flex min-w-0 flex-1 flex-col gap-[8px]">
+      <p class="m-0 text-[32px] font-bold leading-[1.1] text-white">Нет дедупликации</p>
+      <p class="m-0 text-[30px] leading-[38px] text-white/69">Одинаковые запросы запускаются повторно в разных компонентах</p>
+    </div>
+  </div>
+  <div class="ml-[3px] h-[2px] w-[1757px] shrink-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.2),rgba(255,255,255,0))]" aria-hidden="true" />
+  <div class="flex h-[95px] items-center gap-[64px]">
+    <p class="m-0 h-[95px] w-[116px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">02</p>
+    <div class="flex min-w-0 flex-1 flex-col gap-[8px]">
+      <p class="m-0 text-[32px] font-bold leading-[1.1] text-white">Дублирование состояния</p>
+      <p class="m-0 text-[30px] leading-[38px] text-white/69">Каждый экземпляр composable хранит собственные данные, загрузку и ошибку</p>
+    </div>
+  </div>
+  <div class="ml-[3px] h-[2px] w-[1757px] shrink-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.2),rgba(255,255,255,0))]" aria-hidden="true" />
+  <div class="flex h-[95px] items-center gap-[64px]">
+    <p class="m-0 h-[95px] w-[116px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
+    <div class="flex min-w-0 flex-1 flex-col gap-[8px]">
+      <p class="m-0 text-[32px] font-bold leading-[1.1] text-white">Сложный refresh</p>
+      <p class="m-0 text-[30px] leading-[38px] text-white/69">Интервалы и повторные запросы приходится координировать вручную</p>
+    </div>
+  </div>
+</div>
 
 ---
-layout: store-code
-clicks: 3
+layout: default
+variant: none
+showLogo: false
+showNumbers: false
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Кэш</p>
+::canvas::
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.40703837884945deg,#fff_1.5437%,#999_99.362%)]">Кэш – что за зверь?</h1>
-
-<p class="absolute top-[300px] left-[28px] w-[836px] m-0 font-body font-normal text-[32px] leading-[42px] text-white">Кэш – временная копия данных, которая позволяет не обращаться к источнику истины при каждом чтении.</p>
-
-<p class="absolute top-[466px] left-[28px] w-[704px] m-0 font-body font-normal text-[24px] leading-[1.35] text-secondary">Ключ кэша – уникальный идентификатор, по которому находим нужную копию данных.</p>
-
-<BackendCacheDiagram class="absolute top-[304px] left-[896px]" />
+<WhatToDoMeme />
 
 ---
-layout: store-code
+layout: default
+variant: diagonal
 clicks: 4
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Кэш</p>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">B2C сценарий</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.38811141368086deg,#fff_1.5437%,#999_99.362%)]">Инвалидация</h1>
+<h1 class="absolute top-[50px] left-[-6px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.932013deg,#fff_1.5437%,#999_99.362%)]">Проблемы состояний</h1>
 
-<p class="invalidation-definition absolute top-[300px] left-[28px] m-0 w-[1268px] font-body font-normal text-[32px] leading-[42px] text-secondary">Инвалидация кэша – пометка сохранённых данных как устаревших, после которой следующий потребитель получает свежую версию.</p>
-
-<InvalidationFlow class="absolute top-[574px] left-[28px]" :stage="$clicks" />
+<StateProblemCards :stage="$clicks" />
 
 ---
-layout: store-code
+layout: default
 variant: none
-clicks: 6
+clicks: 7
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Состояния</p>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Состояния</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-white">Жизненный цикл Server State</h1>
+<h1 class="absolute top-[50px] left-[-1px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(109.470623deg,#fff_1.5437%,#999_99.362%)]">Жизненный цикл</h1>
 
 <ClientCacheDiagram :stage="$clicks" />
-
 
 ---
 layout: store-code
@@ -876,47 +904,70 @@ clicks: 3
 
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(103.5581102367891deg,#fff_1.5437%,#999_99.362%)]">Это же кэш!</h1>
 
-<div class="projection-notes absolute top-[300px] left-[28px] flex w-[655px] flex-col gap-[32px] font-body font-normal text-[32px] leading-[42px] text-white">
-  <p class="m-0">Источник истины находится на сервере</p>
-  <p class="m-0">На клиенте хранится только копия</p>
+<div class="projection-notes absolute top-[300px] left-[28px] flex w-[836px] flex-col gap-[32px] font-body font-normal text-[32px] leading-[42px] text-white">
+  <p class="m-0">Источник истины находится на сервере</p>
+  <p class="m-0">На клиенте хранится только копия</p>
   <p class="m-0">Эта копия может устаревать</p>
 </div>
 
 <ServerStateProjection :stage="$clicks" />
 
-
 ---
-layout: store-code
+layout: default
+variant: diagonal-left
+clicks: 3
 ---
 
-<h1 class="absolute top-[156px] left-[28px] m-0 w-[1704px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-transparent bg-clip-text bg-[linear-gradient(127.01578971298213deg,#fff_1.5437%,#999_99.362%)]">Server State – отдельный тип</h1>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Кэш</p>
 
-<p class="absolute top-[292px] left-[28px] m-0 w-[1173px] font-body font-normal text-[40px] leading-[1.2] text-secondary">Server State – проекция серверного состояния на клиенте. Она может устареть и не является источником истины.</p>
+<h1 class="absolute top-[50px] left-[-5px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.407038deg,#fff_1.5437%,#999_99.362%)]">Кэш – что за зверь?</h1>
 
-<div class="state-type-comparison absolute top-[528px] inset-x-[28px] flex flex-col font-body">
-  <div class="flex h-[105px] shrink-0 justify-between gap-[32px] border-b border-solid border-white/20">
-    <p class="m-0 w-[836px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">Local State</p>
-    <div class="w-[836px] font-normal text-[32px] leading-[1.2] text-secondary">
-      <p class="m-0">Composables / hooks</p>
-      <p class="m-0">Локальное состояние</p>
-    </div>
-  </div>
-  <div class="flex h-[128px] shrink-0 justify-between gap-[32px] border-b border-solid border-white/20 pt-[23px]">
-    <p class="m-0 w-[836px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">Application State</p>
-    <div class="w-[836px] font-normal text-[32px] leading-[1.2] text-secondary">
-      <p class="m-0">Store</p>
-      <p class="m-0">Глобальное состояние</p>
-    </div>
-  </div>
-  <div class="flex h-[128px] shrink-0 justify-between gap-[32px] border-b border-solid border-white/20 pt-[23px]">
-    <p class="m-0 w-[836px] shrink-0 font-bold text-[40px] leading-[1.2] text-[#41e786]">Server State</p>
-    <div class="w-[836px] font-normal text-[32px] leading-[1.2] text-secondary">
-      <p class="m-0">Проекция серверного состояния</p>
-      <p class="m-0">на клиенте</p>
-    </div>
-  </div>
+<div class="absolute top-[202px] left-0 flex w-[836px] flex-col gap-[32px] font-body">
+  <p class="m-0 text-[30px] leading-[38px] text-white">Кэш – временная копия данных, которая позволяет не обращаться к источнику истины<br>при каждом чтении</p>
+  <p class="m-0 text-[24px] leading-[1.35] text-white/69">Ключ кэша – уникальный идентификатор,<br>по которому находим нужную копию данных</p>
 </div>
 
+<BackendCacheDiagram class="absolute top-[210px] left-[924px]" />
+
+---
+layout: default
+variant: diagonal-left
+clicks: 4
+---
+
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Кэш</p>
+
+<h1 class="absolute top-[50px] left-[-5px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.388111deg,#fff_1.5437%,#999_99.362%)]">Инвалидация</h1>
+
+<p class="invalidation-definition absolute top-[202px] left-0 m-0 w-[792px] font-body text-[30px] leading-[38px] text-body">Инвалидация кэша – пометка сохранённых данных как устаревших, после которой следующий потребитель получает свежую версию</p>
+
+<InvalidationFlow class="absolute top-[372px] left-0" :stage="$clicks" />
+
+---
+layout: default
+variant: diagonal
+---
+
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Состояния</p>
+
+<h1 class="absolute top-[50px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(103.916947deg,#fff_1.5437%,#999_99.362%)]">Server State</h1>
+
+<p class="absolute top-[202px] left-[-1px] m-0 w-[836px] font-body text-[30px] leading-[38px] text-body">Server State – проекция серверного состояния на клиенте. Она может устареть и не является источником истины</p>
+
+<div class="state-type-comparison absolute top-[341.5px] left-0 grid w-full grid-cols-3 gap-[32px]">
+  <article class="box-border flex h-[228px] flex-col gap-[32px] rounded-[32px] border border-solid border-white/20 bg-white/5 p-[40px] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
+    <h2 class="m-0 font-heading font-black text-[32px] leading-[1.2] text-[#7f9fff]">Local State</h2>
+    <p class="m-0 font-body text-[28px] leading-[1.4] text-white/69">Composables / hooks<br>Локальное состояние</p>
+  </article>
+  <article class="box-border flex h-[228px] flex-col gap-[32px] rounded-[32px] border border-solid border-white/20 bg-white/5 p-[40px] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
+    <h2 class="m-0 font-heading font-black text-[32px] leading-[1.2] text-[#41e786]">Application State</h2>
+    <p class="m-0 font-body text-[28px] leading-[1.4] text-white/69">Store<br>Глобальное состояние</p>
+  </article>
+  <article class="box-border flex h-[228px] flex-col gap-[32px] rounded-[32px] border border-solid border-white/20 bg-white/5 p-[40px] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
+    <h2 class="m-0 font-heading font-black text-[32px] leading-[1.2] text-[#ff7166]">Server State</h2>
+    <p class="m-0 font-body text-[28px] leading-[1.4] text-white/69">Проекция серверного состояния<br>на клиенте</p>
+  </article>
+</div>
 
 ---
 layout: store-code
@@ -928,42 +979,20 @@ layout: store-code
 
 <PublicImage class="server-state-chapter-gears absolute top-[80px] left-[920px] block h-[960px] w-[960px] max-w-none object-contain opacity-75 pointer-events-none" src="/images/server-state-chapter-gears.png" alt="" aria-hidden="true" />
 
-
 ---
-layout: store-code
+layout: default
+variant: none
+showLogo: false
+showNumbers: false
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
+::canvas::
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(110.18852664901692deg,#fff_1.5437%,#999_99.362%)]">Store не подходит</h1>
+<PublicImage class="requirements-background pointer-events-none absolute left-[-80px] top-0 block h-[1080px] w-[1920px] max-w-none" src="/images/requirements-meme-background-2x.png" alt="" aria-hidden="true" />
 
-<div class="server-state-store-problems absolute top-[304px] inset-x-[28px] flex flex-col gap-[24px] font-body">
-  <div class="relative flex h-[176px] items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">01</p>
-    <div class="min-w-0 flex-1 flex flex-col gap-[12px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Boilerplate</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Загрузка, ошибки и очистка повторяются в каждом action.</p>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
-  </div>
-  <div class="relative flex h-[176px] items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">02</p>
-    <div class="min-w-0 flex-1 flex flex-col gap-[12px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Нет дедупликации</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Компоненты могут параллельно запросить одни данные.</p>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
-  </div>
-  <div class="relative flex h-[176px] items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
-    <div class="min-w-0 flex-1 flex flex-col gap-[12px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Это не кэш</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Нет ключей, свежести и управляемой инвалидации.</p>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
-  </div>
-</div>
+<h1 class="absolute left-[389px] top-[88px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-[#fafafa]">Соберем требования</h1>
 
+<PublicImage class="requirements-meme absolute left-[430px] top-[232px] block h-[720px] w-[898px] max-w-none rounded-[32px] object-cover" src="/images/requirements-meme-2x.png" alt="Спанч Боб разводит руками под радугой" />
 
 ---
 layout: store-code

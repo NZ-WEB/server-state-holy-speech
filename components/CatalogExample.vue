@@ -2,7 +2,10 @@
 import { useSlideContext } from '@slidev/client'
 import { computed } from 'vue'
 
-const props = withDefaults(defineProps<{ static?: boolean }>(), { static: false })
+const props = withDefaults(defineProps<{ static?: boolean; surface?: 'bevel' | 'glass' }>(), {
+  static: false,
+  surface: 'bevel',
+})
 const { $clicks } = useSlideContext()
 const stage = computed(() => props.static ? 4 : $clicks.value)
 const products = [
@@ -15,6 +18,7 @@ const products = [
 <template>
   <section
     class="catalog-example box-border flex h-[629px] w-[1052px] flex-col gap-[32px] overflow-hidden rounded-[32px] border border-solid border-white/20 bg-white/5 bg-[linear-gradient(180deg,rgba(0,0,0,0.3)_0%,transparent_14%,transparent_86%,rgba(255,255,255,0.04)_100%)] p-[32px] font-body shadow-[inset_12px_0_24px_rgba(0,0,0,0.35),inset_-12px_0_24px_rgba(255,255,255,0.05)] backdrop-blur-[19px]"
+    :class="{ 'catalog-glass': surface === 'glass' }"
     aria-label="Каталог магазина Магнит"
   >
     <div class="flex h-[118px] w-full shrink-0 flex-col gap-[16px]">
@@ -22,8 +26,8 @@ const products = [
       <div class="flex flex-col gap-[4px]">
         <h2 class="m-0 font-body text-[40px] font-bold leading-[1.2] text-white">Магнит</h2>
         <p
-          class="catalog-delivery m-0 h-[26px] w-[457px] whitespace-nowrap text-[24px] leading-[1.35] text-secondary !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"
-          :class="stage >= 4 ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none translate-y-[12px]'"
+          class="catalog-delivery m-0 h-[26px] w-[457px] whitespace-nowrap text-[24px] leading-[1.35] !transition-[opacity,transform] !duration-500 ease-out motion-reduce:!duration-0 motion-reduce:!transform-none"
+          :class="[surface === 'glass' ? 'text-white/69' : 'text-secondary', stage >= 4 ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none translate-y-[12px]']"
           :aria-hidden="stage < 4"
         >Адрес доставки: ул. Ленина, 10 · Москва</p>
       </div>
@@ -46,3 +50,20 @@ const products = [
     </div>
   </section>
 </template>
+
+<style scoped>
+.catalog-glass {
+  box-shadow: inset 12px 0 24px rgb(0 0 0 / 35%), inset -12px 0 24px rgb(255 255 255 / 5%), inset 0 1px 1px rgb(255 255 255 / 8%);
+}
+
+/* A highlight above the 20% border approximates Figma's GLASS edge refraction. */
+.catalog-glass::before {
+  position: absolute;
+  inset: -1px;
+  box-sizing: border-box;
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: inherit;
+  pointer-events: none;
+  content: '';
+}
+</style>

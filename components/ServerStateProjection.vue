@@ -20,7 +20,7 @@ const layers = [
       :class="[layer.border, stage >= index + 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[12px] pointer-events-none']"
     >
       <p class="m-0 w-full font-bold text-[40px] text-white">{{ layer.title }}</p>
-      <p class="m-0 w-full font-normal text-[32px] text-secondary">{{ layer.description }}</p>
+      <p class="m-0 w-full font-normal text-[32px] text-white/69">{{ layer.description }}</p>
     </div>
   </div>
 </template>
