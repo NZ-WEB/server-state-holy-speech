@@ -270,7 +270,7 @@ variant: diagonal-left
 clicks: 3
 ---
 
-<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
 <h1 class="absolute top-[58px] left-[0] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.51865950802929deg,#fff_1.5437%,#999_99.362%)]">Активный адрес</h1>
 
@@ -328,22 +328,23 @@ showNumbers: false
 <PublicImage class="store-everything-meme absolute left-[462px] top-[232px] block h-[751px] w-[836px] max-w-none object-cover" src="/images/store-everything-meme-2x.png" alt="Вовка в короне рядом с бочкой с надписью STORE" />
 
 ---
-layout: store-code
+layout: default
+variant: store-left
 clicks: 4
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.1760574395592deg,#fff_1.5437%,#999_99.362%)]">Список адресов</h1>
+<h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.1760574395592deg,#fff_1.5437%,#999_99.362%)]">Список адресов</h1>
 
-<div class="store-addresses-content absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
+<div class="store-addresses-content absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[32px]">
 
-<div class="store-notes relative left-[-28px] top-[-10px] flex w-[402px] shrink-0 flex-col gap-[16px] font-body font-normal text-[28px] leading-[1.4] text-white/69">
-  <p class="m-0 w-[460px]"><span class="font-semibold text-white">addresses</span> – данные</p>
-  <p class="m-0 w-[460px]"><span class="font-semibold text-white">isLoading</span> – загрузка</p>
-  <p class="m-0 w-[460px]"><span class="font-semibold text-white">error</span> – ошибка</p>
-  <p class="m-0 w-[460px]"><span class="font-semibold text-white">loadAddresses</span> – action</p>
-</div>
+<ul class="store-notes m-0 list-none p-0 relative left-[-28px] top-[-10px] flex w-[402px] shrink-0 flex-col gap-[16px] font-body font-normal text-[28px] leading-[1.4] text-white/69">
+  <li class="m-0 flex"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">addresses</span> – данные</span></li>
+  <li class="m-0 flex"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">isLoading</span> – загрузка</span></li>
+  <li class="m-0 flex"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">error</span> – ошибка</span></li>
+  <li class="m-0 flex"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">loadAddresses</span> – action</span></li>
+</ul>
 
 <StoreCodePanel :line-height="32">
 
@@ -392,7 +393,7 @@ layout: store-code
 clicks: 1
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(102.9576450088695deg,#fff_1.5437%,#999_99.362%)]">Все actions</h1>
 
@@ -454,7 +455,7 @@ layout: store-code
 clicks: 3
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.51865950802929deg,#fff_1.5437%,#999_99.362%)]">Активный адрес</h1>
 
@@ -499,7 +500,7 @@ export const useActiveAddressStore = defineStore('address-act', () => {
 layout: store-code
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(117.15031701376903deg,#fff_1.5437%,#999_99.362%)]">Актуализация состояния</h1>
 
@@ -524,21 +525,22 @@ layout: store-code
 </div>
 
 ---
-layout: store-code
+layout: default
+variant: store-left
 clicks: 7
 ---
 
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.0792614279172deg,#fff_1.5437%,#999_99.362%)]">Ближайший магазин</h1>
+<h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.0792614279172deg,#fff_1.5437%,#999_99.362%)]">Ближайший магазин</h1>
 
-<div class="store-nearest-shop-body absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
-<div class="store-nearest-shop-notes relative left-[-29px] top-[-10px] flex w-[402px] shrink-0 flex-col gap-[16px] font-body font-normal text-[28px] leading-[1.4] text-white/69">
-  <p class="m-0 whitespace-nowrap"><span class="font-semibold text-white">store</span> – найденный магазин</p>
-  <p class="m-0 whitespace-nowrap"><span class="font-semibold text-white">isLoading</span> – загрузка</p>
-  <p class="m-0 whitespace-nowrap"><span class="font-semibold text-white">error</span> – ошибка</p>
-</div>
+<div class="store-nearest-shop-body absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[32px]">
+<ul class="store-nearest-shop-notes m-0 list-none p-0 relative left-[-29px] top-[-10px] flex w-[402px] shrink-0 flex-col gap-[16px] font-body font-normal text-[28px] leading-[1.4] text-white/69">
+  <li class="m-0 flex whitespace-nowrap"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">store</span> – найденный магазин</span></li>
+  <li class="m-0 flex whitespace-nowrap"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">isLoading</span> – загрузка</span></li>
+  <li class="m-0 flex whitespace-nowrap"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">error</span> – ошибка</span></li>
+</ul>
 
 <StoreCodePanel :line-height="28" class="relative top-[-28px]">
 
@@ -602,19 +604,19 @@ window.setInterval(
 </div>
 
 ---
-layout: store-code
+layout: default
 variant: risk-left
 ---
 
-<p class="invalidation-kicker absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent whitespace-nowrap">Реальная жизнь</p>
+<p class="invalidation-kicker absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent whitespace-nowrap">Реальная жизнь</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(115.33539188446608deg,#fff_1.5437%,#999_99.362%)]">Контроль инвалидации</h1>
+<h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(115.33539188446608deg,#fff_1.5437%,#999_99.362%)]">Контроль инвалидации</h1>
 
-<div class="invalidation-clown-crop absolute left-[887px] top-[258px] w-[729px] h-[836px] overflow-hidden rounded-[26.954px] pointer-events-none">
+<div class="invalidation-clown-crop absolute left-[887px] top-[170px] w-[729px] h-[836px] overflow-hidden rounded-[26.954px] pointer-events-none">
   <PublicImage class="invalidation-clown absolute left-[-37.3327441%] top-[-5.8117626%] w-[174.6654726%] h-[105.8498564%] max-w-none" src="/images/invalidation-clown-personalized.png" alt="Автор доклада в костюме клоуна жонглирует мячами" />
 </div>
 
-<div class="invalidation-principles absolute left-0 top-[290px] flex w-[738px] flex-col items-start gap-[20px] font-body font-normal text-[32px] leading-[42px] text-body">
+<div class="invalidation-principles absolute left-0 top-[202px] flex w-[738px] flex-col items-start gap-[20px] font-body font-normal text-[32px] leading-[42px] text-body">
   <div class="invalidation-principle flex items-center gap-[20px]">
     <span class="block h-[42px] w-[28px] shrink-0 text-[28px] leading-[42px]" aria-hidden="true">❌</span>
     <p class="m-0 whitespace-nowrap">Ручное поддержание инвариантов</p>
@@ -634,18 +636,18 @@ layout: store-code
 clicks: 3
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Store-реализация</p>
+<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.34721910752687deg,#fff_1.5437%,#999_99.362%)]">Каталог</h1>
 
-<div class="store-catalog-body absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
+<div class="store-catalog-body absolute inset-x-[28px] top-[272px] flex items-start justify-between gap-[32px]">
 <div class="store-catalog-notes flex w-[402px] shrink-0 flex-col gap-[24px] font-body text-[32px] leading-[1.2] text-white">
   <p class="m-0"><span class="font-bold text-accent">products</span> – данные каталога</p>
   <p class="m-0"><span class="font-bold text-accent">isLoading</span> – загрузка</p>
   <p class="m-0"><span class="font-bold text-accent">error</span> – ошибка</p>
 </div>
 
-<StoreCodePanel :line-height="28" class="relative top-[-28px]">
+<StoreCodePanel :line-height="28">
 
 ````md magic-move
 ```ts {5-9|11-13|15-17|19}
