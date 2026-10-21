@@ -1,41 +1,77 @@
 <script setup lang="ts">
-// The cache is revealed first; both consumers and their connectors follow together.
-defineProps<{ stage: number }>()
+import { computed } from 'vue'
+
+const props = defineProps<{ stage: number }>()
+
+// One model changes the list and every diagram label in the same render.
+const labels = computed(() => props.stage >= 1
+  ? { cache: 'Server State', read: 'useQuery', write: 'useMutation', notes: ['useQuery — чтение Server State', 'useMutation — запись Server State'] }
+  : { cache: 'Cache', read: 'Read', write: 'Write', notes: ['Чтение из кеша', 'Запись в кеш'] })
 </script>
 
 <template>
-  <div class="query-mutation-cache relative w-[1704px] h-[160px] font-body text-white" aria-live="polite">
-    <div
-      data-node="query-cache" data-stage="1"
-      class="absolute top-0 left-[528px] box-border w-[648px] h-[160px] flex items-center justify-center p-[24px] rounded-[24px] border-2 border-solid border-accent bg-white/5 backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)] transition-opacity duration-500 ease-out motion-reduce:duration-0"
-      :class="stage >= 1 ? 'opacity-100' : 'opacity-0'"
-      :aria-hidden="stage < 1"
-    >
-      <p class="m-0 text-[40px] leading-[1.2] font-bold text-center">Query Cache</p>
+  <section class="query-mutation-cache relative h-[376px] w-[1760px] font-body text-white" :data-stage="stage" aria-live="polite">
+    <div class="cache-diagram absolute top-0 left-[788px] h-[376px] w-[972px]">
+      <div data-node="cache" class="cache-card absolute top-[97px] left-0"></div>
+      <div data-node="read" class="cache-card absolute top-0 left-[570px]"></div>
+      <div data-node="write" class="cache-card absolute top-[220px] left-[570px]"></div>
+
+      <div class="absolute top-[78px] left-[410px] flex h-[87px] w-[152px] items-center justify-center" aria-hidden="true">
+        <PublicImage class="block max-w-none shrink-0 rotate-[150.21deg]" src="/images/cache-read-arrow-figma.svg" alt="" width="177.137" height="14.7279" />
+      </div>
+      <div class="absolute top-[194px] left-[410px] flex h-[104px] w-[152px] items-center justify-center" aria-hidden="true">
+        <PublicImage class="block max-w-none shrink-0 rotate-[-145.62deg]" src="/images/cache-write-arrow-figma.svg" alt="" width="186.174" height="14.7279" />
+      </div>
     </div>
 
-    <div
-      data-stage="2"
-      class="absolute inset-0 transition-opacity duration-500 ease-out motion-reduce:duration-0"
-      :class="stage >= 2 ? 'opacity-100' : 'opacity-0'"
-      :aria-hidden="stage < 2"
-    >
-      <div data-node="use-query" data-stage="2" class="absolute top-0 left-0 box-border w-[402px] h-[160px] flex items-center justify-center p-[24px] rounded-[24px] border border-solid border-white/20 bg-white/5 backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-        <p class="m-0 text-[32px] leading-[1.2] font-bold text-center">useQuery</p>
+    <Transition name="cache-copy" mode="out-in">
+      <div :key="labels.cache" class="absolute inset-0">
+        <DeckStarList class="absolute top-0 left-0 w-[720px]" :items="labels.notes" />
+        <p class="cache-label absolute top-[97px] left-[788px]">{{ labels.cache }}</p>
+        <p class="cache-label absolute top-0 left-[1358px]">{{ labels.read }}</p>
+        <p class="cache-label absolute top-[220px] left-[1358px]">{{ labels.write }}</p>
       </div>
-      <div data-node="use-mutation" data-stage="2" class="absolute top-0 right-0 box-border w-[402px] h-[160px] flex items-center justify-center p-[24px] rounded-[24px] border border-solid border-white/20 bg-white/5 backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-        <p class="m-0 text-[32px] leading-[1.2] font-bold text-center">useMutation</p>
-      </div>
-      <svg class="absolute inset-0 pointer-events-none overflow-visible" width="1704" height="160" viewBox="0 0 1704 160" aria-hidden="true">
-        <g data-connection="use-query-cache" data-stage="2" stroke="#ed0f00" stroke-width="3" fill="#ed0f00">
-          <path d="M402 80H516" fill="none" />
-          <path d="M528 80L516 74V86Z" stroke="none" />
-        </g>
-        <g data-connection="use-mutation-cache" data-stage="2" stroke="#ed0f00" stroke-width="3" fill="#ed0f00">
-          <path d="M1302 80H1188" fill="none" />
-          <path d="M1176 80L1188 74V86Z" stroke="none" />
-        </g>
-      </svg>
-    </div>
-  </div>
+    </Transition>
+  </section>
 </template>
+
+<style scoped>
+.cache-card {
+  box-sizing: border-box;
+  display: flex;
+  width: 402px;
+  height: 156px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(16 16 16 / 10%);
+  border-radius: 24px;
+  padding: 40px 24px;
+  background: rgb(255 255 255 / 5%);
+  backdrop-filter: blur(19px);
+  box-shadow: inset -24px -24px 64px rgb(255 255 255 / 6%), inset 24px 24px 64px rgb(0 0 0 / 40%);
+}
+.cache-label { display: grid; place-items: center; margin: 0; width: 402px; height: 156px; text-align: center; font-size: 30px; line-height: 38px; font-weight: 700; }
+.cache-copy-enter-active,
+.cache-copy-leave-active {
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+.cache-copy-enter-from { opacity: 0; transform: translateY(12px); }
+.cache-copy-leave-to { opacity: 0; transform: translateY(-12px); }
+@media (prefers-reduced-motion: reduce) {
+  .cache-copy-enter-active,
+  .cache-copy-leave-active { transition: none; }
+  .cache-copy-enter-from,
+  .cache-copy-leave-to { transform: none; }
+}
+.cache-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgb(255 255 255 / 40%), rgb(255 255 255 / 8%));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+</style>

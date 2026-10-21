@@ -314,6 +314,7 @@ clicks: 4
 
 ---
 layout: default
+showStars: false
 variant: none
 showLogo: false
 showNumbers: false
@@ -339,12 +340,7 @@ clicks: 4
 
 <div class="store-addresses-content absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[32px]">
 
-<ul class="store-notes m-0 list-none p-0 relative left-[-28px] top-[-10px] flex w-[402px] shrink-0 flex-col gap-[16px] font-body font-normal text-[28px] leading-[1.4] text-white/69">
-  <li class="m-0 flex"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">addresses</span> – данные</span></li>
-  <li class="m-0 flex"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">isLoading</span> – загрузка</span></li>
-  <li class="m-0 flex"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">error</span> – ошибка</span></li>
-  <li class="m-0 flex"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">loadAddresses</span> – action</span></li>
-</ul>
+<DeckStarList class="store-notes relative left-[-28px] w-[402px] shrink-0" :items="['addresses – данные', 'isLoading – загрузка', 'error – ошибка', 'loadAddresses – action']" />
 
 <StoreCodePanel :line-height="32">
 
@@ -389,21 +385,18 @@ async function loadAddresses() {
 </div>
 
 ---
-layout: store-code
+layout: default
+variant: store-left
 clicks: 1
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
+<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(102.9576450088695deg,#fff_1.5437%,#999_99.362%)]">Все actions</h1>
+<h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(102.9576450088695deg,#fff_1.5437%,#999_99.362%)]">Все actions</h1>
 
-<div class="store-actions-content absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px]">
+<div class="store-actions-content absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[32px]">
 
-<ul class="store-notes m-0 box-border flex w-[402px] shrink-0 list-disc flex-col gap-[24px] pl-[24px] font-body font-normal text-[30px] leading-[38px] text-white">
-  <li class="m-0 pl-[4px]">Добавить адрес</li>
-  <li class="m-0 pl-[4px]">Удалить адрес</li>
-  <li class="m-0 pl-[4px]">Обновить адрес</li>
-</ul>
+<DeckStarList class="store-notes relative left-[-28px] w-[402px] shrink-0" :items="['Добавить адрес', 'Удалить адрес', 'Обновить адрес']" />
 
 <StoreCodePanel :line-height="28">
 
@@ -451,20 +444,17 @@ async function removeAddress(addressId: string) {
 </div>
 
 ---
-layout: store-code
+layout: default
+variant: store-left
 clicks: 3
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
+<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.51865950802929deg,#fff_1.5437%,#999_99.362%)]">Активный адрес</h1>
+<h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.51865950802929deg,#fff_1.5437%,#999_99.362%)]">Активный адрес</h1>
 
-<div class="store-active-address-content absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[8px]">
-<div class="store-active-address-notes flex w-[460px] shrink-0 flex-col gap-[24px] font-body text-[30px] leading-[38px] text-body">
-  <p class="m-0"><span class="font-bold text-accent">activeAddressId</span> – выбранный ID</p>
-  <p class="m-0"><span class="font-bold text-accent">activeAddress</span> – активный адрес</p>
-  <p class="m-0"><span class="font-bold text-accent">selectAddress</span> – action выбора</p>
-</div>
+<div class="store-active-address-content absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[8px]">
+<DeckStarList class="store-active-address-notes relative left-[-28px] w-[460px] shrink-0" :items="['activeAddressId – выбранный ID', 'activeAddress – активный адрес', 'selectAddress – action выбора']" />
 
 <StoreCodePanel :line-height="28" class="!px-[16px]">
 
@@ -497,34 +487,6 @@ export const useActiveAddressStore = defineStore('address-act', () => {
 </div>
 
 ---
-layout: store-code
----
-
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
-
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(117.15031701376903deg,#fff_1.5437%,#999_99.362%)]">Актуализация состояния</h1>
-
-<p class="refresh-definition absolute top-[288px] inset-x-[28px] m-0 font-body font-normal text-[40px] leading-[1.2] text-secondary">Refresh – повторное получение данных, чтобы клиентская копия снова соответствовала состоянию на сервере.</p>
-
-<div class="refresh-conditions absolute top-[416px] inset-x-[28px] flex flex-col gap-[16px] font-body">
-  <div class="refresh-condition relative flex h-[128px] items-center gap-[32px]">
-    <p class="m-0 w-[402px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">60 секунд</p>
-    <p class="m-0 min-w-0 flex-1 font-normal text-[32px] leading-[1.2] text-secondary">Магазин обновляется раз в минуту</p>
-    <div class="refresh-separator absolute inset-x-0 bottom-0 h-[1px] bg-[#ed0f00]/25" aria-hidden="true"></div>
-  </div>
-  <div class="refresh-condition relative flex h-[128px] items-center gap-[32px]">
-    <p class="m-0 w-[402px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">Состояние клиента</p>
-    <p class="m-0 min-w-0 flex-1 font-normal text-[32px] leading-[1.2] text-secondary">Клиенту нужно обновлять состояние</p>
-    <div class="refresh-separator absolute inset-x-0 bottom-0 h-[1px] bg-[#ed0f00]/25" aria-hidden="true"></div>
-  </div>
-  <div class="refresh-condition relative flex h-[128px] items-center gap-[32px]">
-    <p class="m-0 w-[402px] shrink-0 font-bold text-[40px] leading-[1.2] text-white">Повторный запрос</p>
-    <p class="m-0 min-w-0 flex-1 font-normal text-[32px] leading-[1.2] text-secondary">Обновление нужно запускать автоматически</p>
-    <div class="refresh-separator absolute inset-x-0 bottom-0 h-[1px] bg-[#ed0f00]/25" aria-hidden="true"></div>
-  </div>
-</div>
-
----
 layout: default
 variant: store-left
 clicks: 7
@@ -536,11 +498,7 @@ clicks: 7
 <h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.0792614279172deg,#fff_1.5437%,#999_99.362%)]">Ближайший магазин</h1>
 
 <div class="store-nearest-shop-body absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[32px]">
-<ul class="store-nearest-shop-notes m-0 list-none p-0 relative left-[-29px] top-[-10px] flex w-[402px] shrink-0 flex-col gap-[16px] font-body font-normal text-[28px] leading-[1.4] text-white/69">
-  <li class="m-0 flex whitespace-nowrap"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">store</span> – найденный магазин</span></li>
-  <li class="m-0 flex whitespace-nowrap"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">isLoading</span> – загрузка</span></li>
-  <li class="m-0 flex whitespace-nowrap"><span class="w-[44px] shrink-0" aria-hidden="true">✦</span><span><span class="font-semibold text-white">error</span> – ошибка</span></li>
-</ul>
+<DeckStarList class="store-nearest-shop-notes relative left-[-28px] top-[-28px] w-[402px] shrink-0" :items="['store – найденный магазин', 'isLoading – загрузка', 'error – ошибка']" />
 
 <StoreCodePanel :line-height="28" class="relative top-[-28px]">
 
@@ -632,20 +590,17 @@ variant: risk-left
 </div>
 
 ---
-layout: store-code
+layout: default
+variant: store-left
 clicks: 3
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
+<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.34721910752687deg,#fff_1.5437%,#999_99.362%)]">Каталог</h1>
+<h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.34721910752687deg,#fff_1.5437%,#999_99.362%)]">Каталог</h1>
 
-<div class="store-catalog-body absolute inset-x-[28px] top-[272px] flex items-start justify-between gap-[32px]">
-<div class="store-catalog-notes flex w-[402px] shrink-0 flex-col gap-[24px] font-body text-[32px] leading-[1.2] text-white">
-  <p class="m-0"><span class="font-bold text-accent">products</span> – данные каталога</p>
-  <p class="m-0"><span class="font-bold text-accent">isLoading</span> – загрузка</p>
-  <p class="m-0"><span class="font-bold text-accent">error</span> – ошибка</p>
-</div>
+<div class="store-catalog-body absolute inset-x-[28px] top-[184px] flex items-start justify-between gap-[32px]">
+<DeckStarList class="store-catalog-notes relative left-[-28px] w-[402px] shrink-0" :items="['products – данные каталога', 'isLoading – загрузка', 'error – ошибка']" />
 
 <StoreCodePanel :line-height="28">
 
@@ -866,6 +821,7 @@ variant: diagonal
 
 ---
 layout: default
+showStars: false
 variant: none
 showLogo: false
 showNumbers: false
@@ -906,11 +862,7 @@ clicks: 3
 
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(103.5581102367891deg,#fff_1.5437%,#999_99.362%)]">Это же кеш!</h1>
 
-<div class="projection-notes absolute top-[300px] left-[28px] flex w-[836px] flex-col gap-[32px] font-body font-normal text-[32px] leading-[42px] text-white">
-  <p class="m-0">Источник истины находится на сервере</p>
-  <p class="m-0">На клиенте хранится только копия</p>
-  <p class="m-0">Эта копия может устаревать</p>
-</div>
+<DeckStarList class="projection-notes absolute top-[300px] left-[28px] w-[836px]" :items="['Источник истины находится на сервере', 'На клиенте хранится только копия', 'Эта копия может устаревать']" />
 
 <ServerStateProjection :stage="$clicks" />
 
@@ -983,6 +935,7 @@ layout: store-code
 
 ---
 layout: default
+showStars: false
 variant: none
 showLogo: false
 showNumbers: false
@@ -997,26 +950,18 @@ showNumbers: false
 <PublicImage class="requirements-meme absolute left-[430px] top-[232px] block h-[720px] w-[898px] max-w-none rounded-[32px] object-cover" src="/images/requirements-meme-2x.png" alt="Спанч Боб разводит руками под радугой" />
 
 ---
-layout: store-code
-clicks: 2
+layout: default
+variant: none
+clicks: 1
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
+<FigmaSlideBackdrop />
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(106.39648337165877deg,#fff_1.5437%,#999_99.362%)]">Кеш – это кеш!</h1>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
 
-<div class="query-mutation-tiles absolute top-[304px] inset-x-[28px] flex gap-[32px] font-body">
-  <div data-node="query-definition" class="box-border w-[836px] h-[268px] flex flex-col justify-center gap-[16px] px-[40px] py-[24px] rounded-[24px] bg-white/5 backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-    <p class="m-0 font-bold text-[40px] leading-[1.2] text-[#41e786]">Query</p>
-    <p class="m-0 font-normal text-[32px] leading-[1.2] text-secondary">Ищет запись по ключу. При MISS запрашивает данные у backend.</p>
-  </div>
-  <div data-node="mutation-definition" class="box-border w-[836px] h-[268px] flex flex-col justify-center gap-[16px] px-[40px] py-[24px] rounded-[24px] bg-white/5 backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-    <p class="m-0 font-bold text-[40px] leading-[1.2] text-[#e4bd83]">Mutation</p>
-    <p class="m-0 font-normal text-[32px] leading-[1.2] text-secondary">Меняет данные на backend, после чего связанный кеш может устареть.</p>
-  </div>
-</div>
+<h1 class="absolute top-[50px] left-[-6px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(106.39648337165877deg,#fff_1.5437%,#999_99.362%)]">Кеш – это кеш!</h1>
 
-<QueryMutationCache class="absolute top-[700px] left-[28px]" :stage="$clicks" />
+<QueryMutationCache class="absolute top-[210px] left-0" :stage="$clicks" />
 
 
 ---
@@ -1032,125 +977,108 @@ clicks: 4
 
 
 ---
-layout: store-code
+layout: default
+variant: diagonal-left
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
+<FigmaSlideBackdrop />
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(109.35786726442096deg,#fff_1.5437%,#999_99.362%)]">Долой Boilerplate</h1>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
 
-<div class="absolute inset-x-[28px] top-[340px] flex items-start justify-between gap-[32px]">
+<h1 class="absolute top-[50px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(109.35786726442096deg,#fff_1.5437%,#999_99.362%)]">Долой Boilerplate</h1>
+
+<div class="absolute top-[210px] left-0 flex items-start gap-[32px]">
   <QueryCapabilitiesPanel kind="query" />
   <QueryCapabilitiesPanel kind="mutation" />
 </div>
 
 
 ---
-layout: store-code
+layout: default
+variant: diagonal-left
 clicks: 4
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
+<FigmaSlideBackdrop />
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.92873093740087deg,#fff_1.5437%,#999_99.362%)]">Реактивность</h1>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
 
-<p class="absolute top-[304px] left-[28px] w-[1704px] m-0 font-body font-normal text-[40px] leading-[1.2] text-secondary">Каждый следующий query получает входные данные из предыдущего звена цепочки.</p>
+<h1 class="absolute top-[50px] left-[-6px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.92873093740087deg,#fff_1.5437%,#999_99.362%)]">Реактивность</h1>
 
-<QueryReactivityChain class="absolute top-[592px] left-[28px]" :stage="$clicks" />
+<p class="absolute top-[202px] left-[-2px] w-[792px] m-0 font-body font-normal text-[30px] leading-[38px] text-body">Каждый следующий query получает входные данные из предыдущего звена цепочки</p>
+
+<QueryReactivityChain class="absolute top-[342px] left-0" :stage="$clicks" />
 
 
 ---
-layout: store-code
+layout: default
+variant: diagonal-left
 clicks: 3
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
+<FigmaSlideBackdrop />
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(106.51307381726778deg,#fff_1.5437%,#999_99.362%)]">Дедупликация</h1>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
 
-<SharedQueryCacheDiagram class="absolute top-[304px] left-[28px]" :stage="$clicks" />
+<h1 class="absolute top-[50px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(106.51307381726778deg,#fff_1.5437%,#999_99.362%)]">Дедупликация</h1>
+
+<SharedQueryCacheDiagram class="absolute top-[210px] left-0" :stage="$clicks" />
 
 
 ---
-layout: store-code
+layout: default
+variant: none
 clicks: 5
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
+<FigmaSlideBackdrop :secondary-x="1114" />
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.74101414327697deg,#fff_1.5437%,#999_99.362%)]">Что мы <span class="text-accent">хотим</span></h1>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent whitespace-nowrap">Server State</p>
 
-<ServerStateRequirementsTable class="absolute top-[304px] left-[28px]" :stage="$clicks" />
+<h1 class="absolute top-[50px] left-[-6px] m-0 w-max font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.74101414327697deg,#fff_1.5437%,#999_99.362%)]">Что мы <span class="text-accent">хотим</span></h1>
 
-
----
-layout: store-code
----
-
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
-
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.07667407611406deg,#fff_1.5437%,#999_99.362%)]">Решения уже есть!</h1>
-
-<div class="client-cache-solutions absolute top-[304px] inset-x-[28px] flex justify-between gap-[32px] font-body">
-  <div data-node="1:1433" class="cache-solution-card relative box-border h-[600px] w-[836px] shrink-0 rounded-[24px] border-2 border-solid border-[#41e786] bg-white/5 backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-    <div class="absolute top-[38px] left-[38px] flex h-[96px] w-[756px] items-center">
-      <PublicImage src="/images/tanstack-query-logo.svg" class="block max-w-none" alt="TanStack" width="600" height="93.362" />
-    </div>
-    <div class="absolute top-[166px] left-[38px] flex h-[320px] w-[756px] items-center gap-[24px]">
-      <p class="m-0 w-[412px] shrink-0 font-normal text-[32px] leading-[1.2] text-secondary">Query cache, keys, stale и gc timers, mutations, invalidation, refetch.</p>
-      <a href="https://tanstack.com/query/latest" target="_blank" rel="noopener noreferrer" class="block h-[320px] w-[320px] shrink-0" aria-label="Документация TanStack Query">
-        <PublicImage data-node="1:1447" src="/images/tanstack-query-qr-2x.png" class="block h-[320px] w-[320px] max-w-none" alt="QR-код документации TanStack Query" width="640" height="640" />
-      </a>
-    </div>
-    <a href="https://tanstack.com/query/latest" target="_blank" rel="noopener noreferrer" class="absolute top-[518px] left-[38px] w-[756px] font-bold text-[24px] leading-[1.2] text-[#41e786] no-underline">tanstack.com/query</a>
-  </div>
-  <div data-node="1:1453" class="cache-solution-card relative box-border h-[600px] w-[836px] shrink-0 rounded-[24px] border-2 border-solid border-[#e4bd83] bg-white/5 backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-    <div class="absolute top-[38px] left-[38px] flex h-[96px] w-[756px] items-center gap-[24px]">
-      <PublicImage src="/images/pinia-colada-logo.svg" class="block max-w-none" alt="" aria-hidden="true" width="64" height="71.84" />
-      <p class="m-0 w-[668px] font-bold text-[40px] leading-[1.2] text-white">Pinia Colada</p>
-    </div>
-    <div class="absolute top-[166px] left-[38px] flex h-[320px] w-[756px] items-center gap-[24px]">
-      <p class="m-0 w-[412px] shrink-0 font-normal text-[32px] leading-[1.2] text-secondary">Та же модель Server State в экосистеме Vue: queries, mutations и cache entries.</p>
-      <a href="https://pinia-colada.esm.dev/" target="_blank" rel="noopener noreferrer" class="block h-[320px] w-[320px] shrink-0" aria-label="Документация Pinia Colada">
-        <PublicImage data-node="1:1500" src="/images/pinia-colada-qr-2x.png" class="block h-[320px] w-[320px] max-w-none" alt="QR-код документации Pinia Colada" width="640" height="640" />
-      </a>
-    </div>
-    <a href="https://pinia-colada.esm.dev/" target="_blank" rel="noopener noreferrer" class="absolute top-[518px] left-[38px] w-[756px] font-bold text-[24px] leading-[1.2] text-[#e4bd83] no-underline">pinia-colada.esm.dev</a>
-  </div>
-</div>
+<ServerStateRequirementCircles :stage="$clicks" />
 
 
 ---
-layout: store-code
+layout: default
+variant: none
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
+<FigmaSlideBackdrop />
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.48233705006426deg,#fff_1.5437%,#999_99.362%)]">Let's refactor!</h1>
+<p data-node-id="89:3465" class="absolute left-[-1px] top-0 m-0 font-body text-[24px] font-bold leading-[1.1] text-accent">Server State</p>
 
-<p class="absolute top-[304px] left-[28px] m-0 w-[836px] font-body font-normal text-[40px] leading-[1.2] text-white">Перепишем всё на Pinia Colada</p>
+<h1 data-node-id="89:3467" class="absolute left-[-6px] top-[50px] m-0 whitespace-nowrap bg-[linear-gradient(111.07667407611406deg,#fff_1.5437%,#999_99.362%)] bg-clip-text font-heading text-[80px] font-black leading-[0.9] tracking-[-1.6px] text-transparent">Решения уже есть!</h1>
 
-<figure data-node="rewrite-meme" class="absolute top-[240px] right-[28px] m-0 flex h-[718.263px] w-[836px] flex-col items-center justify-center gap-[24px]">
-  <PublicImage class="block w-[836px] h-auto max-w-none shrink-0 rounded-[24px]" src="/images/rewrite-everything.png" alt="Эмоциональный герой мема с поднятой рукой" width="643" height="418" />
-  <figcaption class="m-0 shrink-0 text-center font-heading font-black text-[48px] leading-[1.2] text-white">Всё переписать!</figcaption>
-</figure>
+<ServerStateSolutions class="absolute left-0 top-[210px]" />
 
 
 ---
-layout: store-code
+layout: default
+showStars: false
+variant: none
+showLogo: false
+showNumbers: false
+---
+
+<RefactorIntro />
+
+
+---
+layout: default
+variant: store-left
 clicks: 4
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Refactor</p>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Refactor</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.95433580916409deg,#fff_1.5437%,#999_99.362%)]">Получение адресов</h1>
+<h1 class="absolute top-[50px] left-[-5px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.95433580916409deg,#fff_1.5437%,#999_99.362%)]">Получение адресов</h1>
 
-<div class="refactor-addresses-body absolute inset-x-[28px] top-[272px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0">
-  <div data-node="refactor-addresses-notes" class="mt-[28px] w-[600px] shrink-0 font-body font-normal text-[32px] leading-[1.2] text-secondary">
-    <p class="m-0">По шагам переносим загрузку, ошибки и повторный запрос в Server State.</p>
-  </div>
+<div class="refactor-addresses-body absolute inset-x-0 top-[210px] flex items-start justify-between gap-[10px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0">
+  <DeckStarList data-node="refactor-addresses-notes" class="w-[570px] shrink-0" :items="['query key для ключей', 'API fetcher для транспорта', 'staleTime - время свежести']" />
 
-<StoreCodePanel data-node="refactor-addresses-code" :font-size="25" :line-height="26">
+<StoreCodePanel class="!w-[1180px] !flex-none" data-node="refactor-addresses-code" :font-size="25" :line-height="26">
 
 ````md magic-move
 ```ts {all}
@@ -1177,11 +1105,16 @@ async function loadAddresses() {
 
 return { addresses, isLoading, error, loadAddresses }
 ```
-```ts {all|5|6|7}
+```ts {all|10|11|12}
 import { useQuery } from '@pinia/colada'
 import { addressesApi } from '@http/transport'
 
-const query = useQuery({
+const {
+  data: addresses,
+  isLoading,
+  error,
+  refetch,
+} = useQuery({
   key: ['addresses'],
   query: addressesApi.list,
   staleTime: 5 * MINUTE,
@@ -1194,58 +1127,15 @@ const query = useQuery({
 
 
 ---
-layout: store-code
-clicks: 3
+layout: default
+variant: none
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Refactor</p>
+<FigmaSlideBackdrop :focal-x="650" />
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
+<h1 class="absolute top-[50px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(110.4115335624527deg,#fff_1.5437%,#999_99.362%)]">Всему своё место</h1>
+<RefactorStateCards class="absolute left-0 top-[210px]" />
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.95433580916409deg,#fff_1.5437%,#999_99.362%)]">Получение адресов</h1>
-
-<div class="refactor-actions-body absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0" :data-stage="$clicks">
-  <div class="refactor-actions-notes w-[600px] shrink-0 font-body font-normal text-[32px] leading-[1.2] text-secondary">
-    <p class="m-0">По шагам переносим загрузку, ошибки и повторный запрос в Server State.</p>
-  </div>
-
-<StoreCodePanel class="refactor-actions-code relative top-[-28px] max-w-[1270px]">
-
-````md magic-move
-```ts {all}
-import { defineQueryOptions } from '@pinia/colada'
-import { addressesApi } from '@http/transport'
-
-export const addressesQuery = defineQueryOptions(() => ({
-  key: ['addresses'],
-  query: addressesApi.list,
-  staleTime: 5 * MINUTE,
-}))
-```
-```ts {all|1,9|5-8}
-import { useQuery } from '@pinia/colada'
-import { addressesQuery } from '@serverState/address'
-
-const {
-  data: addresses,
-  isLoading,
-  error,
-  refetch,
-} = useQuery(addressesQuery)
-```
-````
-
-</StoreCodePanel>
-</div>
-
-
----
-layout: store-code
----
-
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
-
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(110.4115335624527deg,#fff_1.5437%,#999_99.362%)]">Всему своё место</h1>
-
-<RefactorStateCards class="absolute top-[352px] inset-x-[28px]" />
 
 
 ---
@@ -1259,7 +1149,7 @@ clicks: 7
 
 <div data-node="refactor-shop" class="absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0">
 <div class="w-[402px] shrink-0 font-body font-normal text-[32px] leading-[1.2] text-secondary">
-  <p class="m-0">Ключ запроса зависит от активного адреса.</p>
+  <p class="m-0">Реактивная зависимость через динамический ключ</p>
 </div>
 
 <StoreCodePanel :font-size="24" :line-height="24" class="relative top-[-28px]">
@@ -1327,7 +1217,7 @@ clicks: 8
 
 <div data-node="refactor-catalog" class="absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0">
 <div class="w-[402px] shrink-0 font-body font-normal text-[32px] leading-[1.2] text-secondary">
-  <p class="m-0">Ключ запроса зависит от найденного магазина.</p>
+  <p class="m-0">Реактивная зависимость через динамический ключ</p>
 </div>
 
 <StoreCodePanel :font-size="27" :line-height="28" class="relative top-[-28px]">
@@ -1388,9 +1278,9 @@ clicks: 3
 
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(109.38043091915237deg,#fff_1.5437%,#999_99.362%)]">Удалим же адрес</h1>
 
-<p data-node="remove-address-description" class="absolute top-[280px] left-[28px] m-0 w-[836px] font-body font-normal text-[40px] leading-[1.2] text-secondary">После удаления кеш адресов инвалидируется и вся цепочка запросов перезагружается</p>
+<p data-node="remove-address-description" class="absolute top-[280px] left-[28px] m-0 w-[836px] font-body font-normal text-[32px] leading-[1.2] text-secondary">После удаления кеш адресов инвалидируется, и вся цепочка запросов перезагружается</p>
 
-<StoreCodePanel data-node="remove-address-code" :font-size="24" :line-height="24" class="absolute top-[520px] left-[28px] !w-[836px] [&_pre_code]:block motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0">
+<StoreCodePanel data-node="remove-address-code" :font-size="24" :line-height="24" class="absolute top-[420px] left-[28px] !w-[800px] [&_pre_code]:block motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0">
 
 ```ts {all|2,6|2,4,8-9|10-14}
 import {
@@ -1412,48 +1302,40 @@ const remove = useMutation({
 
 </StoreCodePanel>
 
-<RefactorInvalidationFlow class="absolute top-[272px] left-[896px]" />
+<RefactorInvalidationFlow class="absolute top-[240px] left-[896px]" />
 
 
 ---
-layout: store-code
-variant: risk-left
+layout: default
+variant: none
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Refactor</p>
+<FigmaSlideBackdrop :show-secondary="false" focal-src="/images/figma-90-3834-focal.svg" :focal-x="-635" :focal-y="415" :focal-width="1475" :focal-height="1290" />
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.97614104983313deg,#fff_1.5437%,#999_99.362%)]">Да будет инвариант</h1>
+<p data-node="90:3835" class="absolute top-0 left-[-2px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Refactor</p>
 
-<PublicImage data-node="1:433" class="absolute left-[880px] top-[265px] block w-[772px] h-[735px] max-w-none" src="/images/refactor-invariant-ring-2x.png" alt="Семь разноцветных шаров связаны в замкнутое кольцо" width="1544" height="1470" />
+<h1 data-node="90:3837" class="absolute top-[50px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.97614104983313deg,#fff_1.5437%,#999_99.362%)]">Да будет инвариант</h1>
 
-<div data-node="1:434" class="absolute left-[28px] top-[300px] flex flex-col items-start gap-[32px] font-body text-[32px] leading-[42px] text-white">
-  <div class="flex items-center gap-[32px]">
-    <PublicImage class="block shrink-0 max-w-none" src="/images/refactor-invariant-check.svg" alt="" width="64" height="64" />
-    <p class="m-0 whitespace-nowrap">Автоматическое поддержание инвариантов</p>
-  </div>
-  <div class="flex items-center gap-[32px]">
-    <PublicImage class="block shrink-0 max-w-none" src="/images/refactor-invariant-check.svg" alt="" width="64" height="64" />
-    <p class="m-0 whitespace-nowrap">Явная модель зависимостей</p>
-  </div>
-  <div class="flex items-center gap-[32px]">
-    <PublicImage class="block shrink-0 max-w-none" src="/images/refactor-invariant-check.svg" alt="" width="64" height="64" />
-    <p class="m-0 whitespace-nowrap">Меньше ошибок при изменениях</p>
-  </div>
-</div>
+<RefactorInvariant class="absolute left-0 top-[202px]" />
+
 
 
 ---
-layout: store-code
+layout: default
+variant: none
+title: Активный query
 clicks: 8
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Server State</p>
+<FigmaSlideBackdrop />
 
-<h1 data-node="1:1680" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.15316910001444deg,#fff_1.5437%,#999_99.362%)]">Активный query</h1>
+<div class="absolute left-[-1px] top-0 text-[24px] font-bold leading-[1.1] text-[#ed0f00]">Server State</div>
+<h1 data-node="90:3800" class="absolute left-0 top-[50px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.15316910001444deg,#fff_1.5437%,#999_99.362%)]">Активный query</h1>
 
-<p data-node="1:1681" class="absolute top-[280px] left-[28px] m-0 w-[1704px] font-body font-normal text-[40px] leading-[1.2] text-secondary">Активный query — тот, у которого сейчас есть хотя бы один подписчик.</p>
+<div class="absolute left-[-2px] top-[202px] w-[792px] font-body text-[30px] font-normal leading-[38px] text-white/90">Активный query – query, у которого сейчас<br>есть хотя бы один подписчик</div>
 
-<ActiveQueryFlow class="absolute top-[432px] left-[28px]" :stage="$clicks" />
+<ActiveQueryFlow :stage="$clicks" class="absolute left-0 top-[341.8px]" />
+
 
 
 ---
@@ -1494,191 +1376,116 @@ clicks: 5
 
 
 ---
-layout: store-code
+layout: default
+variant: none
+title: Ну теперь заживем?
+kicker: Server State
 ---
 
-<!-- NEW-FIGMA-147-2002:START -->
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Архитектура</p>
+<FigmaSlideBackdrop />
 
-<h1 data-node-id="147:2014" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(120.88926413729571deg,#fff_1.5437%,#999_99.362%)]">Слабые стороны Server State</h1>
+<div class="absolute left-[-1px] top-0 font-body text-[24px] font-bold leading-[1.1] text-[#ed0f00]">Server State</div>
+<h1 class="absolute left-[-6px] top-[50px] m-0 whitespace-nowrap font-heading text-[80px] font-black leading-[0.9] tracking-[-1.6px] bg-[linear-gradient(112.7566460850044deg,#fff_1.5437%,#999_99.362%)] bg-clip-text text-transparent">Ну теперь заживем?</h1>
 
-<div data-node-id="159:2052" class="server-state-weaknesses absolute top-[280px] left-[28px] flex w-[1704px] flex-col gap-0 font-body [&>div>p]:-translate-y-[4px] [&>div>div.flex]:-translate-y-[3px]">
-  <div data-node-id="147:2040" class="relative flex h-[200px] shrink-0 items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">01</p>
-    <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Ключи требуют дисциплины</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Нужно договориться, как называть и собирать query key для каждого среза данных.</p>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
-  </div>
-  <div data-node-id="147:2046" class="relative flex h-[200px] shrink-0 items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">02</p>
-    <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Контроль инвалидаций</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">После каждой мутации нужно точно определить, какие данные больше нельзя считать свежими.</p>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
-  </div>
-  <div data-node-id="147:2052" class="relative flex h-[200px] shrink-0 items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
-    <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Широкое API</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Query Cache доступен отовсюду – его легко размазать по компонентам, Store и роутеру.</p>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
-  </div>
-</div>
-<!-- NEW-FIGMA-147-2002:END -->
+<RefactorHappyEnd />
+
 
 
 ---
-layout: store-code
+layout: default
+showStars: false
+variant: none
+showLogo: false
+showNumbers: false
+title: А минусы будут?
 ---
 
-<!-- NEW-FIGMA-147-2058:START -->
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Боль проекта</p>
+<RefactorDownsides />
 
-<h1 data-node-id="147:2070" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.16491593163272deg,#fff_1.5437%,#999_99.362%)]">Контроль теряется</h1>
 
-<div data-node-id="147:2096" class="absolute top-[320px] left-[28px] flex w-[402px] flex-col gap-[32px] font-body font-normal text-[32px] leading-[1.2] text-secondary">
-  <p class="m-0">• Ключи разбросаны по проекту</p>
-  <p class="m-0">• Инвалидации не связаны с мутациями</p>
-  <p class="m-0">• Правила свежести задаются локально</p>
+
+---
+layout: default
+variant: none
+showLogo: false
+---
+
+<div class="absolute left-[-80px] top-[-88px] z-[-1] w-[1920px] h-[1080px] overflow-hidden bg-[#101010]" aria-hidden="true">
+  <PublicImage class="absolute left-[-650px] top-[-580px] block max-w-none" src="/images/figma-90-4161-weakness-secondary.svg" width="1300" height="1000" alt="" />
+  <PublicImage class="absolute left-[650px] top-[280px] block max-w-none" src="/images/figma-90-4162-weakness-focal.svg" width="1600" height="1250" alt="" />
 </div>
 
-<div class="project-control-diagram absolute inset-0 font-body text-white" role="group" aria-label="Компоненты инвалидируют Query Cache, который обновляет четыре query">
-  <div data-node-id="147:2100" class="absolute top-[400px] left-[462px] box-border flex h-[112px] w-[402px] items-center justify-center rounded-[24px] border border-solid border-white/20 bg-white/5 p-[24px] text-center font-bold text-[32px] leading-[1.2] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">Компонент 2</div>
-  <div data-node-id="147:2102" class="absolute top-[400px] left-[896px] box-border flex h-[112px] w-[402px] items-center justify-center rounded-[24px] border border-solid border-white/20 bg-white/5 p-[24px] text-center font-bold text-[32px] leading-[1.2] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">Query 2</div>
-  <div data-node-id="147:2104" class="absolute top-[400px] left-[1330px] box-border flex h-[112px] w-[402px] items-center justify-center rounded-[24px] border border-solid border-white/20 bg-white/5 p-[24px] text-center font-bold text-[32px] leading-[1.2] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">Компонент 1</div>
-  <div data-node-id="147:2106" class="absolute top-[576px] left-[896px] box-border flex h-[128px] w-[402px] items-center justify-center rounded-[24px] border-2 border-solid border-accent bg-white/5 p-[24px] text-center font-bold text-[40px] leading-[1.2] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">Query Cache</div>
-  <div data-node-id="147:2108" class="absolute top-[816px] left-[462px] box-border flex h-[112px] w-[402px] items-center justify-center rounded-[24px] border border-solid border-white/20 bg-white/5 p-[24px] text-center font-bold text-[32px] leading-[1.2] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">Query 1</div>
-  <div data-node-id="147:2110" class="absolute top-[816px] left-[896px] box-border flex h-[112px] w-[402px] items-center justify-center rounded-[24px] border border-solid border-white/20 bg-white/5 p-[24px] text-center font-bold text-[32px] leading-[1.2] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">Query 3</div>
-  <div data-node-id="147:2112" class="absolute top-[816px] left-[1330px] box-border flex h-[112px] w-[402px] items-center justify-center rounded-[24px] border border-solid border-white/20 bg-white/5 p-[24px] text-center font-bold text-[32px] leading-[1.2] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">Query 4</div>
-  <PublicImage data-node-id="147:2114" class="absolute top-0 left-[-80px] block max-w-none pointer-events-none" src="/images/project-control-arrows/component-2-invalidates.svg" alt="" width="1920" height="1080" />
-  <PublicImage data-node-id="147:2117" class="absolute top-0 left-[-80px] block max-w-none pointer-events-none" src="/images/project-control-arrows/component-1-invalidates.svg" alt="" width="1920" height="1080" />
-  <p data-node-id="147:2120" class="absolute top-[520px] left-[724px] m-0 w-[170px] font-bold text-[24px] leading-[1.2] text-accent">invalidate</p>
-  <p data-node-id="147:2121" class="absolute top-[520px] left-[1330px] m-0 w-[170px] font-bold text-[24px] leading-[1.2] text-accent">invalidate</p>
-  <PublicImage data-node-id="147:2122" class="absolute top-0 left-[-80px] block max-w-none pointer-events-none" src="/images/project-control-arrows/cache-query-2.svg" alt="" width="1920" height="1080" />
-  <PublicImage data-node-id="147:2125" class="absolute top-0 left-[-80px] block max-w-none pointer-events-none" src="/images/project-control-arrows/cache-query-1.svg" alt="" width="1920" height="1080" />
-  <PublicImage data-node-id="147:2128" class="absolute top-0 left-[-80px] block max-w-none pointer-events-none" src="/images/project-control-arrows/cache-query-3.svg" alt="" width="1920" height="1080" />
-  <PublicImage data-node-id="147:2131" class="absolute top-0 left-[-80px] block max-w-none pointer-events-none" src="/images/project-control-arrows/cache-query-4.svg" alt="" width="1920" height="1080" />
-</div>
-<!-- NEW-FIGMA-147-2058:END -->
+<div class="absolute left-[-1px] top-0 whitespace-nowrap text-[24px] leading-[1.1] font-body font-bold text-accent">Server State</div>
+<h1 class="absolute left-[-3px] top-[50px] m-0 whitespace-nowrap text-[80px] leading-[0.9] tracking-[-1.6px] font-heading font-black text-transparent bg-clip-text" style="background-image: linear-gradient(108.92797627857493deg, #fff 1.5437%, #999 99.362%)">Слабые стороны</h1>
+<ServerStateWeaknesses class="absolute left-[-3px] top-[218px]" />
+<PublicImage class="absolute left-0 top-[888px] block max-w-none" src="/images/figma-90-4163-weakness-logo.svg" width="92" height="32" alt="MAGNIT TECH" />
 
 
 ---
 layout: store-code
+variant: none
+showLogo: false
 ---
 
-<!-- NEW-FIGMA-1-1825:START -->
-<p data-node="1:1829" class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Боль проекта</p>
+<!-- NEW-FIGMA-90-3977:START -->
+<ProjectControlBackdrop class="left-[-80px] top-0 z-[-1]" />
+<p data-node-id="90:3981" class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Боль проекта</p>
+<h1 data-node-id="90:3984" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.16491593163272deg,#fff_1.5437%,#999_99.362%)]">Контроль теряется</h1>
+<ProjectControlDiagram class="left-[-80px] top-0" />
+<PublicImage data-node-id="90:3982" class="absolute top-[972px] left-[28px] block max-w-none pointer-events-none" src="/images/figma-90-3977-logo.svg" alt="MAGNIT TECH" width="92" height="32.0606" />
+<!-- NEW-FIGMA-90-3977:END -->
 
-<h1 data-node="1:1832" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.08129053889449deg,#fff_1.5437%,#999_99.362%)]">Последствия</h1>
 
-<div data-node="1:1833" class="absolute top-[280px] inset-x-[28px] flex flex-col gap-0 font-body [&>div>p]:-translate-y-[4px] [&>div>div.flex]:-translate-y-[3px]">
-  <div data-node="1:1834" class="relative flex h-[200px] items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">01</p>
-    <div class="min-w-0 flex-1 flex flex-col gap-[16px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Нежелательная инвалидация</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Сбрасываем больше данных, чем изменилось на сервере.</p>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
-  </div>
-  <div data-node="1:1840" class="relative flex h-[200px] items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">02</p>
-    <div class="min-w-0 flex-1 flex flex-col gap-[16px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Потеря контроля за кешом</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Непонятно, кто и почему сбросил данные или запустил refetch.</p>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
-  </div>
-  <div data-node="1:1846" class="relative flex h-[200px] items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
-    <div class="min-w-0 flex-1 flex flex-col gap-[16px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Лишние запросы</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Фоновая работа кеша превращается в мусорные запросы и лишнюю нагрузку.</p>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
-  </div>
+---
+layout: default
+clicks: 3
+variant: store-left
+showLogo: false
+---
+
+<div class="pointer-events-none absolute left-[-80px] top-[-88px] z-[-1] h-[1080px] w-[1920px] overflow-hidden bg-[#101010]" aria-hidden="true">
+  <PublicImage class="absolute left-[-650px] top-[-580px] block max-w-none" src="/images/figma-90-4173-secondary.svg" width="1300" height="1000" alt="" />
+  <PublicImage class="absolute left-[650px] top-[280px] block max-w-none" src="/images/figma-90-4173-focal.svg" width="1600" height="1250" alt="" />
 </div>
-<!-- NEW-FIGMA-1-1825:END -->
+<p class="absolute left-[-1px] top-0 m-0 font-body text-[24px] font-bold leading-[1.1] text-[#ed0f00]">Боль проекта</p>
+<h1 class="absolute left-[-5px] top-[50px] m-0 whitespace-nowrap bg-clip-text font-heading text-[80px] font-black leading-[0.9] tracking-[-1.6px] text-transparent" style="background-image:linear-gradient(105.08129053889449deg,#fff 1.5437%,#999 99.362%)">Последствия</h1>
+<ServerStateConsequences class="absolute left-0 top-[218px]" :stage="$clicks" />
+<PublicImage class="absolute left-0 top-[888px] block max-w-none" src="/images/figma-90-4173-logo.svg" width="92" height="32" alt="MAGNIT TECH" />
 
 
 ---
-layout: store-code
+layout: default
+clicks: 4
+variant: store-left
+showLogo: false
 ---
 
-<!-- NEW-FIGMA-1-1852:START -->
-<p data-node="1:1853" class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Архитектура</p>
-
-<h1 data-node="1:1855" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-white">Решаем архитектурой</h1>
-
-<div data-node="1:1856" class="architecture-principles absolute top-[272px] left-[28px] flex w-[1704px] flex-col gap-0 font-body [&>div>p]:-translate-y-[4px] [&>div>div.flex]:-translate-y-[3px]">
-  <div data-node="1:1857" class="relative flex h-[160px] shrink-0 items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">01</p>
-    <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Контролируем ключи</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">У каждого домена есть единое место, где описаны query key и query.</p>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
-  </div>
-  <div data-node="1:1863" class="relative flex h-[160px] shrink-0 items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">02</p>
-    <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Сужаем публичный API</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Компоненты работают со сценарием, а не с десятками методов Query Cache.</p>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
-  </div>
-  <div data-node="1:1869" class="relative flex h-[160px] shrink-0 items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
-    <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Управляем кешем явно</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">Инвалидации, обновления и сбросы имеют доменные имена и одно место вызова.</p>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
-  </div>
-  <div data-node="1:1875" class="relative flex h-[160px] shrink-0 items-center gap-[48px]">
-    <p class="m-0 w-[168px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">04</p>
-    <div class="flex min-w-0 flex-1 flex-col gap-[16px] leading-[1.2]">
-      <p class="m-0 font-bold text-[40px] text-white">Фиксируем правила свежести</p>
-      <p class="m-0 font-normal text-[32px] text-secondary">staleTime и зависимые запросы становятся частью контракта домена.</p>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-white/20" aria-hidden="true"></div>
-  </div>
+<div class="pointer-events-none absolute left-[-80px] top-[-88px] z-[-1] h-[1080px] w-[1920px] overflow-hidden bg-[#101010]" aria-hidden="true">
+  <PublicImage class="absolute left-[-650px] top-[-580px] block max-w-none" src="/images/figma-90-4173-secondary.svg" width="1300" height="1000" alt="" />
+  <PublicImage class="absolute left-[650px] top-[280px] block max-w-none" src="/images/figma-90-4173-focal.svg" width="1600" height="1250" alt="" />
 </div>
-<!-- NEW-FIGMA-1-1852:END -->
+<p class="absolute left-[-1px] top-0 m-0 font-body text-[24px] font-bold leading-[1.1] text-[#ed0f00]">Боль проекта</p>
+<h1 class="absolute left-[-5px] top-[50px] m-0 whitespace-nowrap bg-clip-text font-heading text-[80px] font-black leading-[0.9] tracking-[-1.6px] text-transparent" style="background-image:linear-gradient(114.77364587733764deg,#fff 1.5437%,#999 99.362%)">Решаем архитектурой</h1>
+<ArchitecturePrinciples class="absolute left-0 top-[218px]" :stage="$clicks" />
+<PublicImage class="absolute left-0 top-[888px] block max-w-none" src="/images/figma-90-4173-logo.svg" width="92" height="32" alt="MAGNIT TECH" />
 
 
 ---
-layout: store-code
+layout: default
+variant: none
+showLogo: false
 clicks: 1
 ---
 
-<!-- NEW-FIGMA-1-1882:START -->
-
-<p data-node="1:1886" class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Архитектура</p>
-
-<h1 data-node="1:1889" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(110.1661906828467deg,#fff_1.5437%,#999_99.362%)]">Server State Layer</h1>
-
-<ExpandingServerStateLayer class="absolute top-[304px] left-[28px]" :stage="$clicks" />
-
-<!-- NEW-FIGMA-1-1882:END -->
-
-
----
-layout: store-code
----
-
-<!-- NEW-FIGMA-1-1912:START -->
-
-<p data-node="1:1916" class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Архитектура</p>
-
-<h1 data-node="1:1919" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(107.74015827818073deg,#fff_1.5437%,#999_99.362%)]">Структура слоя</h1>
-
-<ServerStateLayerArchitecture class="absolute top-[304px] left-[28px]" />
-
-<!-- NEW-FIGMA-1-1912:END -->
+<!-- NEW-FIGMA-90-3777:START -->
+<div class="absolute left-[-80px] top-[-88px] z-[-1] w-[1920px] h-[1080px] overflow-hidden bg-[#101010]" aria-hidden="true">
+  <PublicImage class="absolute left-[-650px] top-[-580px] block max-w-none" src="/images/figma-deck-red-secondary.svg" width="1300" height="1000" alt="" />
+</div>
+<p data-node-id="90:3779" class="absolute left-[805px] top-0 m-0 font-body text-[24px] font-bold leading-[1.1] text-accent">Архитектура</p>
+<h1 data-node-id="90:3781" class="absolute left-[465px] top-[50px] m-0 whitespace-nowrap font-heading text-[80px] font-black leading-[0.9] tracking-[-1.6px] text-transparent bg-clip-text bg-[linear-gradient(110.1661906828467deg,#fff_1.5437%,#999_99.362%)]">Server State Layer</h1>
+<ExpandingServerStateLayer class="absolute left-0 top-[210px]" :stage="$clicks" />
+<PublicImage data-node-id="90:3780" class="absolute left-0 top-[888px] block max-w-none" src="/images/figma-90-3780-layer-logo.svg" width="92" height="32" alt="MAGNIT TECH" />
+<!-- NEW-FIGMA-90-3777:END -->
 
 
 ---
@@ -1692,10 +1499,10 @@ clicks: 9
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.76449780050385deg,#fff_1.5437%,#999_99.362%)]">Query Options</h1>
 
 <div class="architecture-code-body absolute inset-x-[28px] top-[272px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0 motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0" :data-stage="$clicks">
-  <ul data-node="architecture-notes" class="m-0 mt-[28px] pl-[32px] box-border list-disc flex w-[402px] shrink-0 flex-col gap-[24px] font-body font-normal text-[32px] leading-[1.2] text-secondary">
-    <li class="m-0 pl-[4px]">Все Query Options домена адресов храним в одном месте</li>
-    <li class="m-0 pl-[4px]">Описываем конфигурацию queries</li>
-    <li class="m-0 pl-[4px]">Отвечаем на вопрос: «как делать»</li>
+  <ul data-node="architecture-notes" class="m-0 mt-[28px] pl-[32px] box-border list-disc flex w-[502px] shrink-0 flex-col gap-[24px] font-body font-normal text-[32px] leading-[1.2] text-secondary">
+    <li class="m-0 pl-[4px]">Все Query Options домена в одном месте</li>
+    <li class="m-0 pl-[4px]">Скрываем реализацию</li>
+    <li class="m-0 pl-[4px]">Декларативный интерфейс наружу</li>
   </ul>
 
 <StoreCodePanel data-node="architecture-code" :font-size="27" :line-height="28" class="max-w-[1270px] [&_pre.shiki]:!whitespace-pre [&_pre]:![--smm-delay-container:0] [&_pre]:![--smm-delay-move:0] [&_pre]:![--smm-delay-enter:0.7] [&_pre]:![--smm-delay-leave:0] [&_pre]:![--smm-easing:ease-in-out] [&_.shiki-magic-move-item]:![--smm-stagger:0ms] [&_.shiki-magic-move-enter-active]:!duration-[calc(var(--smm-duration)*0.25)]">
@@ -1750,9 +1557,9 @@ clicks: 12
 
 <div class="architecture-code-body absolute inset-x-[28px] top-[272px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0 motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0" :data-stage="$clicks">
   <ul data-node="architecture-notes" class="m-0 mt-[28px] pl-[32px] box-border list-disc flex w-[402px] shrink-0 flex-col gap-[24px] font-body font-normal text-[32px] leading-[1.2] text-secondary">
-    <li class="m-0 pl-[4px]">Операции записи домена адресов – в одном composable</li>
-    <li class="m-0 pl-[4px]">createAddress,<br>updateAddress,<br>removeAddress</li>
-    <li class="m-0 pl-[4px]">defineMutationOptions связывает mutation с последствиями успеха</li>
+    <li class="m-0 pl-[4px]">Операции записи домена – в одном месте</li>
+    <li class="m-0 pl-[4px]">Скрываем реализацию</li>
+    <li class="m-0 pl-[4px]">Декларативный интерфейс наружу</li>
   </ul>
 
 <StoreCodePanel data-node="architecture-code" :font-size="27" :line-height="27" class="max-w-[1270px] [&_pre.shiki]:!whitespace-pre [&_pre]:![--smm-delay-container:0] [&_pre]:![--smm-delay-move:0] [&_pre]:![--smm-delay-enter:0.7] [&_pre]:![--smm-delay-leave:0] [&_pre]:![--smm-easing:ease-in-out] [&_.shiki-magic-move-item]:![--smm-stagger:0ms] [&_.shiki-magic-move-enter-active]:!duration-[calc(var(--smm-duration)*0.25)]">
@@ -1821,9 +1628,9 @@ clicks: 9
 
 <div class="architecture-code-body absolute inset-x-[28px] top-[272px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0 motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0" :data-stage="$clicks">
   <ul data-node="architecture-notes" class="m-0 mt-[28px] pl-[32px] box-border list-disc flex w-[402px] shrink-0 flex-col gap-[24px] font-body font-normal text-[32px] leading-[1.2] text-secondary">
-    <li class="m-0 pl-[4px]">Все операции с кешем домена адресов живут в одном месте</li>
-    <li class="m-0 pl-[4px]">Мутации и компоненты не знают деталей QueryCache</li>
-    <li class="m-0 pl-[4px]">Сервис даёт инвалидации понятные доменные имена</li>
+    <li class="m-0 pl-[4px]">Все операции с кешем домена в одном месте</li>
+    <li class="m-0 pl-[4px]">Скрываем детали реализации</li>
+    <li class="m-0 pl-[4px]">Декларативный интерфейс наружу</li>
   </ul>
 
 <StoreCodePanel data-node="architecture-code" :font-size="27" :line-height="28" class="max-w-[1270px] [&_pre.shiki]:!whitespace-pre [&_pre]:![--smm-delay-container:0] [&_pre]:![--smm-delay-move:0] [&_pre]:![--smm-delay-enter:0.7] [&_pre]:![--smm-delay-leave:0] [&_pre]:![--smm-easing:ease-in-out] [&_.shiki-magic-move-item]:![--smm-stagger:0ms] [&_.shiki-magic-move-enter-active]:!duration-[calc(var(--smm-duration)*0.25)]">
@@ -1869,8 +1676,8 @@ function updateAddressList(addresses: Address[]) {
 </StoreCodePanel>
 </div>
 
-<blockquote data-node="cache-quote" class="absolute top-[716px] left-[28px] box-border m-0 flex w-[486px] items-center justify-center rounded-[24px] border border-solid border-white/20 bg-white/5 p-[24px] font-body text-[32px] leading-[1.2] text-secondary">
-  <p class="m-0 w-full">«В программировании есть только две проблемы: инвалидация кеша и выбор имён переменных»</p>
+<blockquote data-node="cache-quote" class="absolute top-[616px] left-[28px] box-border m-0 flex w-[486px] items-center justify-center rounded-[24px] border border-solid border-white/20 bg-white/5 p-[24px] font-body text-[32px] leading-[1.4] text-secondary">
+  <p class="m-0 w-full">В программировании есть только две проблемы: инвалидация кеша и выбор имён переменных</p>
 </blockquote>
 <!-- ARCHITECTURE-CODE-64:END -->
 
@@ -1883,15 +1690,17 @@ layout: store-code
 
 <p data-node="artifact-kicker" class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Артефакт</p>
 
-<h1 data-node="artifact-title" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-accent">Server State Layer Skill</h1>
+<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.78797602456692deg,#fff_1.5437%,#999_99.362%)]">Server State Layer <span class="text-accent">Skills</span></h1>
 
 <ul data-node="artifact-contents" class="absolute top-[320px] left-[28px] m-0 flex w-[836px] list-none flex-col gap-[32px] p-0 font-body font-normal text-[40px] leading-[1.2] text-white">
   <li class="flex items-baseline gap-[24px]"><span class="shrink-0" aria-hidden="true">•</span><span>Архитектурный слой</span></li>
-  <li class="flex items-baseline gap-[24px]"><span class="shrink-0" aria-hidden="true">•</span><span>Инструкции по разработке</span></li>
+  <li class="flex items-baseline gap-[24px]"><span class="shrink-0" aria-hidden="true">•</span><span>Инструкции по разработке и миграции</span></li>
   <li class="flex items-baseline gap-[24px]"><span class="shrink-0" aria-hidden="true">•</span><span>Лучшие практики и ограничения</span></li>
 </ul>
 
-<PublicImage data-node="telegram-channel-badge" class="absolute top-[272px] left-[978px] block h-[672px] w-[672px] max-w-none object-contain" src="/images/telegram-channel-badge.png" alt="Круглый чёрно-золотой значок: «Ну теперь заживём»" width="1254" height="1254" />
+<a class="absolute top-[272px] left-[978px] block h-[672px] w-[672px]" href="https://t.me/+g25E4B-9SscxOGM6" target="_blank" rel="noopener noreferrer" aria-label="Открыть Telegram-канал «Ну теперь заживём»">
+  <PublicImage data-node="telegram-channel-qr" class="block h-[672px] w-[672px] max-w-none object-contain" src="/images/server-state-layer-skills-qr.png" alt="QR-код приглашения в Telegram-канал «Ну теперь заживём» с логотипом в центре" width="1184" height="1184" />
+</a>
 
 <!-- TELEGRAM-ARTIFACT-65:END -->
 
@@ -1908,72 +1717,40 @@ layout: store-code
   <span class="block text-accent">Server State</span>
 </h1>
 
-<p data-node="1:2064" class="absolute top-[528px] left-[28px] m-0 w-[1270px] font-body font-bold text-[48px] leading-[53px] tracking-[-2px] text-secondary">Server State – проекция серверного состояния на клиенте. Она может устареть и не является источником истины.</p>
+<p data-node="1:2064" class="absolute top-[528px] left-[28px] m-0 w-[1270px] font-body text-[48px] leading-[53px] tracking-[-2px] text-secondary">Server State – проекция серверного состояния на клиентеб, необходимая для решения фронтенд задач</p>
 <!-- CONCLUSIONS-66:END -->
 
 
 ---
-layout: store-code
+layout: default
+variant: none
+showLogo: false
 ---
 
 <!-- CONCLUSIONS-67:START -->
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Выводы</p>
+<FigmaSlideBackdrop :focal-x="650" />
 
-<h1 data-node="1:2072" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.95318947401859deg,#fff_1.5437%,#999_99.362%)]">Server State – это кеш</h1>
+<p data-node="90:3754" class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Выводы</p>
 
-<div class="cache-conclusion-cards absolute top-[336px] left-[28px] grid w-[1704px] grid-cols-3 gap-[32px] font-body leading-[1.2] text-white">
-  <div data-node="1:2073" class="box-border flex h-[456px] min-w-0 flex-col gap-[32px] rounded-[24px] border-2 border-solid border-white bg-white/5 px-[32px] pt-[40px] pb-[24px] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-    <p class="m-0 font-bold text-[40px] text-white">Проекция</p>
-    <p class="m-0 font-normal text-[32px] text-white">На клиенте хранится копия серверных данных, а не источник истины</p>
-  </div>
-  <div data-node="1:2076" class="box-border flex h-[456px] min-w-0 flex-col gap-[32px] rounded-[24px] border-2 border-solid border-white bg-white/5 px-[32px] pt-[40px] pb-[24px] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-    <p class="m-0 font-bold text-[40px] text-white">Устаревает</p>
-    <p class="m-0 font-normal text-[32px] text-white">Со временем локальная копия перестаёт соответствовать серверу</p>
-  </div>
-  <div data-node="1:2079" class="box-border flex h-[456px] min-w-0 flex-col gap-[32px] rounded-[24px] border-2 border-solid border-white bg-white/5 px-[32px] pt-[40px] pb-[24px] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-    <p class="m-0 font-bold text-[40px] text-white">Обновляется</p>
-    <p class="m-0 font-normal text-[32px] text-white">Свежая версия снова загружается из источника истины</p>
-  </div>
-</div>
+<h1 data-node="90:3756" class="absolute top-[50px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.95318947401859deg,#fff_1.5437%,#999_99.362%)]">Server State – это кэш</h1>
+
+<ServerStateCacheConclusion class="absolute top-[210px] left-0" />
+
+<PublicImage data-node="90:3755" class="absolute top-[888px] left-0 block max-w-none pointer-events-none" src="/images/figma-90-3751-logo.svg" width="92" height="32" alt="MAGNIT TECH" />
 <!-- CONCLUSIONS-67:END -->
 
 
 ---
-layout: store-code
+layout: default
+variant: store-left
 ---
 
 <!-- CONCLUSIONS-68:START -->
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Выводы</p>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Выводы</p>
 
-<h1 data-node="1:2089" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(116.58544816830903deg,#fff_1.5437%,#999_99.362%)]">Реализация Server State</h1>
+<h1 data-node="1:2089" class="absolute top-[50px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(116.58544816830903deg,#fff_1.5437%,#999_99.362%)]">Реализация Server State</h1>
 
-<div class="client-cache-solutions absolute top-[304px] inset-x-[28px] flex justify-between gap-[32px] font-body">
-  <div data-node="1:1433" class="cache-solution-card relative box-border h-[600px] w-[836px] shrink-0 rounded-[24px] border-2 border-solid border-[#41e786] bg-white/5 backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-    <div class="absolute top-[38px] left-[38px] flex h-[96px] w-[756px] items-center">
-      <PublicImage src="/images/tanstack-query-logo.svg" class="block max-w-none" alt="TanStack" width="600" height="93.362" />
-    </div>
-    <div class="absolute top-[166px] left-[38px] flex h-[320px] w-[756px] items-center gap-[24px]">
-      <p class="m-0 w-[412px] shrink-0 font-normal text-[32px] leading-[1.2] text-secondary">Query cache, keys, stale и gc timers, mutations, invalidation, refetch.</p>
-      <a href="https://tanstack.com/query/latest" target="_blank" rel="noopener noreferrer" class="block h-[320px] w-[320px] shrink-0" aria-label="Документация TanStack Query">
-        <PublicImage data-node="1:1447" src="/images/tanstack-query-qr-2x.png" class="block h-[320px] w-[320px] max-w-none" alt="QR-код документации TanStack Query" width="640" height="640" />
-      </a>
-    </div>
-    <a href="https://tanstack.com/query/latest" target="_blank" rel="noopener noreferrer" class="absolute top-[518px] left-[38px] w-[756px] font-bold text-[24px] leading-[1.2] text-[#41e786] no-underline">tanstack.com/query</a>
-  </div>
-  <div data-node="1:1453" class="cache-solution-card relative box-border h-[600px] w-[836px] shrink-0 rounded-[24px] border-2 border-solid border-[#e4bd83] bg-white/5 backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-    <div class="absolute top-[38px] left-[38px] flex h-[96px] w-[756px] items-center gap-[24px]">
-      <PublicImage src="/images/pinia-colada-logo.svg" class="block max-w-none" alt="" aria-hidden="true" width="64" height="71.84" />
-      <p class="m-0 w-[668px] font-bold text-[40px] leading-[1.2] text-white">Pinia Colada</p>
-    </div>
-    <div class="absolute top-[166px] left-[38px] flex h-[320px] w-[756px] items-center gap-[24px]">
-      <p class="m-0 w-[412px] shrink-0 font-normal text-[32px] leading-[1.2] text-secondary">Та же модель Server State в экосистеме Vue: queries, mutations и cache entries.</p>
-      <a href="https://pinia-colada.esm.dev/" target="_blank" rel="noopener noreferrer" class="block h-[320px] w-[320px] shrink-0" aria-label="Документация Pinia Colada">
-        <PublicImage data-node="1:1500" src="/images/pinia-colada-qr-2x.png" class="block h-[320px] w-[320px] max-w-none" alt="QR-код документации Pinia Colada" width="640" height="640" />
-      </a>
-    </div>
-    <a href="https://pinia-colada.esm.dev/" target="_blank" rel="noopener noreferrer" class="absolute top-[518px] left-[38px] w-[756px] font-bold text-[24px] leading-[1.2] text-[#e4bd83] no-underline">pinia-colada.esm.dev</a>
-  </div>
-</div>
+<ServerStateSolutions class="absolute top-[210px] left-0" />
 <!-- CONCLUSIONS-68:END -->
 
 
@@ -2017,7 +1794,7 @@ variant: closing
 <h1 data-node="1:2123" class="absolute top-[220px] left-[28px] m-0 font-heading font-black text-[120px] leading-none tracking-[-2.4px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.61359467739067deg,#fff_1.5437%,#999_99.362%)]">Спасибо!</h1>
 
 <a data-node="telegram-final-link" class="absolute top-[456px] left-[28px] block h-[320px] w-[320px] overflow-hidden rounded-[24px] bg-white" href="https://t.me/+g25E4B-9SscxOGM6" target="_blank" rel="noopener noreferrer" aria-label="Telegram: https://t.me/+g25E4B-9SscxOGM6">
-  <PublicImage data-node="telegram-final-qr" class="block max-w-none" src="/images/telegram-final-qr.svg" alt="QR-код Telegram: https://t.me/+g25E4B-9SscxOGM6" width="320" height="320" />
+  <PublicImage data-node="telegram-final-qr" class="block h-[320px] w-[320px] max-w-none object-contain" src="/images/server-state-layer-skills-qr.png" alt="QR-код Telegram: https://t.me/+g25E4B-9SscxOGM6" width="1184" height="1184" />
 </a>
 
 <p data-node="1:2121" class="absolute top-[814px] left-[28px] m-0 w-[836px] font-body font-bold text-[40px] leading-[1.2] text-white">Telegram-канал</p>

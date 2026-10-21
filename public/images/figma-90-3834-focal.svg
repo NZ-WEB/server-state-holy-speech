@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1475" height="1290" viewBox="0 0 1475 1290" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse id="Light / red focal field" cx="737.5" cy="645" rx="737.5" ry="645" fill="url(#paint0_radial_0_43)"/>
+<defs>
+<radialGradient id="paint0_radial_0_43" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(737.5 645) scale(737.5 645)">
+<stop stop-color="#ED0F00" stop-opacity="0.48"/>
+<stop offset="0.42" stop-color="#ED0F00" stop-opacity="0.192"/>
+<stop offset="0.75" stop-color="#ED0F00" stop-opacity="0.024"/>
+<stop offset="1" stop-color="#ED0F00" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>
