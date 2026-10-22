@@ -778,8 +778,8 @@ variant: diagonal
   <div class="flex h-[95px] items-center gap-[64px]">
     <p class="m-0 h-[95px] w-[116px] shrink-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-accent">03</p>
     <div class="flex min-w-0 flex-1 flex-col gap-[8px]">
-      <p class="m-0 text-[32px] font-bold leading-[1.1] text-white">Это не кеш</p>
-      <p class="m-0 text-[30px] leading-[38px] text-white/69">Нет ключей, свежести и управляемой инвалидации</p>
+      <p class="m-0 text-[32px] font-bold leading-[1.1] text-white">Неявные зависимости</p>
+      <p class="m-0 text-[30px] leading-[38px] text-white/69">Необходимость писать велосипеды для соблюдения инварианта</p>
     </div>
   </div>
 </div>
