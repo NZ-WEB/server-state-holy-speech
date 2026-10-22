@@ -1146,7 +1146,7 @@ clicks: 7
 
 <p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Refactor</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.14359990942712deg,#fff_1.5437%,#999_99.362%)]">Получение магазина</h1>
+<h1 class="absolute top-[156px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.14359990942712deg,#fff_1.5437%,#999_99.362%)]">Получение магазина</h1>
 
 <div data-node="refactor-shop" class="absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0">
 <div class="w-[402px] shrink-0 font-body font-normal text-[32px] leading-[1.2] text-secondary">
