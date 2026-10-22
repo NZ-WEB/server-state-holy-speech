@@ -173,9 +173,27 @@ const arrow = `${import.meta.env.BASE_URL}images/figma-query-reactivity-arrow.sv
 }
 
 .capability-card {
+  position: relative;
   width: 100%;
   min-height: 140.4px;
   flex: 0 0 140.4px;
+}
+
+
+/* Native Figma GLASS adds a reflected rim above the dark 1px base stroke. */
+.capability-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgb(255 255 255 / 32%), rgb(255 255 255 / 10%) 36%, rgb(255 255 255 / 2%) 70%, rgb(255 255 255 / 24%));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .layer-arrow {

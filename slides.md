@@ -306,9 +306,9 @@ variant: diagonal
 clicks: 4
 ---
 
-<p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
+<p class="absolute top-0 left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
-<h1 class="absolute top-[58px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(115.04475892308335deg,#fff_1.5437%,#999_99.362%)]">За что мы любим Store</h1>
+<h1 class="absolute top-[50px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(115.04475892308335deg,#fff_1.5437%,#999_99.362%)]">За что мы любим Store</h1>
 
 <StoreBenefitsCards class="absolute inset-x-0 top-[210px]" />
 
@@ -340,7 +340,7 @@ clicks: 4
 
 <div class="store-addresses-content absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[32px]">
 
-<DeckStarList class="store-notes relative left-[-28px] w-[402px] shrink-0" :items="['addresses – данные', 'isLoading – загрузка', 'error – ошибка загрузки', 'loadAddresses – action']" />
+<DeckStarList class="store-notes relative left-[-28px] w-[402px] shrink-0" variant="notes" :items="['addresses – данные', 'isLoading – загрузка', 'error – ошибка загрузки', 'loadAddresses – action']" />
 
 <StoreCodePanel :line-height="32">
 
@@ -396,7 +396,7 @@ clicks: 1
 
 <div class="store-actions-content absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[32px]">
 
-<DeckStarList class="store-notes relative left-[-28px] w-[402px] shrink-0" :items="['Добавить адрес', 'Удалить адрес', 'Обновить адрес']" />
+<DeckStarList class="store-notes relative left-[-28px] w-[402px] shrink-0" variant="notes" :items="['Добавить адрес', 'Удалить адрес', 'Обновить адрес']" />
 
 <StoreCodePanel :line-height="28">
 
@@ -454,7 +454,7 @@ clicks: 3
 <h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.51865950802929deg,#fff_1.5437%,#999_99.362%)]">Активный адрес</h1>
 
 <div class="store-active-address-content absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[8px]">
-<DeckStarList class="store-active-address-notes relative left-[-28px] w-[460px] shrink-0" :items="['activeAddressId – выбранный ID', 'activeAddress – активный адрес', 'selectAddress – action выбора']" />
+<DeckStarList class="store-active-address-notes relative left-[-28px] w-[460px] shrink-0" variant="notes" :items="['activeAddressId – выбранный ID', 'activeAddress – активный адрес', 'selectAddress – action выбора']" />
 
 <StoreCodePanel :line-height="28" class="!px-[16px]">
 
@@ -498,7 +498,7 @@ clicks: 7
 <h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.0792614279172deg,#fff_1.5437%,#999_99.362%)]">Ближайший магазин</h1>
 
 <div class="store-nearest-shop-body absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[32px]">
-<DeckStarList class="store-nearest-shop-notes relative left-[-28px] top-[-28px] w-[402px] shrink-0" :items="['store – найденный магазин', 'isLoading – загрузка', 'error – ошибка загрузки']" />
+<DeckStarList class="store-nearest-shop-notes relative left-[-28px] top-[-28px] w-[402px] shrink-0" variant="notes" :items="['store – найденный магазин', 'isLoading – загрузка', 'error – ошибка загрузки']" />
 
 <StoreCodePanel :line-height="28" class="relative top-[-28px]">
 
@@ -600,7 +600,7 @@ clicks: 3
 <h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.34721910752687deg,#fff_1.5437%,#999_99.362%)]">Каталог</h1>
 
 <div class="store-catalog-body absolute inset-x-[28px] top-[184px] flex items-start justify-between gap-[32px]">
-<DeckStarList class="store-catalog-notes relative left-[-28px] w-[402px] shrink-0" :items="['products – данные каталога', 'isLoading – загрузка', 'error – ошибка загрузки']" />
+<DeckStarList class="store-catalog-notes relative left-[-28px] w-[402px] shrink-0" variant="notes" :items="['products – данные каталога', 'isLoading – загрузка', 'error – ошибка загрузки']" />
 
 <StoreCodePanel :line-height="28">
 
@@ -860,9 +860,9 @@ layout: store-code
 clicks: 3
 ---
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(103.5581102367891deg,#fff_1.5437%,#999_99.362%)]">Это же кеш!</h1>
+<h1 class="absolute top-[138px] left-[-1px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(103.5581102367891deg,#fff_1.5437%,#999_99.362%)]">Это же кеш!</h1>
 
-<DeckStarList class="projection-notes absolute top-[300px] left-[28px] w-[836px]" :items="['Источник истины находится на сервере', 'На клиенте хранится только копия', 'Эта копия может устаревать']" />
+<DeckStarList class="projection-notes absolute top-[300px] left-[-1px] w-[836px]" :items="['Источник истины находится на сервере', 'На клиенте хранится только копия', 'Эта копия может устаревать']" />
 
 <ServerStateProjection :stage="$clicks" />
 
@@ -924,14 +924,15 @@ variant: diagonal
 </div>
 
 ---
-layout: store-code
+layout: default
+variant: none
+showLogo: false
+showNumbers: false
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">02</p>
-
-<h1 class="absolute top-[368px] left-[28px] m-0 w-[836px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-transparent bg-clip-text bg-[linear-gradient(100.47881993614514deg,#fff_1.5437%,#999_99.362%)]">Как готовить<br>Server State?</h1>
-
-<PublicImage class="server-state-chapter-gears absolute top-[80px] left-[920px] block h-[960px] w-[960px] max-w-none object-contain opacity-75 pointer-events-none" src="/images/server-state-chapter-gears.png" alt="" aria-hidden="true" />
+<!-- FIGMA-95-4829:START -->
+<ServerStateCookingIntro />
+<!-- FIGMA-95-4829:END -->
 
 ---
 layout: default
@@ -1499,11 +1500,7 @@ clicks: 9
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.76449780050385deg,#fff_1.5437%,#999_99.362%)]">Query Options</h1>
 
 <div class="architecture-code-body absolute inset-x-[28px] top-[272px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0 motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0" :data-stage="$clicks">
-  <ul data-node="architecture-notes" class="m-0 mt-[28px] pl-[32px] box-border list-disc flex w-[502px] shrink-0 flex-col gap-[24px] font-body font-normal text-[32px] leading-[1.2] text-secondary">
-    <li class="m-0 pl-[4px]">Все Query Options домена в одном месте</li>
-    <li class="m-0 pl-[4px]">Скрываем реализацию</li>
-    <li class="m-0 pl-[4px]">Декларативный интерфейс наружу</li>
-  </ul>
+  <DeckStarList data-node="architecture-notes" class="w-[502px] shrink-0" style="margin-top: 28px; --deck-list-color: rgba(255, 255, 255, 0.8)" :items="['Все Query Options домена в одном месте', 'Скрываем реализацию', 'Декларативный интерфейс наружу']" />
 
 <StoreCodePanel data-node="architecture-code" :font-size="27" :line-height="28" class="max-w-[1270px] [&_pre.shiki]:!whitespace-pre [&_pre]:![--smm-delay-container:0] [&_pre]:![--smm-delay-move:0] [&_pre]:![--smm-delay-enter:0.7] [&_pre]:![--smm-delay-leave:0] [&_pre]:![--smm-easing:ease-in-out] [&_.shiki-magic-move-item]:![--smm-stagger:0ms] [&_.shiki-magic-move-enter-active]:!duration-[calc(var(--smm-duration)*0.25)]">
 
@@ -1556,11 +1553,7 @@ clicks: 12
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.85989467988094deg,#fff_1.5437%,#999_99.362%)]">Mutation Options</h1>
 
 <div class="architecture-code-body absolute inset-x-[28px] top-[272px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0 motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0" :data-stage="$clicks">
-  <ul data-node="architecture-notes" class="m-0 mt-[28px] pl-[32px] box-border list-disc flex w-[402px] shrink-0 flex-col gap-[24px] font-body font-normal text-[32px] leading-[1.2] text-secondary">
-    <li class="m-0 pl-[4px]">Операции записи домена – в одном месте</li>
-    <li class="m-0 pl-[4px]">Скрываем реализацию</li>
-    <li class="m-0 pl-[4px]">Декларативный интерфейс наружу</li>
-  </ul>
+  <DeckStarList data-node="architecture-notes" class="w-[402px] shrink-0" style="margin-top: 28px; --deck-list-color: rgba(255, 255, 255, 0.8)" :items="['Операции записи домена – в одном месте', 'Скрываем реализацию', 'Декларативный интерфейс наружу']" />
 
 <StoreCodePanel data-node="architecture-code" :font-size="27" :line-height="27" class="max-w-[1270px] [&_pre.shiki]:!whitespace-pre [&_pre]:![--smm-delay-container:0] [&_pre]:![--smm-delay-move:0] [&_pre]:![--smm-delay-enter:0.7] [&_pre]:![--smm-delay-leave:0] [&_pre]:![--smm-easing:ease-in-out] [&_.shiki-magic-move-item]:![--smm-stagger:0ms] [&_.shiki-magic-move-enter-active]:!duration-[calc(var(--smm-duration)*0.25)]">
 
@@ -1627,11 +1620,7 @@ clicks: 9
 <h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.78797602456692deg,#fff_1.5437%,#999_99.362%)]">Cache Service</h1>
 
 <div class="architecture-code-body absolute inset-x-[28px] top-[272px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0 motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0" :data-stage="$clicks">
-  <ul data-node="architecture-notes" class="m-0 mt-[28px] pl-[32px] box-border list-disc flex w-[402px] shrink-0 flex-col gap-[24px] font-body font-normal text-[32px] leading-[1.2] text-secondary">
-    <li class="m-0 pl-[4px]">Все операции с кешем домена в одном месте</li>
-    <li class="m-0 pl-[4px]">Скрываем детали реализации</li>
-    <li class="m-0 pl-[4px]">Декларативный интерфейс наружу</li>
-  </ul>
+  <DeckStarList data-node="architecture-notes" class="w-[402px] shrink-0" style="margin-top: 28px; --deck-list-color: rgba(255, 255, 255, 0.8)" :items="['Все операции с кешем домена в одном месте', 'Скрываем детали реализации', 'Декларативный интерфейс наружу']" />
 
 <StoreCodePanel data-node="architecture-code" :font-size="27" :line-height="28" class="max-w-[1270px] [&_pre.shiki]:!whitespace-pre [&_pre]:![--smm-delay-container:0] [&_pre]:![--smm-delay-move:0] [&_pre]:![--smm-delay-enter:0.7] [&_pre]:![--smm-delay-leave:0] [&_pre]:![--smm-easing:ease-in-out] [&_.shiki-magic-move-item]:![--smm-stagger:0ms] [&_.shiki-magic-move-enter-active]:!duration-[calc(var(--smm-duration)*0.25)]">
 
@@ -1676,49 +1665,26 @@ function updateAddressList(addresses: Address[]) {
 </StoreCodePanel>
 </div>
 
-<blockquote data-node="cache-quote" class="absolute top-[616px] left-[28px] box-border m-0 flex w-[486px] items-center justify-center rounded-[24px] border border-solid border-white/20 bg-white/5 p-[24px] font-body text-[32px] leading-[1.4] text-secondary">
-  <p class="m-0 w-full">В программировании есть только две проблемы: инвалидация кеша и выбор имён переменных</p>
-</blockquote>
+
 <!-- ARCHITECTURE-CODE-64:END -->
 
 
 ---
-layout: store-code
+layout: default
+variant: none
+showLogo: false
 ---
 
-<!-- TELEGRAM-ARTIFACT-65:START -->
-
-<p data-node="artifact-kicker" class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Артефакт</p>
-
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.78797602456692deg,#fff_1.5437%,#999_99.362%)]">Server State Layer <span class="text-accent">Skills</span></h1>
-
-<ul data-node="artifact-contents" class="absolute top-[320px] left-[28px] m-0 flex w-[836px] list-none flex-col gap-[32px] p-0 font-body font-normal text-[40px] leading-[1.2] text-white">
-  <li class="flex items-baseline gap-[24px]"><span class="shrink-0" aria-hidden="true">•</span><span>Архитектурный слой</span></li>
-  <li class="flex items-baseline gap-[24px]"><span class="shrink-0" aria-hidden="true">•</span><span>Инструкции по разработке и миграции</span></li>
-  <li class="flex items-baseline gap-[24px]"><span class="shrink-0" aria-hidden="true">•</span><span>Лучшие практики и ограничения</span></li>
-</ul>
-
-<a class="absolute top-[272px] left-[978px] block h-[672px] w-[672px]" href="https://t.me/+g25E4B-9SscxOGM6" target="_blank" rel="noopener noreferrer" aria-label="Открыть Telegram-канал «Ну теперь заживём»">
-  <PublicImage data-node="telegram-channel-qr" class="block h-[672px] w-[672px] max-w-none object-contain" src="/images/server-state-layer-skills-qr.png" alt="QR-код приглашения в Telegram-канал «Ну теперь заживём» с логотипом в центре" width="1184" height="1184" />
-</a>
-
-<!-- TELEGRAM-ARTIFACT-65:END -->
+<ServerStateSkillsSlide />
 
 
 ---
-layout: store-code
+layout: default
+variant: none
+showLogo: false
 ---
 
-<!-- CONCLUSIONS-66:START -->
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Выводы</p>
-
-<h1 data-node="1:2063" class="absolute top-[280px] left-[28px] m-0 w-[1704px] font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] text-transparent bg-clip-text bg-[linear-gradient(110.65609704351242deg,#fff_1.5437%,#999_99.362%)]">
-  <span class="block">Есть такой тип</span>
-  <span class="block text-accent">Server State</span>
-</h1>
-
-<p data-node="1:2064" class="absolute top-[528px] left-[28px] m-0 w-[1270px] font-body text-[48px] leading-[53px] tracking-[-2px] text-secondary">Server State – проекция серверного состояния на клиенте, необходимая для решения фронтенд задач</p>
-<!-- CONCLUSIONS-66:END -->
+<ServerStateTypeIntro />
 
 
 ---
@@ -1755,49 +1721,23 @@ variant: store-left
 
 
 ---
-layout: store-code
+layout: default
+variant: none
+showLogo: false
 ---
 
 <!-- CONCLUSIONS-69:START -->
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Выводы</p>
-
-<h1 data-node="1:2103" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.27209169199533deg,#fff_1.5437%,#999_99.362%)]">Архитектурный слой</h1>
-
-<p data-node="1:2104" class="absolute top-[280px] left-[28px] m-0 w-[1704px] font-body font-normal text-[40px] leading-[1.2] text-secondary">Чтобы контролировать кеш, ключи и инвалидации, ограничиваем работу с Server State архитектурным слоем.</p>
-
-<div data-node="1:2105" class="absolute top-[456px] left-[28px] flex w-[1704px] flex-col gap-[24px] font-body">
-  <div data-node="1:2106" class="box-border flex h-[128px] w-full shrink-0 items-center gap-[32px] rounded-[24px] border-2 border-solid border-[#a7b9f4] bg-white/5 px-[32px] py-[24px] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-    <p class="m-0 w-[772px] shrink-0 font-bold text-[48px] leading-[53px] tracking-[-2px] text-[#a7b9f4]">Query Options</p>
-    <p class="m-0 min-w-0 flex-1 font-normal text-[40px] leading-[1.2] text-secondary">Конфигурация запросов</p>
-  </div>
-  <div data-node="1:2109" class="box-border flex h-[128px] w-full shrink-0 items-center gap-[32px] rounded-[24px] border-2 border-solid border-[#e4bd83] bg-white/5 px-[32px] py-[24px] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-    <p class="m-0 w-[772px] shrink-0 font-bold text-[48px] leading-[53px] tracking-[-2px] text-[#e4bd83]">Mutation Options</p>
-    <p class="m-0 min-w-0 flex-1 font-normal text-[40px] leading-[1.2] text-secondary">Конфигурация мутаций</p>
-  </div>
-  <div data-node="1:2112" class="box-border flex h-[128px] w-full shrink-0 items-center gap-[32px] rounded-[24px] border-2 border-solid border-[#86caa9] bg-white/5 px-[32px] py-[24px] backdrop-blur-[19px] [box-shadow:inset_-24px_-24px_64px_rgb(255_255_255_/_6%),inset_24px_24px_64px_rgb(0_0_0_/_40%)]">
-    <p class="m-0 w-[772px] shrink-0 font-bold text-[48px] leading-[53px] tracking-[-2px] text-[#86caa9]">Cache Service</p>
-    <p class="m-0 min-w-0 flex-1 font-normal text-[40px] leading-[1.2] text-secondary">Сервис управления кешом</p>
-  </div>
-</div>
+<ServerStateArchitectureConclusion />
 <!-- CONCLUSIONS-69:END -->
 
 
 ---
-layout: store-code
-variant: closing
+layout: default
+variant: none
+showLogo: false
+showNumbers: false
 ---
 
 <!-- CONCLUSIONS-70:START -->
-
-<PublicImage data-node="1:2120" class="absolute top-[20px] left-[820px] block h-[1100px] w-[1100px] max-w-none object-contain opacity-75 pointer-events-none" src="/images/closing-glass-gears.png" alt="" aria-hidden="true" />
-
-<h1 data-node="1:2123" class="absolute top-[220px] left-[28px] m-0 font-heading font-black text-[120px] leading-none tracking-[-2.4px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.61359467739067deg,#fff_1.5437%,#999_99.362%)]">Спасибо!</h1>
-
-<a data-node="telegram-final-link" class="absolute top-[456px] left-[28px] block h-[320px] w-[320px] overflow-hidden rounded-[24px] bg-white" href="https://t.me/+g25E4B-9SscxOGM6" target="_blank" rel="noopener noreferrer" aria-label="Telegram: https://t.me/+g25E4B-9SscxOGM6">
-  <PublicImage data-node="telegram-final-qr" class="block h-[320px] w-[320px] max-w-none object-contain" src="/images/server-state-layer-skills-qr.png" alt="QR-код Telegram: https://t.me/+g25E4B-9SscxOGM6" width="1184" height="1184" />
-</a>
-
-<p data-node="1:2121" class="absolute top-[814px] left-[28px] m-0 w-[836px] font-body font-bold text-[40px] leading-[1.2] text-white">Telegram-канал</p>
-
-<p data-node="1:2122" class="absolute top-[872px] left-[28px] m-0 w-[836px] font-body font-normal text-[24px] leading-[1.35] text-secondary">Больше про Server State и архитектуру фронтенда</p>
+<ThanksSlide />
 <!-- CONCLUSIONS-70:END -->

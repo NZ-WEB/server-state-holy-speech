@@ -9,7 +9,7 @@ const layers = [
 </script>
 
 <template>
-  <div class="server-state-projection absolute left-[896px] top-[288px] flex w-[836px] flex-col gap-[80px] font-body text-center leading-[1.2]">
+  <div class="server-state-projection absolute left-[896px] top-[288px] flex w-[836px] flex-col gap-[32px] font-body text-center leading-[1.2]">
     <div
       v-for="(layer, index) in layers"
       :key="layer.title"
