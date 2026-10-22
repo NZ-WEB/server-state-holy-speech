@@ -1717,7 +1717,7 @@ layout: store-code
   <span class="block text-accent">Server State</span>
 </h1>
 
-<p data-node="1:2064" class="absolute top-[528px] left-[28px] m-0 w-[1270px] font-body text-[48px] leading-[53px] tracking-[-2px] text-secondary">Server State – проекция серверного состояния на клиентеб, необходимая для решения фронтенд задач</p>
+<p data-node="1:2064" class="absolute top-[528px] left-[28px] m-0 w-[1270px] font-body text-[48px] leading-[53px] tracking-[-2px] text-secondary">Server State – проекция серверного состояния на клиенте, необходимая для решения фронтенд задач</p>
 <!-- CONCLUSIONS-66:END -->
 
 
