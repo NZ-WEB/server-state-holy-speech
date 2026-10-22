@@ -340,7 +340,7 @@ clicks: 4
 
 <div class="store-addresses-content absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[32px]">
 
-<DeckStarList class="store-notes relative left-[-28px] w-[402px] shrink-0" :items="['addresses – данные', 'isLoading – загрузка', 'error – ошибка', 'loadAddresses – action']" />
+<DeckStarList class="store-notes relative left-[-28px] w-[402px] shrink-0" :items="['addresses – данные', 'isLoading – загрузка', 'error – ошибка загрузки', 'loadAddresses – action']" />
 
 <StoreCodePanel :line-height="32">
 
@@ -498,7 +498,7 @@ clicks: 7
 <h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.0792614279172deg,#fff_1.5437%,#999_99.362%)]">Ближайший магазин</h1>
 
 <div class="store-nearest-shop-body absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[32px]">
-<DeckStarList class="store-nearest-shop-notes relative left-[-28px] top-[-28px] w-[402px] shrink-0" :items="['store – найденный магазин', 'isLoading – загрузка', 'error – ошибка']" />
+<DeckStarList class="store-nearest-shop-notes relative left-[-28px] top-[-28px] w-[402px] shrink-0" :items="['store – найденный магазин', 'isLoading – загрузка', 'error – ошибка загрузки']" />
 
 <StoreCodePanel :line-height="28" class="relative top-[-28px]">
 
@@ -600,7 +600,7 @@ clicks: 3
 <h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.34721910752687deg,#fff_1.5437%,#999_99.362%)]">Каталог</h1>
 
 <div class="store-catalog-body absolute inset-x-[28px] top-[184px] flex items-start justify-between gap-[32px]">
-<DeckStarList class="store-catalog-notes relative left-[-28px] w-[402px] shrink-0" :items="['products – данные каталога', 'isLoading – загрузка', 'error – ошибка']" />
+<DeckStarList class="store-catalog-notes relative left-[-28px] w-[402px] shrink-0" :items="['products – данные каталога', 'isLoading – загрузка', 'error – ошибка загрузки']" />
 
 <StoreCodePanel :line-height="28">
 
