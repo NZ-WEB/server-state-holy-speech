@@ -21,7 +21,7 @@ const rows = computed(() => props.items.map(text => {
     <li v-for="row in rows" :key="row.text" class="deck-star-list-item">
       <span v-if="variant === 'stars'" class="deck-star-list-marker" aria-hidden="true">✦</span>
       <span v-if="variant === 'notes' && row.field"><span class="notes-field">{{ row.field }}</span><span class="notes-description">{{ row.description }}</span></span>
-      <span v-else>{{ row.text }}</span>
+      <span v-else :class="{ 'notes-field': variant === 'notes' }">{{ row.text }}</span>
     </li>
   </ul>
 </template>
@@ -67,5 +67,6 @@ const rows = computed(() => props.items.map(text => {
 .notes-description {
   color: rgb(255 255 255 / 69%);
   font-weight: 400;
+  font-style: normal;
 }
 </style>

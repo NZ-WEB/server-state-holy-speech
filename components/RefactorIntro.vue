@@ -8,7 +8,7 @@
       <div class="refactor-background-shade" />
     </div>
     <h1 class="absolute left-[647px] top-[88px] m-0 whitespace-nowrap font-heading text-[80px] font-black leading-[0.9] tracking-[-1.6px] text-[#fafafa]" data-node-id="89:3598">Let's refactor!</h1>
-    <PublicImage class="absolute left-[539px] top-[232px] block h-[720px] w-[842px] max-w-none" src="/images/figma-89-3595-refactor-image-2x.png" alt="Два кадра из фильма «Остров проклятых»: герои обсуждают переписывание приложения" width="1684" height="1440" data-node-id="89:3595" />
+    <PublicImage class="refactor-image absolute left-[539px] top-[232px] block h-[720px] w-[842px] max-w-none" src="/images/figma-89-3595-refactor-image-2x.png" alt="Два кадра из фильма «Остров проклятых»: герои обсуждают переписывание приложения" width="1684" height="1440" data-node-id="89:3595" />
     <div class="refactor-label absolute left-[616.5px] top-[264px] box-border h-[96px] w-[307px] rounded-[12px] bg-[#191919] px-[15px] pb-[10px] pt-[6px] font-body text-[36px] font-bold leading-[1.1] text-white" data-node-id="89:3596">
       <p class="m-0">Перепишем всё<br>на Pinia Colada?</p>
     </div>
@@ -16,6 +16,8 @@
 </template>
 
 <style scoped>
+/* The 2× export has opaque #101010 outside its 64px rounded contour. */
+.refactor-image { border-radius: 32px; }
 .refactor-background {
   position: absolute;
   left: -993px;

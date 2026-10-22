@@ -336,9 +336,9 @@ clicks: 4
 
 <p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
-<h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.1760574395592deg,#fff_1.5437%,#999_99.362%)]">Список адресов</h1>
+<h1 class="absolute top-[58px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.1760574395592deg,#fff_1.5437%,#999_99.362%)]">Список адресов</h1>
 
-<div class="store-addresses-content absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[32px]">
+<div class="store-addresses-content absolute left-[28px] right-0 top-[212px] flex items-start justify-between gap-[60px]">
 
 <DeckStarList class="store-notes relative left-[-28px] w-[402px] shrink-0" variant="notes" :items="['addresses – данные', 'isLoading – загрузка', 'error – ошибка загрузки', 'loadAddresses – action']" />
 
@@ -392,9 +392,9 @@ clicks: 1
 
 <p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
-<h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(102.9576450088695deg,#fff_1.5437%,#999_99.362%)]">Все actions</h1>
+<h1 class="absolute top-[58px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(102.9576450088695deg,#fff_1.5437%,#999_99.362%)]">Все actions</h1>
 
-<div class="store-actions-content absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[32px]">
+<div class="store-actions-content absolute left-[28px] right-0 top-[212px] flex items-start justify-between gap-[60px]">
 
 <DeckStarList class="store-notes relative left-[-28px] w-[402px] shrink-0" variant="notes" :items="['Добавить адрес', 'Удалить адрес', 'Обновить адрес']" />
 
@@ -451,9 +451,9 @@ clicks: 3
 
 <p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
-<h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.51865950802929deg,#fff_1.5437%,#999_99.362%)]">Активный адрес</h1>
+<h1 class="absolute top-[58px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.51865950802929deg,#fff_1.5437%,#999_99.362%)]">Активный адрес</h1>
 
-<div class="store-active-address-content absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[8px]">
+<div class="store-active-address-content absolute left-[28px] right-0 top-[212px] flex items-start justify-between gap-[36px]">
 <DeckStarList class="store-active-address-notes relative left-[-28px] w-[460px] shrink-0" variant="notes" :items="['activeAddressId – выбранный ID', 'activeAddress – активный адрес', 'selectAddress – action выбора']" />
 
 <StoreCodePanel :line-height="28" class="!px-[16px]">
@@ -495,9 +495,9 @@ clicks: 7
 
 <p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
-<h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.0792614279172deg,#fff_1.5437%,#999_99.362%)]">Ближайший магазин</h1>
+<h1 class="absolute top-[58px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(113.0792614279172deg,#fff_1.5437%,#999_99.362%)]">Ближайший магазин</h1>
 
-<div class="store-nearest-shop-body absolute inset-x-[28px] top-[212px] flex items-start justify-between gap-[32px]">
+<div class="store-nearest-shop-body absolute left-[28px] right-0 top-[212px] flex items-start justify-between gap-[60px]">
 <DeckStarList class="store-nearest-shop-notes relative left-[-28px] top-[-28px] w-[402px] shrink-0" variant="notes" :items="['store – найденный магазин', 'isLoading – загрузка', 'error – ошибка загрузки']" />
 
 <StoreCodePanel :line-height="28" class="relative top-[-28px]">
@@ -597,9 +597,9 @@ clicks: 3
 
 <p class="absolute top-[8px] left-[-1px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Реализация</p>
 
-<h1 class="absolute top-[58px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.34721910752687deg,#fff_1.5437%,#999_99.362%)]">Каталог</h1>
+<h1 class="absolute top-[58px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(99.34721910752687deg,#fff_1.5437%,#999_99.362%)]">Каталог</h1>
 
-<div class="store-catalog-body absolute inset-x-[28px] top-[184px] flex items-start justify-between gap-[32px]">
+<div class="store-catalog-body absolute left-[28px] right-0 top-[184px] flex items-start justify-between gap-[60px]">
 <DeckStarList class="store-catalog-notes relative left-[-28px] w-[402px] shrink-0" variant="notes" :items="['products – данные каталога', 'isLoading – загрузка', 'error – ошибка загрузки']" />
 
 <StoreCodePanel :line-height="28">
@@ -1077,7 +1077,7 @@ clicks: 4
 <h1 class="absolute top-[50px] left-[-5px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.95433580916409deg,#fff_1.5437%,#999_99.362%)]">Получение адресов</h1>
 
 <div class="refactor-addresses-body absolute inset-x-0 top-[210px] flex items-start justify-between gap-[10px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0">
-  <DeckStarList data-node="refactor-addresses-notes" class="w-[570px] shrink-0" :items="['query key для ключей', 'API fetcher для транспорта', 'staleTime - время свежести']" />
+  <DeckStarList data-node="refactor-addresses-notes" class="w-[570px] shrink-0" style="--deck-list-font-size: 28px" :items="['query key для ключей', 'API fetcher для транспорта', 'staleTime - время свежести']" />
 
 <StoreCodePanel class="!w-[1180px] !flex-none" data-node="refactor-addresses-code" :font-size="25" :line-height="26">
 
@@ -1209,14 +1209,15 @@ export function useShopQueryOptions() {
 
 ---
 layout: store-code
+standardInsets: true
 clicks: 8
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Refactor</p>
+<p class="absolute top-[88px] left-0 m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Refactor</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(112.54071791881543deg,#fff_1.5437%,#999_99.362%)]">Получение каталога</h1>
+<h1 class="absolute top-[138px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(112.54071791881543deg,#fff_1.5437%,#999_99.362%)]">Получение каталога</h1>
 
-<div data-node="refactor-catalog" class="absolute inset-x-[28px] top-[300px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0">
+<div data-node="refactor-catalog" class="absolute inset-x-0 top-[282px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0">
 <div class="w-[402px] shrink-0 font-body font-normal text-[32px] leading-[1.2] text-secondary">
   <p class="m-0">Реактивная зависимость через динамический ключ</p>
 </div>
@@ -1272,16 +1273,17 @@ export function useCatalogQueryOptions() {
 
 ---
 layout: store-code
+standardInsets: true
 clicks: 3
 ---
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Refactor</p>
+<p class="absolute top-[88px] left-0 m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Refactor</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(109.38043091915237deg,#fff_1.5437%,#999_99.362%)]">Удалим же адрес</h1>
+<h1 class="absolute top-[138px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(109.38043091915237deg,#fff_1.5437%,#999_99.362%)]">Удалим же адрес</h1>
 
-<p data-node="remove-address-description" class="absolute top-[280px] left-[28px] m-0 w-[836px] font-body font-normal text-[32px] leading-[1.2] text-secondary">После удаления кеш адресов инвалидируется, и вся цепочка запросов перезагружается</p>
+<p data-node="remove-address-description" class="absolute top-[262px] left-0 m-0 w-[836px] font-body font-normal text-[32px] leading-[1.2] text-secondary">После удаления кеш адресов инвалидируется, и вся цепочка запросов перезагружается</p>
 
-<StoreCodePanel data-node="remove-address-code" :font-size="24" :line-height="24" class="absolute top-[420px] left-[28px] !w-[800px] [&_pre_code]:block motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0">
+<StoreCodePanel data-node="remove-address-code" :font-size="24" :line-height="24" class="absolute top-[402px] left-0 !w-[800px] [&_pre_code]:block motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0">
 
 ```ts {all|2,6|2,4,8-9|10-14}
 import {
@@ -1303,7 +1305,7 @@ const remove = useMutation({
 
 </StoreCodePanel>
 
-<RefactorInvalidationFlow class="absolute top-[240px] left-[896px]" />
+<RefactorInvalidationFlow class="absolute top-[222px] left-[924px]" />
 
 
 ---
@@ -1341,35 +1343,36 @@ clicks: 8
 
 ---
 layout: store-code
+standardInsets: true
 clicks: 5
 ---
 
 <!-- NEW-FIGMA-146-2082:START -->
 
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Refactor</p>
+<p class="absolute top-[88px] left-0 m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Refactor</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-white">Результаты рефакторинга</h1>
+<h1 class="absolute top-[138px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-white">Результаты рефакторинга</h1>
 
-<div class="summary-refactor-results absolute top-[288px] left-[28px] flex w-[1704px] flex-col gap-0 font-body leading-[1.2]" role="table">
+<div class="summary-refactor-results absolute top-[270px] left-0 flex w-[1760px] flex-col gap-0 font-body leading-[1.2]" role="table">
   <div v-click="1" data-summary-row="1" class="box-border flex h-[120px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
-    <p class="m-0 translate-y-px w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Boilerplate – всё</p>
-    <p class="m-0 translate-y-[2px] w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Загрузка, ошибки и повторный запрос уже описаны библиотекой</p>
+    <p class="m-0 translate-y-px w-[864px] shrink-0 text-[40px] font-bold text-white" role="cell">Boilerplate – всё</p>
+    <p class="m-0 translate-y-[2px] w-[864px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Загрузка, ошибки и повторный запрос уже описаны библиотекой</p>
   </div>
   <div v-click="2" data-summary-row="2" class="box-border flex h-[120px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
-    <p class="m-0 -translate-y-[2px] w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Дедупликация из коробки</p>
-    <p class="m-0 -translate-y-[0.5px] w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Одинаковые queries разделяют один запрос</p>
+    <p class="m-0 -translate-y-[2px] w-[864px] shrink-0 text-[40px] font-bold text-white" role="cell">Дедупликация из коробки</p>
+    <p class="m-0 -translate-y-[0.5px] w-[864px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Одинаковые queries разделяют один запрос</p>
   </div>
   <div v-click="3" data-summary-row="3" class="box-border flex h-[120px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
-    <p class="m-0 translate-y-px w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Кеш – это кеш</p>
-    <p class="m-0 translate-y-[0.5px] w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Ключи, свежесть и инвалидация имеют готовый API</p>
+    <p class="m-0 translate-y-px w-[864px] shrink-0 text-[40px] font-bold text-white" role="cell">Кеш – это кеш</p>
+    <p class="m-0 translate-y-[0.5px] w-[864px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Ключи, свежесть и инвалидация имеют готовый API</p>
   </div>
   <div v-click="4" data-summary-row="4" class="box-border flex h-[120px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
-    <p class="m-0 translate-y-px w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Больше возможностей</p>
-    <p class="m-0 translate-y-[2px] w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Фоновые обновления и оптимистичные изменения</p>
+    <p class="m-0 translate-y-px w-[864px] shrink-0 text-[40px] font-bold text-white" role="cell">Больше возможностей</p>
+    <p class="m-0 translate-y-[2px] w-[864px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Фоновые обновления и оптимистичные изменения</p>
   </div>
   <div v-click="5" data-summary-row="5" class="box-border flex h-[120px] shrink-0 items-center gap-[32px] border-b border-solid border-white/20 transition-opacity !duration-500 ease-out motion-reduce:!duration-0" role="row">
-    <p class="m-0 -translate-y-px w-[836px] shrink-0 text-[40px] font-bold text-white" role="cell">Реактивная модель</p>
-    <p class="m-0 w-[836px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Query зависят друг от друга и автоматически ждут входные данные</p>
+    <p class="m-0 -translate-y-px w-[864px] shrink-0 text-[40px] font-bold text-white" role="cell">Реактивная модель</p>
+    <p class="m-0 w-[864px] shrink-0 text-[32px] font-normal text-secondary" role="cell">Query зависят друг от друга и автоматически ждут входные данные</p>
   </div>
 </div>
 
@@ -1424,16 +1427,17 @@ showLogo: false
 
 ---
 layout: store-code
+standardInsets: true
 variant: none
 showLogo: false
 ---
 
 <!-- NEW-FIGMA-90-3977:START -->
 <ProjectControlBackdrop class="left-[-80px] top-0 z-[-1]" />
-<p data-node-id="90:3981" class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Боль проекта</p>
-<h1 data-node-id="90:3984" class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.16491593163272deg,#fff_1.5437%,#999_99.362%)]">Контроль теряется</h1>
-<ProjectControlDiagram class="left-[-80px] top-0" />
-<PublicImage data-node-id="90:3982" class="absolute top-[972px] left-[28px] block max-w-none pointer-events-none" src="/images/figma-90-3977-logo.svg" alt="MAGNIT TECH" width="92" height="32.0606" />
+<p data-node-id="90:3981" class="absolute top-[88px] left-0 m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Боль проекта</p>
+<h1 data-node-id="90:3984" class="absolute top-[138px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(111.16491593163272deg,#fff_1.5437%,#999_99.362%)]">Контроль теряется</h1>
+<ProjectControlDiagram class="left-[-108px] top-0" />
+<PublicImage data-node-id="90:3982" class="absolute bottom-[72px] left-0 block max-w-none pointer-events-none" src="/images/figma-90-3977-logo.svg" alt="MAGNIT TECH" width="92" height="32.0606" />
 <!-- NEW-FIGMA-90-3977:END -->
 
 
@@ -1491,15 +1495,16 @@ clicks: 1
 
 ---
 layout: store-code
+standardInsets: true
 clicks: 9
 ---
 
 <!-- ARCHITECTURE-CODE-62:START -->
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Архитектура</p>
+<p class="absolute top-[88px] left-0 m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Архитектура</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.76449780050385deg,#fff_1.5437%,#999_99.362%)]">Query Options</h1>
+<h1 class="absolute top-[138px] left-0 m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.76449780050385deg,#fff_1.5437%,#999_99.362%)]">Query Options</h1>
 
-<div class="architecture-code-body absolute inset-x-[28px] top-[272px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0 motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0" :data-stage="$clicks">
+<div class="architecture-code-body absolute inset-x-0 top-[254px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0 motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0" :data-stage="$clicks">
   <DeckStarList data-node="architecture-notes" class="w-[502px] shrink-0" style="margin-top: 28px; --deck-list-color: rgba(255, 255, 255, 0.8)" :items="['Все Query Options домена в одном месте', 'Скрываем реализацию', 'Декларативный интерфейс наружу']" />
 
 <StoreCodePanel data-node="architecture-code" :font-size="27" :line-height="28" class="max-w-[1270px] [&_pre.shiki]:!whitespace-pre [&_pre]:![--smm-delay-container:0] [&_pre]:![--smm-delay-move:0] [&_pre]:![--smm-delay-enter:0.7] [&_pre]:![--smm-delay-leave:0] [&_pre]:![--smm-easing:ease-in-out] [&_.shiki-magic-move-item]:![--smm-stagger:0ms] [&_.shiki-magic-move-enter-active]:!duration-[calc(var(--smm-duration)*0.25)]">
@@ -1544,15 +1549,16 @@ await queryCache.refresh(queryCache.ensure(addressQueryOptions.list))
 
 ---
 layout: store-code
+standardInsets: true
 clicks: 12
 ---
 
 <!-- ARCHITECTURE-CODE-63:START -->
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Архитектура</p>
+<p class="absolute top-[88px] left-0 m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Архитектура</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.85989467988094deg,#fff_1.5437%,#999_99.362%)]">Mutation Options</h1>
+<h1 class="absolute top-[138px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(108.85989467988094deg,#fff_1.5437%,#999_99.362%)]">Mutation Options</h1>
 
-<div class="architecture-code-body absolute inset-x-[28px] top-[272px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0 motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0" :data-stage="$clicks">
+<div class="architecture-code-body absolute inset-x-0 top-[254px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0 motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0" :data-stage="$clicks">
   <DeckStarList data-node="architecture-notes" class="w-[402px] shrink-0" style="margin-top: 28px; --deck-list-color: rgba(255, 255, 255, 0.8)" :items="['Операции записи домена – в одном месте', 'Скрываем реализацию', 'Декларативный интерфейс наружу']" />
 
 <StoreCodePanel data-node="architecture-code" :font-size="27" :line-height="27" class="max-w-[1270px] [&_pre.shiki]:!whitespace-pre [&_pre]:![--smm-delay-container:0] [&_pre]:![--smm-delay-move:0] [&_pre]:![--smm-delay-enter:0.7] [&_pre]:![--smm-delay-leave:0] [&_pre]:![--smm-easing:ease-in-out] [&_.shiki-magic-move-item]:![--smm-stagger:0ms] [&_.shiki-magic-move-enter-active]:!duration-[calc(var(--smm-duration)*0.25)]">
@@ -1611,15 +1617,16 @@ const handleRemove = async () => {
 
 ---
 layout: store-code
+standardInsets: true
 clicks: 9
 ---
 
 <!-- ARCHITECTURE-CODE-64:START -->
-<p class="absolute top-[108px] left-[28px] m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Архитектура</p>
+<p class="absolute top-[88px] left-0 m-0 font-body font-bold text-[24px] leading-[1.1] text-accent">Архитектура</p>
 
-<h1 class="absolute top-[156px] left-[28px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.78797602456692deg,#fff_1.5437%,#999_99.362%)]">Cache Service</h1>
+<h1 class="absolute top-[138px] left-[-2px] m-0 font-heading font-black text-[80px] leading-[0.9] tracking-[-1.6px] whitespace-nowrap text-transparent bg-clip-text bg-[linear-gradient(105.78797602456692deg,#fff_1.5437%,#999_99.362%)]">Cache Service</h1>
 
-<div class="architecture-code-body absolute inset-x-[28px] top-[272px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0 motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0" :data-stage="$clicks">
+<div class="architecture-code-body absolute inset-x-0 top-[254px] flex items-start justify-between gap-[32px] motion-reduce:[&_.shiki-magic-move-item]:!duration-0 motion-reduce:[&_.shiki-magic-move-item]:!delay-0 motion-reduce:[&_.shiki-magic-move-container]:!duration-0 motion-reduce:[&_.shiki-magic-move-container]:!delay-0 motion-reduce:[&_pre_span]:!duration-0 motion-reduce:[&_pre_span]:!delay-0" :data-stage="$clicks">
   <DeckStarList data-node="architecture-notes" class="w-[402px] shrink-0" style="margin-top: 28px; --deck-list-color: rgba(255, 255, 255, 0.8)" :items="['Все операции с кешем домена в одном месте', 'Скрываем детали реализации', 'Декларативный интерфейс наружу']" />
 
 <StoreCodePanel data-node="architecture-code" :font-size="27" :line-height="28" class="max-w-[1270px] [&_pre.shiki]:!whitespace-pre [&_pre]:![--smm-delay-container:0] [&_pre]:![--smm-delay-move:0] [&_pre]:![--smm-delay-enter:0.7] [&_pre]:![--smm-delay-leave:0] [&_pre]:![--smm-easing:ease-in-out] [&_.shiki-magic-move-item]:![--smm-stagger:0ms] [&_.shiki-magic-move-enter-active]:!duration-[calc(var(--smm-duration)*0.25)]">
